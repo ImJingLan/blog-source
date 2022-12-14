@@ -1,0 +1,64 @@
+{{- $ThemeVersion := "3.8.0" -}}
+<footer class="site-footer">
+  <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    </script>
+    <script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2020, 02, 11, 22, 00, 00)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = '小屋已安全在树上挂了' + currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    
+    setInterval(setTime, 1000);
+    </script>
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ .Site.Title }}
+    </section>
+    
+    <section class="powerby">
+	<span id="htmer_time"></span><br>
+        {{ with .Site.Params.footer.customText }}
+            {{ . | safeHTML }} <br/>
+        {{ end }}
+
+        {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
+        {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
+        {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
+
+        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
+        {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}
+    </section>
+</footer>
