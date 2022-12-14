@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head><meta charset='utf-8'>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2bfeb9ce570a39b11f885206ee6b5bff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='使用Hugo配合Vercel搭建个人博客'><title>使用Hugo搭建个人博客</title>
+
+<link rel='canonical' href='https://yurik.cafe/p/hugo-blog/'>
+
+<link rel="stylesheet" href="/scss/style.min.d59041805007384093d8a29260ee89633f08e90f353c3067e472c66f3124b2a7.css"><meta property='og:title' content='使用Hugo搭建个人博客'>
+<meta property='og:description' content='使用Hugo配合Vercel搭建个人博客'>
+<meta property='og:url' content='https://yurik.cafe/p/hugo-blog/'>
+<meta property='og:site_name' content='景蓝の小屋'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-02-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-02-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://yurik.cafe/p/hugo-blog/banner.png' />
+<meta name="twitter:site" content="@imjinglan">
+    <meta name="twitter:creator" content="@imjinglan"><meta name="twitter:title" content="使用Hugo搭建个人博客">
+<meta name="twitter:description" content="使用Hugo配合Vercel搭建个人博客"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://yurik.cafe/p/hugo-blog/banner.png' />
+    <link rel="shortcut icon" href="https://cdn.rimeradio.top/2022/07/21/avatar.ico" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-blog/">
+                <img src="/p/hugo-blog/banner_hu145ed520fac9f2d3a2088f570693d3d3_25983_800x0_resize_box_3.png"
+                        srcset="/p/hugo-blog/banner_hu145ed520fac9f2d3a2088f570693d3d3_25983_800x0_resize_box_3.png 800w, /p/hugo-blog/banner_hu145ed520fac9f2d3a2088f570693d3d3_25983_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post 使用Hugo搭建个人博客" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
+                技术
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/hugo-blog/">使用Hugo搭建个人博客</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        使用Hugo配合Vercel搭建个人博客
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">〇、前言</h2>
+<h3 id="01-我为什么选择hugo">0.1 我为什么选择Hugo</h3>
+<p>Hugo是一个使用<strong>Go</strong>语言编写的静态网站生成器。
+长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的<strong>Typecho</strong>系统，转而寻找静态博客系统。在尝试了<strong>Hexo</strong>、<strong>Jekyll</strong>后，我选择了<strong>Hugo</strong>，原因首先是它支持Markdown语法，这使得我将文章从Typecho迁移至Hugo变得容易，其次是<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    ><strong>Stack</strong></a>主题仅适用于Hugo (搭建博客第一要领：好看)</p>
+<h3 id="02-网页托管">0.2 网页托管</h3>
+<p>说起网页托管，大家第一想到的大概都是<a class="link" href="https://pages.github.com"  target="_blank" rel="noopener"
+    ><strong>Github Pages</strong></a>吧，最初我也是使用gh来对生成的动态页面进行托管，可长期使用下来我发现gh pages存在一些问题：</p>
+<ol>
+<li>github pages会对绑定的域名进行cname验证，而Cloudflare默认将主域名的CNAME拉平成A解析，这导致我的域名一周多了还没有通过验证</li>
+<li>Github Pages默认给每个域名申请免费的SSL证书，而我的一个域名出现了SSL证书出错的情况😓，最后也没排查出是域名还是gh pages的问题</li>
+<li>可能会有DNS污染导致github.io无法访问</li>
+<li>不支持PHP，导致我原先的一些脚本无法使用</li>
+</ol>
+<p>为了解决这些问题，我在知乎游了一圈，发现了一个宝藏部署服务：<a class="link" href="https://vercel.com"  target="_blank" rel="noopener"
+    ><strong>Vercel</strong></a></p>
+<p><img src="/p/hugo-blog/vercel.png"
+	width="1374"
+	height="856"
+	srcset="/p/hugo-blog/vercel_huac5a9d8ac0d4ca457887b47ebb5011b0_75885_480x0_resize_box_3.png 480w, /p/hugo-blog/vercel_huac5a9d8ac0d4ca457887b47ebb5011b0_75885_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Vercel主页"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="385px"
+	
+></p>
+<p>Vercel有以下优点：</p>
+<ol>
+<li>
+<p>访问速度比Github Pages快</p>
+</li>
+<li>
+<p>比Github Pages稳定</p>
+</li>
+<li>
+<p>自带SSL证书</p>
+</li>
+<li>
+<p>支持将域名DNS服务器迁移至Vercel</p>
+</li>
+</ol>
+<p>放一张Github Pages与Vercel速度对比图（左：Gh Pages | 右：vercel）
+<img src="/p/hugo-blog/speed-compair.png"
+	width="1514"
+	height="577"
+	srcset="/p/hugo-blog/speed-compair_hu505af44e4305f8cbda9781a8e69602f7_110930_480x0_resize_box_3.png 480w, /p/hugo-blog/speed-compair_hu505af44e4305f8cbda9781a8e69602f7_110930_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Speed Compair"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="262"
+		data-flex-basis="629px"
+	
+></p>
+<blockquote>
+<p>数据、地图来自 <a class="link" href="https://tool.chinaz.com/speedtest/"  target="_blank" rel="noopener"
+    >站长工具 &gt; 国内网站测速</a></p>
+</blockquote>
+<p>Vercel 比 GhPages 绿多了（逃</p>
+<h2 id="一准备工作">一、准备工作</h2>
+<h3 id="11-安装hugo">1.1 安装Hugo</h3>
+<blockquote>
+<p>本文仅展示使用Windows安装Hugo</p>
+<p>本教程中使用 <a class="link" href="https://scoop.sh/"  target="_blank" rel="noopener"
+    ><strong>scoop</strong>软件包管理器</a> 安装</p>
+<p>其余方法大同小异，请自行使用搜索引擎搜索</p>
+<p>安装scoop，请看这篇文章：<a class="link" href="/p/install-scoop/" >Scoop - 一款强大的Windows包管理工具</a></p>
+</blockquote>
+<p><code>win</code> + <code>r</code> 打开运行窗口</p>
+<p><img src="/p/hugo-blog/run-windows.png"
+	width="399"
+	height="230"
+	srcset="/p/hugo-blog/run-windows_huca9e951f8357639a92c08fc67d065ef4_11585_480x0_resize_box_3.png 480w, /p/hugo-blog/run-windows_huca9e951f8357639a92c08fc67d065ef4_11585_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="运行"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="173"
+		data-flex-basis="416px"
+	
+></p>
+<p>输入<code>Powershell</code></p>
+<p>在打开的窗口中输入</p>
+<p><code>scoop install hugo</code></p>
+<p>或者用以下方式安装扩展版本</p>
+<p><code>scoop install hugo-extended</code></p>
+<p>当控制台显示<code><span style="color:green"><b>&lsquo;hugo&rsquo; (0.92.2) was installed successfully!</b></span></code>时代表安装已完成</p>
+<blockquote>
+<p>若选择安装拓展版本，则当显示<code><span style="color:green"><b>&lsquo;hugo&rsquo; (0.92.2) was installed successfully!</b></span></code>时代表安装已完成</p>
+</blockquote>
+<blockquote>
+<p>括号内版本号以最新版本为准</p>
+</blockquote>
+<h3 id="12-创建站点">1.2 创建站点</h3>
+<h4 id="121-初始化站点">1.2.1 初始化站点</h4>
+<p>在控制台中输入<code>hugo new site 路径</code>新建一个站点</p>
+<p>如<code>hugo new site E:\myblog</code></p>
+<p>这个命令将在E盘中创建一个名为myblog的目录并在此中创建一个新的hugo站点</p>
+<h4 id="122-安装主题">1.2.2 安装主题</h4>
+<p>由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题</p>
+<p>在本文中选择从hexo移植的<a class="link" href="https://github.com/elkan1788/hugo-theme-next"  target="_blank" rel="noopener"
+    >Next主题</a></p>
+<p>进入站点根目录后，使用git获取主题</p>
+<p><code>git clone https://github.com/elkan1788/hugo-theme-next.git themes/hugo-theme-next</code></p>
+<p>复制站点根目录/theme/hugo-theme-next/exampleSite中的文件并粘贴至站点根目录后覆盖</p>
+<p>运行<code>hugo server</code></p>
+<p>恭喜你，你的hugo博客已成功运行</p>
+<h4 id="123-自定义博客">1.2.3 自定义博客</h4>
+<p>待完成&hellip;..</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/minecraft-server-on-linux-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/minecraft-server-on-linux-1/done.b3a71833ca461965be1917e43bb34ba2_hucedda61d3d9d66978b7043cd2dc339e8_484755_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 在Linux上搭建MC服务器（一）"
+                        data-key="minecraft-Server-on-Linux-1" 
+                        data-hash="md5-s6cYM8pGGWW&#43;GRfkO7NLog==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Linux上搭建MC服务器（一）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/minecraft-server-on-linux-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/minecraft-server-on-linux-1/done.b3a71833ca461965be1917e43bb34ba2_hucedda61d3d9d66978b7043cd2dc339e8_484755_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 在Linux上搭建MC服务器（一）"
+                        data-key="minecraft-Server-on-Linux-1" 
+                        data-hash="md5-s6cYM8pGGWW&#43;GRfkO7NLog==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Linux上搭建MC服务器（一）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/get-bilibili-album/">
+        
+        
+            <div class="article-image">
+                <img src="/p/get-bilibili-album/banner.9f77cf143be113ebb954b096fd24f088_hufe074a0d0401dbaceb5582eac69e6765_380970_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 获取B站视频封面"
+                        data-key="get-bilibili-album" 
+                        data-hash="md5-n3fPFDvhE&#43;u5VLCW/STwiA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">获取B站视频封面</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/dell-poweredge-r720-review/">
+        
+        
+            <div class="article-image">
+                <img src="/p/dell-poweredge-r720-review/photo-3.4c7e456962c46820f22ceb64283f7d68_hu00d2e5b14078aa9ebefd76a0389cc3c8_95018_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器"
+                        data-key="dell-poweredge-r720-review" 
+                        data-hash="md5-TH5FaWLEaCDyLOtkKD99aA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/qqbot-dev-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/qqbot-dev-1/banner.f1a9de7e23c403edfb70aa9c46334a67_hu28c59544680010fae30152def9654cc9_242684_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post cqhttp-go - 便捷开发自己的QQ机器人（一）"
+                        data-key="qqbot-dev-1" 
+                        data-hash="md5-8anefiPEA&#43;37cKqcRjNKZw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">cqhttp-go - 便捷开发自己的QQ机器人（一）</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="ImJingLan/MyBlogCommets"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+  <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    </script>
+    <script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2020, 02, 11, 22, 00, 00)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = '小屋已安全在树上挂了' + currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    
+    setInterval(setTime, 1000);
+    </script>
+    <section class="copyright">
+        &copy; 
+        
+        2022 景蓝の小屋
+    </section>
+    
+    <section class="powerby">
+	<span id="htmer_time"></span><br>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">〇、前言</a>
+      <ol>
+        <li><a href="#01-我为什么选择hugo">0.1 我为什么选择Hugo</a></li>
+        <li><a href="#02-网页托管">0.2 网页托管</a></li>
+      </ol>
+    </li>
+    <li><a href="#一准备工作">一、准备工作</a>
+      <ol>
+        <li><a href="#11-安装hugo">1.1 安装Hugo</a></li>
+        <li><a href="#12-创建站点">1.2 创建站点</a>
+          <ol>
+            <li><a href="#121-初始化站点">1.2.1 初始化站点</a></li>
+            <li><a href="#122-安装主题">1.2.2 安装主题</a></li>
+            <li><a href="#123-自定义博客">1.2.3 自定义博客</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开箱 on 景蓝の小屋</title>
+    <link>https://yurik.cafe/categories/%E5%BC%80%E7%AE%B1/</link>
+    <description>Recent content in 开箱 on 景蓝の小屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/categories/%E5%BC%80%E7%AE%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iPod Classic 上手 :  优雅永不过时</title>
+      <link>https://yurik.cafe/p/ipod-classic-review/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yurik.cafe/p/ipod-classic-review/</guid>
+      <description>这篇文章是一篇补档，由于博客系统的更换，原文已丢失
+引言 iPod Classic</description>
+    </item>
+    
+    <item>
+      <title>戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</title>
+      <link>https://yurik.cafe/p/dell-poweredge-r720-review/</link>
+      <pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yurik.cafe/p/dell-poweredge-r720-review/</guid>
+      <description>假期咯，是时候折腾一些新玩意啦！
+假期开始的时候在一个同学家玩（下面叫他叫兽），突然有一天他说：“再过几周我想和你研究一下怎么写网页（HTML），顺便学学怎么搭建服务器。”
+“服务器嘛，你自己用一台电脑开就好了。”
+但我真的想要一台服务器啊QwQ
+回到家我越想越睡不着，越想越睡不着
+于是我
+开箱 U1S1，这玩意是真的沉。顺丰小哥推着一个推车帮我推上来的，辛苦了 Orz
+顺丰小哥：你买了什么啊，这么沉？
+商家发的真的结实，除了泡沫外顶上还有一层防摔垫
+（由于没有图，就不放了QWQ，大家看看上面的说说吧
+iDRAC YYDS？ 得益于戴尔强大的iDRAC助力，使安装系统变成了一件 极其容易 的事
+—— 景蓝Yurik
+这是我问云资后得出的初结论
+真的吗？
+这件事可能对于一台新的Dell服务器来说，易如反掌，但对于这样一台二手服务器，却花费了我和云资一个下午
+首先，服务器需要在原先网口的基础上再连接iDRAC的网口（也就是两根网线）
+我的解决方案是PDD 58元的 水星5口全千兆交换机
+一开始，iDrac的默认地址一直无法连接(https)
+重置之后Edge浏览器便提示
+使用不受支持的协议
+ERR_SSL_VERSION_OR_CIPHER_MISMATCH
+无论是Chrome Firefox 还是 Edge 即使进入Windows设置支持SSL 3.0 后仍于事无补
+最后解决方案是使用Edge的IE模式访问（没想到IE还是蛮有用的）
+点亮 既然进入的iDRAC，我们就启动虚拟控制台吧
+点击 虚拟介质-&amp;gt;连接虚拟介质
+等待连接后点 虚拟介质-&amp;gt;映射CD/DVD，选择 ISO镜像，选择系统镜像
+选择 下次引导-&amp;gt;虚拟CD/DVD/ISO
+电源-&amp;gt;系统关机后再开机（冷引导）
+重启后就和正常安装系统一样了
+我安装了Proxmox Virtual Environment ( PVE ),这样可以在一台设备上跑多个系统，ALL IN ONE YYDS!
+截图时候还在装着Centos 用来跑 Rimetown 的 主要服务
+后来还装了一个OpenMediaVault来做Nas
+注意 二手服务器到了之后一定要去BIOS里面重置一下iDRAC设置，并且最好不要让iDRAC使用DHCP获取IP，自己指定一个会方便很多
+购买服务器后的部分问题 &amp;amp; 可能有用的解决方案 风扇开机后一直全功率运行 进入BIOS里面的System BIOS Settings -&amp;gt; System Profile Settings 里面检查一下C1E有没有设置成Enabled</description>
+    </item>
+    
+  </channel>
+</rss>
