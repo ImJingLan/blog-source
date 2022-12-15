@@ -21,7 +21,6 @@ hasCJKLanguage: false
 permalinks:
     post: /p/:slug/
     page: /:slug/
-    tweet: /tweet/:slug/
 
 params:
     mainSections:
@@ -184,14 +183,6 @@ menu:
               ### For demonstration purpose, the home link will be open in a new tab
               newTab: false
               icon: home
-        - identifier: brithday
-          name: 生日倒计时
-          url: https://birthday-lan.lite.cafe/
-          weight: -98
-          params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: false
-              icon: cake
         - identifier: travelling
           name: 开往
           url: https://travellings.link
@@ -200,6 +191,23 @@ menu:
               ### For demonstration purpose, the home link will be open in a new tab
               newTab: false
               icon: train
+        - identifier: tweet
+          name: 日常碎碎念
+          url: https://tweet.yurik.cafe/
+          weight: -98
+          params:
+              ### For demonstration purpose, the home link will be open in a new tab
+              newTab: false
+              icon: twitter
+        - identifier: brithday
+          name: 生日倒计时
+          url: https://birthday-lan.lite.cafe/
+          weight: -97
+          params:
+              ### For demonstration purpose, the home link will be open in a new tab
+              newTab: false
+              icon: cake
+        
     social:
         - identifier: github
           name: GitHub
