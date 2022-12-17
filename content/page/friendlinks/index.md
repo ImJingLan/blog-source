@@ -1,12 +1,12 @@
 ---
 title: 友情链接
-slug: links
+slug: friend-links
 links:
 menu:
-    main: 
-        weight: -50
-        params:
-            icon: link
+  main:
+    weight: -50
+    params:
+      icon: link
 license: false
 toc: false
 readingTime: false
@@ -18,5 +18,38 @@ comments: false
 
 这里是友情链接页面
 
-| [<img src="https://2f07.misaka.pet/assets/images/jimmytian@1x.png" width="100px;"/><br /><sub><b>JimmyTian</b></sub>](https://www.twz.moe)|[<img src="https://gravatar.loli.net/avatar/828dd77feb4c4a650e43cf622cd74232?s=500&d=mp" width="100px;"/><br /><sub><b>ZigZagK的博客</b></sub>](https://zigzagk.top/)
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [<img src="https://2f07.misaka.pet/assets/images/jimmytian@1x.png" width="100px;"/><br /><sub><b>JimmyTian</b></sub>](https://www.twz.moe) | [<img src="https://gravatar.loli.net/avatar/828dd77feb4c4a650e43cf622cd74232?s=500&d=mp" width="100px;"/><br /><sub><b>ZigZagK 的博客</b></sub>](https://zigzagk.top/) | [<img src="https://up.imold.wang/2020/10/20201024155226502.png" width="100px;"/><br /><sub><b>Geekshine</b></sub>](https://imold.wang/) |
+| :----------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------- |
+
+## 如果你想添加友链，可以看看下面
+
+如果你想加入友链，请满足这些要求
+
+#### 1. 您的网页应满足：
+
+- 愿为开放的网络做出贡献（如乐于分享知识经验等）；
+- 没有违法以及影响体验的内容（如侵入式广告等）；
+- 正常更新维护中（国内无法正常访问会被移除）；
+- 启用 Https
+- 已将本站点加入您的友链 或 本站点主动添加友链
+
+#### 2. 如何加入
+
+到友链仓库提[Issues](https://github.com/ImJingLan/FriendLink/issues)吧
+
+#### 3.友链多久后添加
+
+看我的时间吧，学校有空就过来清 Issues
+
+#### 4.我的站点信息
+
+| 信息       | 详情                                       |
+| ---------- | ------------------------------------------ |
+| 站点名称   | 景蓝の小屋                                 |
+| 站点简介   | 我是景蓝，喜欢 MC 短片，写代码······       |
+| 站点链接   | [https://lan.lt5d.cn](https://lan.lt5d.cn) |
+| 站点图标\* | [点我下载](./site-icon.png)</a>            |
+
+> 站点图标**版权及其他相关权利** 均归 **景蓝 & 本站点** 共同所有
+>
+> 未经允许，不得用作商业用途
