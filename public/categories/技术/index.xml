@@ -154,8 +154,7 @@ Q:为什么选择Scoop（Scoop有什么优点） 仍在维护
 在打开的窗口中输入
 1 iwr -useb get.scoop.sh | iex 或者
 1 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 如果您收到错误，您可能需要更改执行策略（即启用Powershell）
-1 Set-ExecutionPolicy RemoteSigned -scope CurrentUser 当Powershell显示&amp;quot;Scoop was installed successfully!&amp;ldquo;时，即代表你的scoop已安装完成
-二、Scoop的使用 待更新。。。。。。</description>
+1 Set-ExecutionPolicy RemoteSigned -scope CurrentUser 当Powershell显示&amp;quot;Scoop was installed successfully!&amp;ldquo;时，即代表你的scoop已安装完成</description>
     </item>
     
     <item>

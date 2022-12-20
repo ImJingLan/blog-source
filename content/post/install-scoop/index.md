@@ -64,7 +64,3 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.
 当Powershell显示"<span style="color:green"><b>Scoop was installed successfully!</b></span>"时，即代表你的scoop已安装完成
 
 ![Install-Scoop](install-scoop.png)
-
-## 二、Scoop的使用
-
-待更新。。。。。。

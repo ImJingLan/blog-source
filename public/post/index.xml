@@ -6,25 +6,7 @@
     <description>Recent content in Posts on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dictum开发日志 2022-12-25</title>
-      <link>https://yurik.cafe/p/dictum-dev-log-22-12-15/</link>
-      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://yurik.cafe/p/dictum-dev-log-22-12-15/</guid>
-      <description>Dictum 开发进度 [2022-12-15] 终于拾起几个月前的 Dictum 屎山代码了，在今日的更新中，我完善了 API 公开接口，伴随着 API 结构的大改
-同时，用户的基本安全功能也已经实现： [x] 修改密码 [x] 刷新 TOKEN
-得益于 Token 机制的引入，前端调用更加地便捷
-本次架构重构学习了kasuganosoras/Pigeon(就是本站的程序)，对于 Dashboard 与 Api 均采用了模块设计，方便后续代码维护
-本次更新大致内容如下
-规范变量命名 添加管理面板主页与账号信息页 实现密码修改与 Token 刷新 更改了 API 目录结构 下面是详细信息
-重要内容 API 更改 为适应后续功能（账户管理 API）开发与代码可维护性需要，我们修改了 API 结构，原先的语句 API 终结点由/api/?type=[type]变更为/api/dictums/?module=[type]，基本语法不变
-添加了用户账户管理 API 接口，终结点为/api/users//module=[module]，目前还在规范与完善中……
-管理面板 我们在本次更新中实现了管理面板的雏形，并完成了用户账户密码的自主修改与令牌手动刷新
-数据库 为适应后续功能（账户管理 API）开发与代码可维护性需要，我们更新了数据表的结构，在 users 表中添加 token(令牌) 与 reg_date(注册时间)，并计划在之后的更新中为用户及语句添加 UUID 项</description>
-    </item>
-    
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在Linux上搭建MC服务器（一）</title>
       <link>https://yurik.cafe/p/minecraft-server-on-linux-1/</link>
@@ -216,8 +198,7 @@ Q:为什么选择Scoop（Scoop有什么优点） 仍在维护
 在打开的窗口中输入
 1 iwr -useb get.scoop.sh | iex 或者
 1 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 如果您收到错误，您可能需要更改执行策略（即启用Powershell）
-1 Set-ExecutionPolicy RemoteSigned -scope CurrentUser 当Powershell显示&amp;quot;Scoop was installed successfully!&amp;ldquo;时，即代表你的scoop已安装完成
-二、Scoop的使用 待更新。。。。。。</description>
+1 Set-ExecutionPolicy RemoteSigned -scope CurrentUser 当Powershell显示&amp;quot;Scoop was installed successfully!&amp;ldquo;时，即代表你的scoop已安装完成</description>
     </item>
     
     <item>
