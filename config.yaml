@@ -19,233 +19,241 @@ DefaultContentLanguage: zh-cn
 hasCJKLanguage: false
 
 permalinks:
-    post: /p/:slug/
-    page: /:slug/
+  post: /p/:slug/
+  page: /:slug/
 
 params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon: https://cdn.rimeradio.top/2022/07/21/avatar.ico
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: https://cdn.rimeradio.top/2022/07/21/avatar.ico
 
-    footer:
-        since: 2022
-        customText:
+  footer:
+    since: 2022
+    customText:
 
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+  dateFormat:
+    published: Jan 02, 2006
+    lastUpdated: Jan 02, 2006 15:04 MST
 
-    sidebar:
-        emoji: 🍕
-        subtitle: 桃之夭夭，灼灼其华。
-        avatar:
-            enabled: true
-            local: false
-            src: https://cdn.rimeradio.top/2022/07/21/avatar@150.png
+  sidebar:
+    emoji: 🍕
+    subtitle: 桃之夭夭，灼灼其华。
+    avatar:
+      enabled: true
+      local: false
+      src: https://cdn.rimeradio.top/2022/07/21/avatar@150.png
 
-    article:
-        math: false
-        toc: true
-        readingTime: true
-        license:
-            enabled: true
-            default: 采用 CC BY-NC-SA 4.0 共享
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: true
+      default: 采用 CC BY-NC-SA 4.0 共享
 
-    comments:
-        enabled: true
-        provider: utterances
+  comments:
+    enabled: true
+    provider: utterances
 
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
+    disqusjs:
+      shortname:
+      apiUrl:
+      apiKey:
+      admin:
+      adminLabel:
 
-        utterances:
-            repo: ImJingLan/MyBlogCommets
-            issueTerm: pathname
-            label:
+    utterances:
+      repo: ImJingLan/MyBlogCommets
+      issueTerm: pathname
+      label:
 
-        remark42:
-            host:
-            site:
-            locale:
+    remark42:
+      host:
+      site:
+      locale:
 
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
+    vssue:
+      platform:
+      owner:
+      repo:
+      clientId:
+      clientSecret:
+      autoCreateIssue: false
 
-        # Waline client configuration see: https://waline.js.org/en/reference/client.html
-        waline:
-            serverURL:
-            lang:
-            visitor:
-            avatar:
-            emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
-            requiredMeta:
-                - name
-                - email
-                - url
-            placeholder:
-            locale:
-                admin: Admin
+    # Waline client configuration see: https://waline.js.org/en/reference/client.html
+    waline:
+      serverURL:
+      lang:
+      visitor:
+      avatar:
+      emoji:
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+      requiredMeta:
+        - name
+        - email
+        - url
+      placeholder:
+      locale:
+        admin: Admin
 
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
+    twikoo:
+      envId:
+      region:
+      path:
+      lang:
 
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+    # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+    cactus:
+      defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+      serverName: "cactus.chat"
+      siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
 
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
+    giscus:
+      repo:
+      repoID:
+      category:
+      categoryID:
+      mapping:
+      lightTheme:
+      darkTheme:
+      reactionsEnabled: 1
+      emitMetadata: 0
 
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
+    gitalk:
+      owner:
+      admin:
+      repo:
+      clientID:
+      clientSecret:
 
-        cusdis:
-            host:
-            id:
-    widgets:
-        enabled:
-            - search
-            - archives
-            - tag-cloud
+    cusdis:
+      host:
+      id:
+  widgets:
+    enabled:
+      - search
+      - archives
+      - tag-cloud
 
-        archives:
-            limit: 5
+    archives:
+      limit: 5
 
-        tagCloud:
-            limit: 10
+    tagCloud:
+      limit: 10
 
+  opengraph:
+    twitter:
+      # Your Twitter username
+      site: imjinglan
+
+      # Available values: summary, summary_large_image
+      card: summary_large_image
+
+  defaultImage:
     opengraph:
-        twitter:
-            # Your Twitter username
-            site: imjinglan
+      enabled: false
+      local: false
+      src:
 
-            # Available values: summary, summary_large_image
-            card: summary_large_image
+  colorScheme:
+    # Display toggle
+    toggle: true
 
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
+    # Available values: auto, light, dark
+    default: auto
 
-    colorScheme:
-        # Display toggle
-        toggle: true
-
-        # Available values: auto, light, dark
-        default: auto
-
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
 
 ### Custom menu
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main:
-        - identifier: home
-          name: 主页
-          url: /
-          weight: -100
-          params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: false
-              icon: home
-        - identifier: travelling
-          name: 开往
-          url: https://travellings.link
-          weight: -99
-          params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: false
-              icon: train
-        - identifier: tweet
-          name: 日常碎碎念
-          url: https://tweet.yurik.cafe/
-          weight: -98
-          params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: false
-              icon: twitter
-        - identifier: brithday
-          name: 生日倒计时
-          url: https://birthday-lan.lite.cafe/
-          weight: -97
-          params:
-              ### For demonstration purpose, the home link will be open in a new tab
-              newTab: false
-              icon: cake
-        
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/ImJingLan
-          params:
-              icon: brand-github
+  main:
+    - identifier: home
+      name: 主页
+      url: /
+      weight: -100
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: home
+    - identifier: travelling
+      name: 开往
+      url: https://travellings.link
+      weight: -99
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: train
+    - identifier: tweet
+      name: 日常碎碎念
+      url: https://tweet.yurik.cafe/
+      weight: -98
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: twitter
+    - identifier: brithday
+      name: 生日倒计时
+      url: https://birthday-lan.lite.cafe/
+      weight: -97
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: cake
+    - identifier: status
+      name: 服务器监视
+      url: https://stats.uptimerobot.com/pBNNEsz05n
+      weight: -96
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: hash
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com/ImJingLan
-          params:
-              icon: brand-twitter
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/ImJingLan
+      params:
+        icon: brand-github
+
+    - identifier: twitter
+      name: Twitter
+      url: https://twitter.com/ImJingLan
+      params:
+        icon: brand-twitter
 
 related:
-    includeNewer: true
-    threshold: 60
-    toLower: false
-    indices:
-        - name: tags
-          weight: 100
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
 
-        - name: categories
-          weight: 200
+    - name: categories
+      weight: 200
 
 markup:
-    goldmark:
-        renderer:
-            ## Set to true if you have HTML content inside Markdown
-            unsafe: true
-    tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
-    highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: true
-        lineNumbersInTable: true
-        tabWidth: 4
+  goldmark:
+    renderer:
+      ## Set to true if you have HTML content inside Markdown
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
