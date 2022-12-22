@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Office 365 E5 账号申请</title>
+      <link>https://yurik.cafe/p/create-an-office-e5-account/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://yurik.cafe/p/create-an-office-e5-account/</guid>
+      <description>申请教程 进入申请链接，点击立即加入，登录你的微软账户
+别忘了去个人资料添加自己的姓氏和名称，不然无法注册
+姓名添加后可能需要等待几个小时后才可以注册
+选择你的 国家/地区, 填写你的公司名称, 勾选同意协议
+接下来的几个页面自己看着选就可以啦
+在 设置 Microsoft 365 E5 沙盒 页面中选择 可配置沙盒
+填写 管理员用户名 、 域 和 管理员密码
+若域冲突请换用其它的域名称
+在弹出的页面中输入手机号并填写验证码
+稍安勿躁，等待一会儿后就申请成功了</description>
+    </item>
+    
     <item>
       <title>在Linux上搭建MC服务器（一）</title>
       <link>https://yurik.cafe/p/minecraft-server-on-linux-1/</link>
