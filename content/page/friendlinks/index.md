@@ -47,7 +47,7 @@ comments: false
 | 站点链接   | [https://yurik.cafe](https://yurik.cafe)                                                                     |
 | 站点图标\* | [https://cdn.rimeradio.top/avatars/avatar@800px.png](https://cdn.rimeradio.top/avatars/avatar@800px.png)</a> |
 
-> \*: 请尽量使用图标直链，也可以缓存的说（但请是不是的来看看 icon 是不是更改了 QWQ）
+> \*: 请尽量使用图标直链，也可以缓存的说（但请时不时的来看看 icon 是不是更改了 QWQ）
 >
 > 站点图标**版权及其他相关权利** 均归 **景蓝 & 本站点** 共同所有
 >
