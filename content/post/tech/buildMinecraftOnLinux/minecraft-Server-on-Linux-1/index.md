@@ -7,8 +7,6 @@ image: done.png
 categories:
   - 游戏
   - 技术
-
-license: CC BY-NC-SA 4.0
 ---
 
 接上文
