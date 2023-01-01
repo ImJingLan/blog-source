@@ -14,9 +14,7 @@ license: CC BY 4.0
 image: 715850d76b7db.png
 ---
 
-
-
- **原文链接**：PRIN BLOG - [又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API](https://printempw.github.io/minecraft-yggdrasil-api-third-party-implementation/)
+**原文链接**：PRIN BLOG - [又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API](https://printempw.github.io/minecraft-yggdrasil-api-third-party-implementation/)
 
 > **共享协议**：本文与原文采用相同的 [CC BY 4.0 协议](https://creativecommons.org/licenses/by/4.0/deed.zh)而非本博客默认的共享协议
 
@@ -27,8 +25,6 @@ image: 715850d76b7db.png
 > **注意**：本文不适合小白及问题解决能力弱的人群阅读。
 
 ~~感觉我明明好久没玩 MC 了，要玩也都是玩正版服务器，但是却一直在搞这些盗版服用的东西，我真是舍己为人造福大众普惠众生啊（不~~
-
-
 
 ## 一、服务器内置登录插件
 
@@ -49,15 +45,15 @@ image: 715850d76b7db.png
 
 ## 二、外置登录系统
 
-正是这样的需求催生了不少 Minecraft 的「外置登录插件」、「网页登录」等等软件（而且人气都挺高的），我随手在 MCBBS 上一搜就有很多类似的产品，用啥语言写的都有：*MadAuth、WebLogin、BeeLogin、WebRegister、冰棂登陆系统……*
+正是这样的需求催生了不少 Minecraft 的「外置登录插件」、「网页登录」等等软件（而且人气都挺高的），我随手在 MCBBS 上一搜就有很多类似的产品，用啥语言写的都有：_MadAuth、WebLogin、BeeLogin、WebRegister、冰棂登陆系统……_
 
 这些软件的原理就是将原本的登录鉴权这一步骤从游戏里抽出来了，将其放到启动器 or 网页上去，而服务端插件的功能就只剩下「查询数据库中用户的登录状态，决定是否放行」：
 
 ![原理图](Minecraft.jpg)
 
-*▲ 随手画的示意流程图，这里推荐一下 [ProcessOn](https://www.processon.com/) 这个在线作图网站，很好用 ;)*
+_▲ 随手画的示意流程图，这里推荐一下 [ProcessOn](https://www.processon.com/) 这个在线作图网站，很好用 ;)_
 
-> Printempw的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底
+> Printempw 的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底
 
 似乎也挺好的，不是吗？那我今天要说的「自行实现 Yggdrasil API」方法，和这些现成的方式有什么不一样呢？
 
@@ -111,15 +107,15 @@ authlib-injector 官方也提供了一个 Java 编写的后端 [yggdrasil-mock](
 
 ![网页管理](37e6d2778c77a.png)
 
-*▲在皮肤站「角色管理」中可添加多个角色*
+_▲ 在皮肤站「角色管理」中可添加多个角色_
 
 ![多角色选择](f8f9c076da123.png)
 
-*▲使用皮肤站的邮箱与密码登录后，配合 HMCL 实现多角色选择*
+_▲ 使用皮肤站的邮箱与密码登录后，配合 HMCL 实现多角色选择_
 
 ![游戏](715850d76b7db.png)
 
-▲游戏内的显示效果
+▲ 游戏内的显示效果
 
 ## 四、Yggdrasil API 踩坑记录
 

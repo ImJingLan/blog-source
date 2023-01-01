@@ -145,18 +145,18 @@
         <guid>https://yurik.cafe/p/minecraft-server-on-linux-1/</guid>
         <description>&lt;img src="https://yurik.cafe/p/minecraft-server-on-linux-1/done.png" alt="Featured image of post 在Linux上搭建MC服务器（一）" /&gt;&lt;p&gt;接上文&lt;/p&gt;
 &lt;p&gt;自从有了一台独立服务器后，可以玩的东西就多了&lt;/p&gt;
-&lt;p&gt;于是决定开一个我的世界Java服务器&lt;/p&gt;
+&lt;p&gt;于是决定开一个我的世界 Java 服务器&lt;/p&gt;
 &lt;p&gt;写一篇文章记录一下&lt;/p&gt;
 &lt;h2 id=&#34;一安装运行环境&#34;&gt;一、安装运行环境&lt;/h2&gt;
-&lt;p&gt;Minecraft Java版的服务器运行环境非常单纯，只需要一个Java就行&lt;/p&gt;
-&lt;p&gt;由于我想开一个1.16.5的服务器，所以Java版本选择了Java 17&lt;/p&gt;
+&lt;p&gt;Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行&lt;/p&gt;
+&lt;p&gt;由于我想开一个 1.16.5 的服务器，所以 Java 版本选择了 Java 17&lt;/p&gt;
 &lt;p&gt;安装过程参考的这篇文章《&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/chaosmoor/p/15897693.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux 安装 Java 17 - ChaosMoor&lt;/a&gt;》&lt;/p&gt;
 &lt;h2 id=&#34;二下载服务端&#34;&gt;二、下载服务端&lt;/h2&gt;
-&lt;p&gt;Minecraft服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit等&lt;/p&gt;
+&lt;p&gt;Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等&lt;/p&gt;
 &lt;p&gt;由于我希望保留原版的红石特性，所以选择了原版服务端&lt;/p&gt;
-&lt;p&gt;对于最新版本的Minecraft服务器，可以前往&lt;a class=&#34;link&#34; href=&#34;https://www.minecraft.net/download/server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Minecraft.net&lt;/a&gt;下载jar文件&lt;/p&gt;
+&lt;p&gt;对于最新版本的 Minecraft 服务器，可以前往&lt;a class=&#34;link&#34; href=&#34;https://www.minecraft.net/download/server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Minecraft.net&lt;/a&gt;下载 jar 文件&lt;/p&gt;
 &lt;p&gt;如果你想获取特定版本的服务端文件，可以访问&lt;a class=&#34;link&#34; href=&#34;https://minecraft.fandom.com/wiki/Minecraft_Wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Minecraft Wiki&lt;/a&gt;搜索对应版本页面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/minecraft-server-on-linux-1/wiki.png&#34;
@@ -173,10 +173,10 @@
 		data-flex-basis=&#34;98px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;▲ Wiki界面&lt;/p&gt;
+&lt;p&gt;▲ Wiki 界面&lt;/p&gt;
 &lt;p&gt;Download(下载) -&amp;gt; Server(服务端)下载服务端&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;color:red !important&#34;&gt;&lt;b&gt;注意，不开玩笑！&lt;/b&gt;&lt;/span&gt;：千万不要误点括号后的(.json)文件，或错选Obfuscation maps(混淆映射表)中的Server(服务器)选项&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color:red !important&#34;&gt;&lt;b&gt;注意，不开玩笑！&lt;/b&gt;&lt;/span&gt;：千万不要误点括号后的(.json)文件，或错选 Obfuscation maps(混淆映射表)中的 Server(服务器)选项&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;三运行服务器&#34;&gt;三、运行服务器&lt;/h2&gt;
 &lt;p&gt;进入终端&lt;/p&gt;
@@ -199,9 +199,9 @@
 		data-flex-basis=&#34;372px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;▲ 使用WinSCP上传&lt;/p&gt;
+&lt;p&gt;▲ 使用 WinSCP 上传&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我在这里将服务端命名为server.jar&lt;/p&gt;
+&lt;p&gt;我在这里将服务端命名为 server.jar&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;修改文件权限&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chmod 744 &amp;lt;服务端文件名&amp;gt;.jar&lt;/code&gt;&lt;/p&gt;
@@ -223,9 +223,9 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;▲ 终端报错了&lt;/p&gt;
 &lt;p&gt;怎么回事，闪退啦?&lt;/p&gt;
-&lt;p&gt;查了下翻译软件，发现是要你同意Eula文件&lt;/p&gt;
+&lt;p&gt;查了下翻译软件，发现是要你同意 Eula 文件&lt;/p&gt;
 &lt;p&gt;做法很简单&lt;/p&gt;
-&lt;p&gt;用文本编辑器将eula.txt中最后一行&lt;code&gt;eula=false&lt;/code&gt;修改为&lt;code&gt;eula=true&lt;/code&gt;再次运行即可&lt;/p&gt;
+&lt;p&gt;用文本编辑器将 eula.txt 中最后一行&lt;code&gt;eula=false&lt;/code&gt;修改为&lt;code&gt;eula=true&lt;/code&gt;再次运行即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/minecraft-server-on-linux-1/eula-true.png&#34;
 	width=&#34;680&#34;
 	height=&#34;131&#34;
@@ -240,9 +240,9 @@
 		data-flex-basis=&#34;1245px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;▲ EULA.TXT修改后&lt;/p&gt;
+&lt;p&gt;▲ EULA.TXT 修改后&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;color:green !important&#34;&gt;&lt;b&gt;记住这点更好&lt;/b&gt;&lt;/span&gt;：当你将eula改为&lt;strong&gt;true&lt;/strong&gt;后，即代表你同意了《&lt;a class=&#34;link&#34; href=&#34;https://account.mojang.com/documents/minecraft_eula&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;span style=&#34;color:green !important&#34;&gt;&lt;b&gt;记住这点更好&lt;/b&gt;&lt;/span&gt;：当你将 eula 改为&lt;strong&gt;true&lt;/strong&gt;后，即代表你同意了《&lt;a class=&#34;link&#34; href=&#34;https://account.mojang.com/documents/minecraft_eula&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MINECRAFT 最终用户许可协议&lt;/a&gt;》, 因此你最好详细阅读一下&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;四服务器配置&#34;&gt;四、服务器配置&lt;/h2&gt;
@@ -394,9 +394,9 @@
         
         <guid>https://yurik.cafe/p/get-bilibili-album/</guid>
         <description>&lt;img src="https://yurik.cafe/p/get-bilibili-album/banner.png" alt="Featured image of post 获取B站视频封面" /&gt;&lt;h2 id=&#34;前言&#34;&gt;〇、前言&lt;/h2&gt;
-&lt;p&gt;最近重装了电脑，然后电脑上整理的iTunes资料库全没了。&lt;del&gt;草&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;在整理的时候发现有一些歌曲是直接从B站上下载下来的，专辑封面也是从B站封面扒的，全没了（呜呜呜&lt;/p&gt;
-&lt;p&gt;虽然在Bing上一搜就有很多封面提取的网站&lt;/p&gt;
+&lt;p&gt;最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。&lt;del&gt;草&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;在整理的时候发现有一些歌曲是直接从 B 站上下载下来的，专辑封面也是从 B 站封面扒的，全没了（呜呜呜&lt;/p&gt;
+&lt;p&gt;虽然在 Bing 上一搜就有很多封面提取的网站&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/get-bilibili-album/1.webp&#34;
 	width=&#34;649&#34;
 	height=&#34;108&#34;
@@ -439,10 +439,10 @@
 		data-flex-basis=&#34;1368px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;但是秉承着&lt;strong&gt;用轮子不如造轮子&lt;/strong&gt;的理论(&lt;del&gt;其实就是闲着没事&lt;/del&gt;)，我决定自己用Python写一个提取封面的工具&lt;/p&gt;
+&lt;p&gt;但是秉承着&lt;strong&gt;用轮子不如造轮子&lt;/strong&gt;的理论(&lt;del&gt;其实就是闲着没事&lt;/del&gt;)，我决定自己用 Python 写一个提取封面的工具&lt;/p&gt;
 &lt;h2 id=&#34;一准备工作&#34;&gt;一、准备工作&lt;/h2&gt;
-&lt;p&gt;既然是造轮子，那当然要先看B站的API&lt;/p&gt;
-&lt;p&gt;搜了一下，发现网上公认的哔哩哔哩官方API文档地址是：&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.bilibili.cn/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;既然是造轮子，那当然要先看 B 站的 API&lt;/p&gt;
+&lt;p&gt;搜了一下，发现网上公认的哔哩哔哩官方 API 文档地址是：&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.bilibili.cn/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://docs.bilibili.cn/wiki&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;但是&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/get-bilibili-album/4.webp&#34;
@@ -470,7 +470,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在Github上面找到的野生文档 &lt;a class=&#34;link&#34; href=&#34;https://github.com/SocialSisterYi/bilibili-API-collect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;在 Github 上面找到的野生文档 &lt;a class=&#34;link&#34; href=&#34;https://github.com/SocialSisterYi/bilibili-API-collect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;SocialSisterYi/bilibili-API-collect&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;API&lt;/p&gt;
@@ -1020,7 +1020,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;有用的就是pic字段了&lt;img src=&#34;https://yurik.cafe/p/get-bilibili-album/pic.webp&#34;
+&lt;/div&gt;&lt;p&gt;有用的就是 pic 字段了&lt;img src=&#34;https://yurik.cafe/p/get-bilibili-album/pic.webp&#34;
 	width=&#34;674&#34;
 	height=&#34;27&#34;
 	srcset=&#34;https://yurik.cafe/p/get-bilibili-album/pic_hu3141977f31c1fcf94573ce712c6cefd7_4404_480x0_resize_q75_h2_box_2.webp 480w, https://yurik.cafe/p/get-bilibili-album/pic_hu3141977f31c1fcf94573ce712c6cefd7_4404_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
@@ -1035,7 +1035,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;那么，开搞&lt;/p&gt;
-&lt;h2 id=&#34;二python实现&#34;&gt;二、Python实现&lt;/h2&gt;
+&lt;h2 id=&#34;二python-实现&#34;&gt;二、Python 实现&lt;/h2&gt;
 &lt;p&gt;随便写了个代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1083,7 +1083,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;输出成功&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;PS:《噬光者与发光体的爱情》真的好听！！！！Meumy我吹爆！！！！&lt;/p&gt;
+&lt;p&gt;PS:《噬光者与发光体的爱情》真的好听！！！！Meumy 我吹爆！！！！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;接下来写输出&#34;&gt;接下来写输出&lt;/h3&gt;
 &lt;h4 id=&#34;先写了封面文件夹检测&#34;&gt;先写了封面文件夹检测&lt;/h4&gt;
@@ -1099,7 +1099,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;cover&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;用requests写了图片保存的函数&#34;&gt;用requests写了图片保存的函数&lt;/h4&gt;
+&lt;/div&gt;&lt;h4 id=&#34;用-requests-写了图片保存的函数&#34;&gt;用 requests 写了图片保存的函数&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1263,7 +1263,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;找不到该BV号&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;CODE:&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;code&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; MESSAGE:&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;message&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;这不是一个合法的BV号, BV号应为12位字符串&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1292,7 +1292,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;vid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;视频BV号:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#获取视频BV号&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;1&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bvcheck&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
@@ -1320,7 +1320,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;自己加了AV号与BV号的判断，如果是AV号就把AV转换成BV再用BV手法去找封面&lt;/p&gt;
+&lt;p&gt;自己加了 AV 号与 BV 号的判断，如果是 AV 号就把 AV 转换成 BV 再用 BV 手法去找封面&lt;/p&gt;
 &lt;p&gt;然后根据选择的类型进行保存&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;运行一下&#34;&gt;运行一下&lt;/h4&gt;
@@ -1341,7 +1341,7 @@
 &lt;p&gt;&lt;strong&gt;Done！&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;四后记&#34;&gt;四、后记&lt;/h2&gt;
 &lt;p&gt;这玩意没啥好说的。。。&lt;/p&gt;
-&lt;p&gt;唯一的缺点就是没有写AV号的获取和BV号格式检测吧。。&lt;/p&gt;
+&lt;p&gt;唯一的缺点就是没有写 AV 号的获取和 BV 号格式检测吧。。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1353,7 +1353,7 @@
         <description>&lt;img src="https://yurik.cafe/p/dell-poweredge-r720-review/photo-3.webp" alt="Featured image of post 戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器" /&gt;&lt;p&gt;假期咯，是时候折腾一些新玩意啦！&lt;/p&gt;
 &lt;p&gt;假期开始的时候在一个同学家玩（下面叫他叫兽），突然有一天他说：“再过几周我想和你研究一下怎么写网页（HTML），顺便学学怎么搭建服务器。”&lt;/p&gt;
 &lt;p&gt;“服务器嘛，你自己用一台电脑开就好了。”&lt;/p&gt;
-&lt;p&gt;但我真的想要一台服务器啊QwQ&lt;/p&gt;
+&lt;p&gt;但我真的想要一台服务器啊 QwQ&lt;/p&gt;
 &lt;p&gt;回到家我越想越睡不着，越想越睡不着&lt;/p&gt;
 &lt;p&gt;于是我&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/dell-poweredge-r720-review/qzone.webp&#34;
@@ -1376,17 +1376,17 @@
 &lt;p&gt;顺丰小哥：你买了什么啊，这么沉？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;商家发的真的结实，除了泡沫外顶上还有一层防摔垫&lt;/p&gt;
-&lt;p&gt;（由于没有图，就不放了QWQ，大家看看上面的说说吧&lt;/p&gt;
+&lt;p&gt;（由于没有图，就不放了 QWQ，大家看看上面的说说吧&lt;/p&gt;
 &lt;h2 id=&#34;idrac-yyds&#34;&gt;iDRAC YYDS？&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;得益于戴尔强大的iDRAC助力，使安装系统变成了一件 &lt;strong&gt;极其容易&lt;/strong&gt; 的事&lt;/p&gt;
-&lt;p&gt;—— 景蓝Yurik&lt;/p&gt;
+&lt;p&gt;得益于戴尔强大的 iDRAC 助力，使安装系统变成了一件 &lt;strong&gt;极其容易&lt;/strong&gt; 的事&lt;/p&gt;
+&lt;p&gt;—— 景蓝 Yurik&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这是我问云资后得出的初结论&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;真的吗？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这件事可能对于一台新的Dell服务器来说，易如反掌，但对于这样一台二手服务器，却花费了我和云资一个下午&lt;/p&gt;
-&lt;p&gt;首先，服务器需要在原先网口的基础上再连接iDRAC的网口（也就是两根网线）&lt;/p&gt;
-&lt;p&gt;我的解决方案是PDD 58元的 水星5口全千兆交换机&lt;/p&gt;
+&lt;p&gt;这件事可能对于一台新的 Dell 服务器来说，易如反掌，但对于这样一台二手服务器，却花费了我和云资一个下午&lt;/p&gt;
+&lt;p&gt;首先，服务器需要在原先网口的基础上再连接 iDRAC 的网口（也就是两根网线）&lt;/p&gt;
+&lt;p&gt;我的解决方案是 PDD 58 元的 水星 5 口全千兆交换机&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/dell-poweredge-r720-review/switch.webp&#34;
 	width=&#34;1762&#34;
 	height=&#34;810&#34;
@@ -1401,16 +1401,16 @@
 		data-flex-basis=&#34;522px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;一开始，iDrac的默认地址一直无法连接(https)&lt;/p&gt;
-&lt;p&gt;重置之后Edge浏览器便提示&lt;/p&gt;
+&lt;p&gt;一开始，iDrac 的默认地址一直无法连接(https)&lt;/p&gt;
+&lt;p&gt;重置之后 Edge 浏览器便提示&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;使用不受支持的协议&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ERR_SSL_VERSION_OR_CIPHER_MISMATCH&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;无论是Chrome Firefox 还是 Edge 即使进入Windows设置支持SSL 3.0 后仍于事无补&lt;/p&gt;
-&lt;p&gt;最后解决方案是使用Edge的IE模式访问（没想到IE还是蛮有用的）&lt;/p&gt;
+&lt;p&gt;无论是 Chrome Firefox 还是 Edge 即使进入 Windows 设置支持 SSL 3.0 后仍于事无补&lt;/p&gt;
+&lt;p&gt;最后解决方案是使用 Edge 的 IE 模式访问（没想到 IE 还是蛮有用的）&lt;/p&gt;
 &lt;h2 id=&#34;点亮&#34;&gt;点亮&lt;/h2&gt;
-&lt;p&gt;既然进入的iDRAC，我们就启动虚拟控制台吧&lt;/p&gt;
+&lt;p&gt;既然进入的 iDRAC，我们就启动虚拟控制台吧&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/dell-poweredge-r720-review/idrac-1.webp&#34;
 	width=&#34;823&#34;
 	height=&#34;284&#34;
@@ -1440,11 +1440,11 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;点击 虚拟介质-&amp;gt;连接虚拟介质&lt;/p&gt;
-&lt;p&gt;等待连接后点 虚拟介质-&amp;gt;映射CD/DVD，选择 ISO镜像，选择系统镜像&lt;/p&gt;
-&lt;p&gt;选择 下次引导-&amp;gt;虚拟CD/DVD/ISO&lt;/p&gt;
+&lt;p&gt;等待连接后点 虚拟介质-&amp;gt;映射 CD/DVD，选择 ISO 镜像，选择系统镜像&lt;/p&gt;
+&lt;p&gt;选择 下次引导-&amp;gt;虚拟 CD/DVD/ISO&lt;/p&gt;
 &lt;p&gt;电源-&amp;gt;系统关机后再开机（冷引导）&lt;/p&gt;
 &lt;p&gt;重启后就和正常安装系统一样了&lt;/p&gt;
-&lt;p&gt;我安装了Proxmox Virtual Environment ( PVE ),这样可以在一台设备上跑多个系统，ALL IN ONE YYDS!&lt;/p&gt;
+&lt;p&gt;我安装了 Proxmox Virtual Environment ( PVE ),这样可以在一台设备上跑多个系统，ALL IN ONE YYDS!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/dell-poweredge-r720-review/PVE.webp&#34;
 	width=&#34;1417&#34;
 	height=&#34;834&#34;
@@ -1460,19 +1460,19 @@
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;截图时候还在装着Centos 用来跑 Rimetown 的 主要服务&lt;/p&gt;
-&lt;p&gt;后来还装了一个OpenMediaVault来做Nas&lt;/p&gt;
+&lt;p&gt;截图时候还在装着 Centos 用来跑 Rimetown 的 主要服务&lt;/p&gt;
+&lt;p&gt;后来还装了一个 OpenMediaVault 来做 Nas&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
-&lt;p&gt;二手服务器到了之后一定要去BIOS里面重置一下iDRAC设置，并且最好不要让iDRAC使用DHCP获取IP，自己指定一个会方便很多&lt;/p&gt;
+&lt;p&gt;二手服务器到了之后一定要去 BIOS 里面重置一下 iDRAC 设置，并且最好不要让 iDRAC 使用 DHCP 获取 IP，自己指定一个会方便很多&lt;/p&gt;
 &lt;h2 id=&#34;购买服务器后的部分问题--可能有用的解决方案&#34;&gt;购买服务器后的部分问题 &amp;amp; 可能有用的解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;风扇开机后一直全功率运行&#34;&gt;风扇开机后一直全功率运行&lt;/h3&gt;
-&lt;p&gt;进入BIOS里面的System BIOS Settings -&amp;gt; System Profile Settings 里面检查一下C1E有没有设置成Enabled&lt;/p&gt;
-&lt;p&gt;设置成Enabled后重启，说不定就好了&lt;/p&gt;
+&lt;p&gt;进入 BIOS 里面的 System BIOS Settings -&amp;gt; System Profile Settings 里面检查一下 C1E 有没有设置成 Enabled&lt;/p&gt;
+&lt;p&gt;设置成 Enabled 后重启，说不定就好了&lt;/p&gt;
 &lt;p&gt;实在不行就只能用&lt;a class=&#34;link&#34; href=&#34;https://github.com/cw1997/dell_fans_controller&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;dell_fans_controller (Windows 推荐)&lt;/a&gt; 或者 &lt;a class=&#34;link&#34; href=&#34;https://github.com/ipmitool/ipmitool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ipmitool (上手成本较高)&lt;/a&gt;来手动调速了，具体方法自行百度&lt;/p&gt;
-&lt;p&gt;别忘了开启主机的IPMI&lt;/p&gt;
+&lt;p&gt;别忘了开启主机的 IPMI&lt;/p&gt;
 &lt;h2 id=&#34;配置&#34;&gt;配置&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1511,17 +1511,17 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;小插曲&#34;&gt;小插曲&lt;/h2&gt;
-&lt;p&gt;我的配置单中是双路750W的电源，但是卖家发错成了双495W的电源了&lt;/p&gt;
-&lt;p&gt;我找完客服之后立马给我打电话联系我补发，原先的495W就送我了&lt;/p&gt;
+&lt;p&gt;我的配置单中是双路 750W 的电源，但是卖家发错成了双 495W 的电源了&lt;/p&gt;
+&lt;p&gt;我找完客服之后立马给我打电话联系我补发，原先的 495W 就送我了&lt;/p&gt;
 &lt;p&gt;商家真的蛮好的&lt;/p&gt;
 &lt;p&gt;但是我的博客里面就不打广告，不提店名啦&lt;/p&gt;
 &lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
 &lt;p&gt;这一套配置说不上好，只是我第一次捡服务器（洋垃圾）的尝试&lt;/p&gt;
 &lt;p&gt;谢谢你看了那么多 Orz&lt;/p&gt;
-&lt;p&gt;总的来说，戴尔的服务器还是十分优秀的，iDRAC简直就是服务器管理的神器！&lt;/p&gt;
+&lt;p&gt;总的来说，戴尔的服务器还是十分优秀的，iDRAC 简直就是服务器管理的神器！&lt;/p&gt;
 &lt;p&gt;就靠他陪伴我和即将开服的&lt;a class=&#34;link&#34; href=&#34;https://rimetown.net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Rime Town&lt;/a&gt; 度过未来的日子啦!&lt;/p&gt;
-&lt;p&gt;话说还是期待着换R730 或者 R740 的说&amp;hellip;&lt;/p&gt;
+&lt;p&gt;话说还是期待着换 R730 或者 R740 的说&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;晒图&#34;&gt;晒图&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/dell-poweredge-r720-review/photo-1.webp&#34;
 	width=&#34;1905&#34;
@@ -1589,26 +1589,27 @@
         <guid>https://yurik.cafe/p/qqbot-dev-1/</guid>
         <description>&lt;img src="https://yurik.cafe/p/qqbot-dev-1/banner.png" alt="Featured image of post cqhttp-go - 便捷开发自己的QQ机器人（一）" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;夏天到了，又到了暑假的季节，是时候学一点新新的技术术啦！&lt;/p&gt;
-&lt;p&gt;之前一直用的是酷Q作为机器人框架，可惜因为一些原因，酷Q关闭了自己的官网，原先的免费版也无法再次登录，于是我便打算自己写一个QQ机器人&lt;/p&gt;
+&lt;p&gt;之前一直用的是酷 Q 作为机器人框架，可惜因为一些原因，酷 Q 关闭了自己的官网，原先的免费版也无法再次登录，于是我便打算自己写一个 QQ 机器人&lt;/p&gt;
 &lt;p&gt;在互联网上一顿搜索过后，我找到了&lt;a class=&#34;link&#34; href=&#34;https://docs.go-cqhttp.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;go-cqhttp&lt;/a&gt;，一个QQ机器人框架&lt;/p&gt;
-&lt;p&gt;go-cqhttp支持&lt;code&gt;HTTP API&lt;/code&gt; 和 &lt;code&gt;HTTP POST多点上报&lt;/code&gt;，那么我们就可以用python + flask来制作一个最简单自动回复QQ机器人&lt;/p&gt;
+    &gt;go-cqhttp&lt;/a&gt;，一个 QQ 机器人框架&lt;/p&gt;
+&lt;p&gt;go-cqhttp 支持&lt;code&gt;HTTP API&lt;/code&gt; 和 &lt;code&gt;HTTP POST多点上报&lt;/code&gt;，那么我们就可以用 python + flask 来制作一个最简单自动回复 QQ 机器人&lt;/p&gt;
 &lt;p&gt;有意思的事情，即将发生&lt;/p&gt;
 &lt;h2 id=&#34;环境搭建&#34;&gt;环境搭建&lt;/h2&gt;
 &lt;p&gt;首先我们肯定要登录机器人账号&lt;/p&gt;
 &lt;p&gt;具体步骤请参考&lt;a class=&#34;link&#34; href=&#34;https://docs.go-cqhttp.org/guide/quick_start.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;基础教程&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后就是Python环境&lt;/p&gt;
-&lt;p&gt;使用pip安装以下库&lt;/p&gt;
+&lt;p&gt;然后就是 Python 环境&lt;/p&gt;
+&lt;p&gt;使用 pip 安装以下库&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;requests - 与go-cqhttp交互&lt;/p&gt;
+&lt;p&gt;requests - 与 go-cqhttp 交互&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;flask - 接受go-cqhttp上报信息&lt;/p&gt;
+&lt;p&gt;flask - 接受 go-cqhttp 上报信息&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这两个是基础库，其余根据自己代码的编写自行安装&lt;/p&gt;
+&lt;h2 id=&#34;start-开始&#34;&gt;Start 开始！&lt;/h2&gt;
 </description>
         </item>
         <item>
@@ -1723,15 +1724,15 @@
         <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
         
         <guid>https://yurik.cafe/p/install-scoop/</guid>
-        <description>&lt;img src="https://yurik.cafe/p/install-scoop/banner.png" alt="Featured image of post Scoop - 一款强大的Windows包管理工具" /&gt;&lt;h2 id=&#34;scoop是什么&#34;&gt;〇、Scoop是什么&lt;/h2&gt;
-&lt;p&gt;Scoop是一款在Windows上的包管理器&lt;/p&gt;
+        <description>&lt;img src="https://yurik.cafe/p/install-scoop/banner.png" alt="Featured image of post Scoop - 一款强大的Windows包管理工具" /&gt;&lt;h2 id=&#34;scoop-是什么&#34;&gt;〇、Scoop 是什么&lt;/h2&gt;
+&lt;p&gt;Scoop 是一款在 Windows 上的包管理器&lt;/p&gt;
 &lt;h3 id=&#34;q什么是包管理器&#34;&gt;Q：什么是包管理器？&lt;/h3&gt;
 &lt;p&gt;A：简单来说，“包管理器”（或“软件包管理器”）是一种工具，它允许用户在操作系统上安装、删除、升级、配置和管理软件包。软件包管理器可以是像“软件中心”这样的图形化应用，也可以是像 apt-get 或 pacman 这样的命令行工具。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;来自&lt;a class=&#34;link&#34; href=&#34;https://linux.cn/article-12713-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://linux.cn/article-12713-1.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;q为什么选择scoopscoop有什么优点&#34;&gt;Q:为什么选择Scoop（Scoop有什么优点）&lt;/h3&gt;
+&lt;h3 id=&#34;q为什么选择-scoopscoop-有什么优点&#34;&gt;Q:为什么选择 Scoop（Scoop 有什么优点）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;仍在维护&lt;/p&gt;
@@ -1740,7 +1741,7 @@
 &lt;p&gt;不依赖管理员权限&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;防止安装大量程序造成的PATH污染&lt;/p&gt;
+&lt;p&gt;防止安装大量程序造成的 PATH 污染&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;避免了安装和卸载程序的意外副作用&lt;/p&gt;
@@ -1754,9 +1755,9 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;翻译自&lt;a class=&#34;link&#34; href=&#34;https://github.com/ScoopInstaller/Scoop/blob/master/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Scoop的README文件&lt;/a&gt;&lt;/p&gt;
+    &gt;Scoop 的 README 文件&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;一安装scoop&#34;&gt;一、安装scoop&lt;/h2&gt;
+&lt;h2 id=&#34;一安装-scoop&#34;&gt;一、安装 scoop&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;win&lt;/code&gt; + &lt;code&gt;r&lt;/code&gt; 打开运行窗口&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/install-scoop/run-windows.png&#34;
 	width=&#34;399&#34;
@@ -1792,7 +1793,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;如果您收到错误，您可能需要更改执行策略（即启用Powershell）&lt;/p&gt;
+&lt;p&gt;如果您收到错误，您可能需要更改执行策略（即启用 Powershell）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1802,7 +1803,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;当Powershell显示&amp;quot;&lt;span style=&#34;color:green&#34;&gt;&lt;b&gt;Scoop was installed successfully!&lt;/b&gt;&lt;/span&gt;&amp;ldquo;时，即代表你的scoop已安装完成&lt;/p&gt;
+&lt;p&gt;当 Powershell 显示&amp;quot;&lt;span style=&#34;color:green&#34;&gt;&lt;b&gt;Scoop was installed successfully!&lt;/b&gt;&lt;/span&gt;&amp;ldquo;时，即代表你的 scoop 已安装完成&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/install-scoop/install-scoop.png&#34;
 	width=&#34;859&#34;
 	height=&#34;220&#34;
@@ -1826,18 +1827,18 @@
         
         <guid>https://yurik.cafe/p/hugo-blog/</guid>
         <description>&lt;img src="https://yurik.cafe/p/hugo-blog/banner.png" alt="Featured image of post 使用Hugo搭建个人博客" /&gt;&lt;h2 id=&#34;前言&#34;&gt;〇、前言&lt;/h2&gt;
-&lt;h3 id=&#34;01-我为什么选择hugo&#34;&gt;0.1 我为什么选择Hugo&lt;/h3&gt;
-&lt;p&gt;Hugo是一个使用&lt;strong&gt;Go&lt;/strong&gt;语言编写的静态网站生成器。
-长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的&lt;strong&gt;Typecho&lt;/strong&gt;系统，转而寻找静态博客系统。在尝试了&lt;strong&gt;Hexo&lt;/strong&gt;、&lt;strong&gt;Jekyll&lt;/strong&gt;后，我选择了&lt;strong&gt;Hugo&lt;/strong&gt;，原因首先是它支持Markdown语法，这使得我将文章从Typecho迁移至Hugo变得容易，其次是&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;strong&gt;Stack&lt;/strong&gt;&lt;/a&gt;主题仅适用于Hugo (搭建博客第一要领：好看)&lt;/p&gt;
+&lt;h3 id=&#34;01-我为什么选择-hugo&#34;&gt;0.1 我为什么选择 Hugo&lt;/h3&gt;
+&lt;p&gt;Hugo 是一个使用&lt;strong&gt;Go&lt;/strong&gt;语言编写的静态网站生成器。
+长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的&lt;strong&gt;Typecho&lt;/strong&gt;系统，转而寻找静态博客系统。在尝试了&lt;strong&gt;Hexo&lt;/strong&gt;、&lt;strong&gt;Jekyll&lt;/strong&gt;后，我选择了&lt;strong&gt;Hugo&lt;/strong&gt;，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Stack&lt;/strong&gt;&lt;/a&gt;主题仅适用于 Hugo (搭建博客第一要领：好看)&lt;/p&gt;
 &lt;h3 id=&#34;02-网页托管&#34;&gt;0.2 网页托管&lt;/h3&gt;
 &lt;p&gt;说起网页托管，大家第一想到的大概都是&lt;a class=&#34;link&#34; href=&#34;https://pages.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;strong&gt;Github Pages&lt;/strong&gt;&lt;/a&gt;吧，最初我也是使用gh来对生成的动态页面进行托管，可长期使用下来我发现gh pages存在一些问题：&lt;/p&gt;
+    &gt;&lt;strong&gt;Github Pages&lt;/strong&gt;&lt;/a&gt;吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;github pages会对绑定的域名进行cname验证，而Cloudflare默认将主域名的CNAME拉平成A解析，这导致我的域名一周多了还没有通过验证&lt;/li&gt;
-&lt;li&gt;Github Pages默认给每个域名申请免费的SSL证书，而我的一个域名出现了SSL证书出错的情况😓，最后也没排查出是域名还是gh pages的问题&lt;/li&gt;
-&lt;li&gt;可能会有DNS污染导致github.io无法访问&lt;/li&gt;
-&lt;li&gt;不支持PHP，导致我原先的一些脚本无法使用&lt;/li&gt;
+&lt;li&gt;github pages 会对绑定的域名进行 cname 验证，而 Cloudflare 默认将主域名的 CNAME 拉平成 A 解析，这导致我的域名一周多了还没有通过验证&lt;/li&gt;
+&lt;li&gt;Github Pages 默认给每个域名申请免费的 SSL 证书，而我的一个域名出现了 SSL 证书出错的情况 😓，最后也没排查出是域名还是 gh pages 的问题&lt;/li&gt;
+&lt;li&gt;可能会有 DNS 污染导致 github.io 无法访问&lt;/li&gt;
+&lt;li&gt;不支持 PHP，导致我原先的一些脚本无法使用&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;为了解决这些问题，我在知乎游了一圈，发现了一个宝藏部署服务：&lt;a class=&#34;link&#34; href=&#34;https://vercel.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Vercel&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1855,22 +1856,22 @@
 		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;Vercel有以下优点：&lt;/p&gt;
+&lt;p&gt;Vercel 有以下优点：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;访问速度比Github Pages快&lt;/p&gt;
+&lt;p&gt;访问速度比 Github Pages 快&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;比Github Pages稳定&lt;/p&gt;
+&lt;p&gt;比 Github Pages 稳定&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;自带SSL证书&lt;/p&gt;
+&lt;p&gt;自带 SSL 证书&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;支持将域名DNS服务器迁移至Vercel&lt;/p&gt;
+&lt;p&gt;支持将域名 DNS 服务器迁移至 Vercel&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;放一张Github Pages与Vercel速度对比图（左：Gh Pages | 右：vercel）
+&lt;p&gt;放一张 Github Pages 与 Vercel 速度对比图（左：Gh Pages | 右：vercel）
 &lt;img src=&#34;https://yurik.cafe/p/hugo-blog/speed-compair.png&#34;
 	width=&#34;1514&#34;
 	height=&#34;577&#34;
@@ -1891,13 +1892,13 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Vercel 比 GhPages 绿多了（逃&lt;/p&gt;
 &lt;h2 id=&#34;一准备工作&#34;&gt;一、准备工作&lt;/h2&gt;
-&lt;h3 id=&#34;11-安装hugo&#34;&gt;1.1 安装Hugo&lt;/h3&gt;
+&lt;h3 id=&#34;11-安装-hugo&#34;&gt;1.1 安装 Hugo&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本文仅展示使用Windows安装Hugo&lt;/p&gt;
+&lt;p&gt;本文仅展示使用 Windows 安装 Hugo&lt;/p&gt;
 &lt;p&gt;本教程中使用 &lt;a class=&#34;link&#34; href=&#34;https://scoop.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;scoop&lt;/strong&gt;软件包管理器&lt;/a&gt; 安装&lt;/p&gt;
 &lt;p&gt;其余方法大同小异，请自行使用搜索引擎搜索&lt;/p&gt;
-&lt;p&gt;安装scoop，请看这篇文章：&lt;a class=&#34;link&#34; href=&#34;https://yurik.cafe/p/install-scoop/&#34; &gt;Scoop - 一款强大的Windows包管理工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装 scoop，请看这篇文章：&lt;a class=&#34;link&#34; href=&#34;https://yurik.cafe/p/install-scoop/&#34; &gt;Scoop - 一款强大的 Windows 包管理工具&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;win&lt;/code&gt; + &lt;code&gt;r&lt;/code&gt; 打开运行窗口&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/hugo-blog/run-windows.png&#34;
@@ -1930,16 +1931,16 @@
 &lt;h4 id=&#34;121-初始化站点&#34;&gt;1.2.1 初始化站点&lt;/h4&gt;
 &lt;p&gt;在控制台中输入&lt;code&gt;hugo new site 路径&lt;/code&gt;新建一个站点&lt;/p&gt;
 &lt;p&gt;如&lt;code&gt;hugo new site E:\myblog&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;这个命令将在E盘中创建一个名为myblog的目录并在此中创建一个新的hugo站点&lt;/p&gt;
+&lt;p&gt;这个命令将在 E 盘中创建一个名为 myblog 的目录并在此中创建一个新的 hugo 站点&lt;/p&gt;
 &lt;h4 id=&#34;122-安装主题&#34;&gt;1.2.2 安装主题&lt;/h4&gt;
 &lt;p&gt;由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题&lt;/p&gt;
-&lt;p&gt;在本文中选择从hexo移植的&lt;a class=&#34;link&#34; href=&#34;https://github.com/elkan1788/hugo-theme-next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Next主题&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;进入站点根目录后，使用git获取主题&lt;/p&gt;
+&lt;p&gt;在本文中选择从 hexo 移植的&lt;a class=&#34;link&#34; href=&#34;https://github.com/elkan1788/hugo-theme-next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Next 主题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入站点根目录后，使用 git 获取主题&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone https://github.com/elkan1788/hugo-theme-next.git themes/hugo-theme-next&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;复制站点根目录/theme/hugo-theme-next/exampleSite中的文件并粘贴至站点根目录后覆盖&lt;/p&gt;
+&lt;p&gt;复制站点根目录/theme/hugo-theme-next/exampleSite 中的文件并粘贴至站点根目录后覆盖&lt;/p&gt;
 &lt;p&gt;运行&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;恭喜你，你的hugo博客已成功运行&lt;/p&gt;
+&lt;p&gt;恭喜你，你的 hugo 博客已成功运行&lt;/p&gt;
 &lt;h4 id=&#34;123-自定义博客&#34;&gt;1.2.3 自定义博客&lt;/h4&gt;
 &lt;p&gt;待完成&amp;hellip;..&lt;/p&gt;
 </description>
@@ -1996,7 +1997,7 @@
 &lt;p&gt;&lt;em&gt;▲ 随手画的示意流程图，这里推荐一下 &lt;a class=&#34;link&#34; href=&#34;https://www.processon.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ProcessOn&lt;/a&gt; 这个在线作图网站，很好用 ;)&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Printempw的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底&lt;/p&gt;
+&lt;p&gt;Printempw 的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;似乎也挺好的，不是吗？那我今天要说的「自行实现 Yggdrasil API」方法，和这些现成的方式有什么不一样呢？&lt;/p&gt;
 &lt;h2 id=&#34;三自行实现-yggdrasil-api&#34;&gt;三、自行实现 Yggdrasil API&lt;/h2&gt;
@@ -2061,7 +2062,7 @@
 		data-flex-basis=&#34;347px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;▲在皮肤站「角色管理」中可添加多个角色&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;▲ 在皮肤站「角色管理」中可添加多个角色&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/f8f9c076da123.png&#34;
 	width=&#34;802&#34;
 	height=&#34;511&#34;
@@ -2076,7 +2077,7 @@
 		data-flex-basis=&#34;376px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;▲使用皮肤站的邮箱与密码登录后，配合 HMCL 实现多角色选择&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;▲ 使用皮肤站的邮箱与密码登录后，配合 HMCL 实现多角色选择&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/715850d76b7db.png&#34;
 	width=&#34;1366&#34;
 	height=&#34;768&#34;
@@ -2091,7 +2092,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;▲游戏内的显示效果&lt;/p&gt;
+&lt;p&gt;▲ 游戏内的显示效果&lt;/p&gt;
 &lt;h2 id=&#34;四yggdrasil-api-踩坑记录&#34;&gt;四、Yggdrasil API 踩坑记录&lt;/h2&gt;
 &lt;p&gt;下面记录一些自己实现 Yggdrasil API 时踩到的坑，毕竟 wiki.vg 里并不会提到这些在自己实现 API 时需要注意的东西（提到的大部分都是使用 API 时应该要注意的），所以我也只能摸着石头过河，踩了不少坑，这里记录一下，希望能帮到后来人。&lt;/p&gt;
 &lt;p&gt;基础的 API 定义之类的我就不说了，下面主要讲一些 &lt;a class=&#34;link&#34; href=&#34;http://wiki.vg/Authentication&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2402,7 +2403,7 @@
     &gt;Sakura Frp&lt;/a&gt;国外服务器的穿透来使自己的网站能够访问（那时候建站节点还没有收费），后来将系统装成了 CentOS 7，从此就一直泡在&lt;strong&gt;Linux&lt;/strong&gt;系统里面了&lt;/p&gt;
 &lt;p&gt;那时候 Sakura Frp 的节点对于我家的网络还不是特别的稳定，有一次一个月内换了好几个节点。（也有可能是移动网络的问题）&lt;/p&gt;
 &lt;p&gt;后来接触了虚拟主机，陆陆续续换了几家主机商，可最终因为没钱而取消续费&lt;/p&gt;
-&lt;p&gt;现在的博客的框架是Hugo + &lt;a class=&#34;link&#34; href=&#34;https://vercel.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;现在的博客的框架是 Hugo + &lt;a class=&#34;link&#34; href=&#34;https://vercel.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Vercel&lt;/strong&gt;&lt;/a&gt;，优势就是免费，并且我的文章在本地留有备份&lt;/p&gt;
 &lt;p&gt;就这样吧。&lt;/p&gt;
 &lt;p&gt;感谢你读到这里。&lt;/p&gt;

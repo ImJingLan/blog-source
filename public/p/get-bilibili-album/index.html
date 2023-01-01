@@ -148,9 +148,9 @@
     
     
     <h2 id="前言">〇、前言</h2>
-<p>最近重装了电脑，然后电脑上整理的iTunes资料库全没了。<del>草</del></p>
-<p>在整理的时候发现有一些歌曲是直接从B站上下载下来的，专辑封面也是从B站封面扒的，全没了（呜呜呜</p>
-<p>虽然在Bing上一搜就有很多封面提取的网站</p>
+<p>最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。<del>草</del></p>
+<p>在整理的时候发现有一些歌曲是直接从 B 站上下载下来的，专辑封面也是从 B 站封面扒的，全没了（呜呜呜</p>
+<p>虽然在 Bing 上一搜就有很多封面提取的网站</p>
 <p><img src="/p/get-bilibili-album/1.webp"
 	width="649"
 	height="108"
@@ -193,10 +193,10 @@
 		data-flex-basis="1368px"
 	
 ></p>
-<p>但是秉承着<strong>用轮子不如造轮子</strong>的理论(<del>其实就是闲着没事</del>)，我决定自己用Python写一个提取封面的工具</p>
+<p>但是秉承着<strong>用轮子不如造轮子</strong>的理论(<del>其实就是闲着没事</del>)，我决定自己用 Python 写一个提取封面的工具</p>
 <h2 id="一准备工作">一、准备工作</h2>
-<p>既然是造轮子，那当然要先看B站的API</p>
-<p>搜了一下，发现网上公认的哔哩哔哩官方API文档地址是：<strong><a class="link" href="http://docs.bilibili.cn/wiki"  target="_blank" rel="noopener"
+<p>既然是造轮子，那当然要先看 B 站的 API</p>
+<p>搜了一下，发现网上公认的哔哩哔哩官方 API 文档地址是：<strong><a class="link" href="http://docs.bilibili.cn/wiki"  target="_blank" rel="noopener"
     >http://docs.bilibili.cn/wiki</a></strong></p>
 <p>但是</p>
 <p><img src="/p/get-bilibili-album/4.webp"
@@ -224,7 +224,7 @@
 	
 ></p>
 <blockquote>
-<p>在Github上面找到的野生文档 <a class="link" href="https://github.com/SocialSisterYi/bilibili-API-collect"  target="_blank" rel="noopener"
+<p>在 Github 上面找到的野生文档 <a class="link" href="https://github.com/SocialSisterYi/bilibili-API-collect"  target="_blank" rel="noopener"
     >SocialSisterYi/bilibili-API-collect</a></p>
 </blockquote>
 <p>API</p>
@@ -774,7 +774,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>有用的就是pic字段了<img src="/p/get-bilibili-album/pic.webp"
+</div><p>有用的就是 pic 字段了<img src="/p/get-bilibili-album/pic.webp"
 	width="674"
 	height="27"
 	srcset="/p/get-bilibili-album/pic_hu3141977f31c1fcf94573ce712c6cefd7_4404_480x0_resize_q75_h2_box_2.webp 480w, /p/get-bilibili-album/pic_hu3141977f31c1fcf94573ce712c6cefd7_4404_1024x0_resize_q75_h2_box_2.webp 1024w"
@@ -789,7 +789,7 @@
 	
 ></p>
 <p>那么，开搞</p>
-<h2 id="二python实现">二、Python实现</h2>
+<h2 id="二python-实现">二、Python 实现</h2>
 <p>随便写了个代码</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -837,7 +837,7 @@
 ></p>
 <p><strong>输出成功</strong></p>
 <blockquote>
-<p>PS:《噬光者与发光体的爱情》真的好听！！！！Meumy我吹爆！！！！</p>
+<p>PS:《噬光者与发光体的爱情》真的好听！！！！Meumy 我吹爆！！！！</p>
 </blockquote>
 <h3 id="接下来写输出">接下来写输出</h3>
 <h4 id="先写了封面文件夹检测">先写了封面文件夹检测</h4>
@@ -853,7 +853,7 @@
 </span></span><span class="line"><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;cover&#39;</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="用requests写了图片保存的函数">用requests写了图片保存的函数</h4>
+</div><h4 id="用-requests-写了图片保存的函数">用 requests 写了图片保存的函数</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1017,7 +1017,7 @@
 </span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;找不到该BV号&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;CODE:&#34;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34; MESSAGE:&#34;</span><span class="o">+</span><span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;这不是一个合法的BV号, BV号应为12位字符串&#39;</span><span class="p">)</span>
@@ -1046,7 +1046,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">vid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;视频BV号:&#39;</span><span class="p">)</span><span class="c1">#获取视频BV号</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="ow">or</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">valid</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">bvcheck</span><span class="p">(</span><span class="n">vid</span><span class="p">):</span>
@@ -1074,7 +1074,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>自己加了AV号与BV号的判断，如果是AV号就把AV转换成BV再用BV手法去找封面</p>
+<p>自己加了 AV 号与 BV 号的判断，如果是 AV 号就把 AV 转换成 BV 再用 BV 手法去找封面</p>
 <p>然后根据选择的类型进行保存</p>
 </blockquote>
 <h4 id="运行一下">运行一下</h4>
@@ -1095,7 +1095,7 @@
 <p><strong>Done！</strong></p>
 <h2 id="四后记">四、后记</h2>
 <p>这玩意没啥好说的。。。</p>
-<p>唯一的缺点就是没有写AV号的获取和BV号格式检测吧。。</p>
+<p>唯一的缺点就是没有写 AV 号的获取和 BV 号格式检测吧。。</p>
 
 </section>
 
@@ -1339,7 +1339,9 @@
     <section class="copyright">
         &copy; 
         
-        2022 景蓝の小屋
+            2022 - 
+        
+        2023 景蓝の小屋
     </section>
     
     <section class="powerby">
@@ -1451,12 +1453,12 @@
   <ol>
     <li><a href="#前言">〇、前言</a></li>
     <li><a href="#一准备工作">一、准备工作</a></li>
-    <li><a href="#二python实现">二、Python实现</a>
+    <li><a href="#二python-实现">二、Python 实现</a>
       <ol>
         <li><a href="#接下来写输出">接下来写输出</a>
           <ol>
             <li><a href="#先写了封面文件夹检测">先写了封面文件夹检测</a></li>
-            <li><a href="#用requests写了图片保存的函数">用requests写了图片保存的函数</a></li>
+            <li><a href="#用-requests-写了图片保存的函数">用 requests 写了图片保存的函数</a></li>
             <li><a href="#获取一些必要信息">获取一些必要信息</a></li>
             <li><a href="#完整代码">完整代码</a></li>
             <li><a href="#运行一下">运行一下</a></li>

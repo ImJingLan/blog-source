@@ -5,18 +5,18 @@ date: 2022-10-23
 slug: get-bilibili-album
 image: banner.png
 categories:
-    - 技术
-    
+  - 技术
+
 license: CC BY-NC-SA 4.0
 ---
 
 ## 〇、前言
 
-最近重装了电脑，然后电脑上整理的iTunes资料库全没了。~~草~~
+最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。~~草~~
 
-在整理的时候发现有一些歌曲是直接从B站上下载下来的，专辑封面也是从B站封面扒的，全没了（呜呜呜
+在整理的时候发现有一些歌曲是直接从 B 站上下载下来的，专辑封面也是从 B 站封面扒的，全没了（呜呜呜
 
-虽然在Bing上一搜就有很多封面提取的网站
+虽然在 Bing 上一搜就有很多封面提取的网站
 
 ![网站1](1.webp)
 
@@ -24,13 +24,13 @@ license: CC BY-NC-SA 4.0
 
 ![网站3](3.webp)
 
-但是秉承着**用轮子不如造轮子**的理论(~~其实就是闲着没事~~)，我决定自己用Python写一个提取封面的工具
+但是秉承着**用轮子不如造轮子**的理论(~~其实就是闲着没事~~)，我决定自己用 Python 写一个提取封面的工具
 
 ## 一、准备工作
 
-既然是造轮子，那当然要先看B站的API
+既然是造轮子，那当然要先看 B 站的 API
 
-搜了一下，发现网上公认的哔哩哔哩官方API文档地址是：**[http://docs.bilibili.cn/wiki](http://docs.bilibili.cn/wiki)**
+搜了一下，发现网上公认的哔哩哔哩官方 API 文档地址是：**[http://docs.bilibili.cn/wiki](http://docs.bilibili.cn/wiki)**
 
 但是
 
@@ -38,7 +38,7 @@ license: CC BY-NC-SA 4.0
 
 ![2017717113835269.jpg](https://i.loli.net/2021/07/27/HPiBuzEebg5Zclf.jpg)
 
-> 在Github上面找到的野生文档 [SocialSisterYi/bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
+> 在 Github 上面找到的野生文档 [SocialSisterYi/bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
 
 API
 
@@ -319,13 +319,11 @@ API
 }
 ```
 
-有用的就是pic字段了![PIC](pic.webp)
+有用的就是 pic 字段了![PIC](pic.webp)
 
 那么，开搞
 
-## 二、Python实现
-
-
+## 二、Python 实现
 
 随便写了个代码
 
@@ -348,7 +346,7 @@ if __name__ == "__main__":
 
 **输出成功**
 
-> PS:《噬光者与发光体的爱情》真的好听！！！！Meumy我吹爆！！！！
+> PS:《噬光者与发光体的爱情》真的好听！！！！Meumy 我吹爆！！！！
 
 ### 接下来写输出
 
@@ -360,7 +358,7 @@ def mkcoverdif():
         os.mkdir('cover')
 ```
 
-#### 用requests写了图片保存的函数
+#### 用 requests 写了图片保存的函数
 
 ```python
 def imgdownload(url,name):
@@ -376,7 +374,8 @@ def imgdownload(url,name):
     title = info['data'].get('title') # 视频标题
     bvid = info['data'].get('bvid') # 返回的正确格式BV号
 ```
->这是直接写入主程序块的
+
+> 这是直接写入主程序块的
 
 #### 完整代码
 
@@ -418,7 +417,7 @@ def bvcheck(vid):
                 print("找不到该BV号")
                 print("CODE:"+str(info.get('code'))+" MESSAGE:"+info.get('message'))
                 return False
-                
+
 
         else:
             print('这不是一个合法的BV号, BV号应为12位字符串')
@@ -447,7 +446,7 @@ def main():
 
     if status == '2':
         vid = input('视频BV号:')#获取视频BV号
-    
+
     if status == '1' or status == '2':
         if valid:
             if bvcheck(vid):
@@ -474,9 +473,9 @@ if __name__ == "__main__":
     os.system('pause')
 ```
 
->自己加了AV号与BV号的判断，如果是AV号就把AV转换成BV再用BV手法去找封面
+> 自己加了 AV 号与 BV 号的判断，如果是 AV 号就把 AV 转换成 BV 再用 BV 手法去找封面
 >
->然后根据选择的类型进行保存
+> 然后根据选择的类型进行保存
 
 #### 运行一下
 
@@ -488,5 +487,4 @@ if __name__ == "__main__":
 
 这玩意没啥好说的。。。
 
-唯一的缺点就是没有写AV号的获取和BV号格式检测吧。。
-
+唯一的缺点就是没有写 AV 号的获取和 BV 号格式检测吧。。

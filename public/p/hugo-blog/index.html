@@ -148,18 +148,18 @@
     
     
     <h2 id="前言">〇、前言</h2>
-<h3 id="01-我为什么选择hugo">0.1 我为什么选择Hugo</h3>
-<p>Hugo是一个使用<strong>Go</strong>语言编写的静态网站生成器。
-长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的<strong>Typecho</strong>系统，转而寻找静态博客系统。在尝试了<strong>Hexo</strong>、<strong>Jekyll</strong>后，我选择了<strong>Hugo</strong>，原因首先是它支持Markdown语法，这使得我将文章从Typecho迁移至Hugo变得容易，其次是<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
-    ><strong>Stack</strong></a>主题仅适用于Hugo (搭建博客第一要领：好看)</p>
+<h3 id="01-我为什么选择-hugo">0.1 我为什么选择 Hugo</h3>
+<p>Hugo 是一个使用<strong>Go</strong>语言编写的静态网站生成器。
+长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的<strong>Typecho</strong>系统，转而寻找静态博客系统。在尝试了<strong>Hexo</strong>、<strong>Jekyll</strong>后，我选择了<strong>Hugo</strong>，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    ><strong>Stack</strong></a>主题仅适用于 Hugo (搭建博客第一要领：好看)</p>
 <h3 id="02-网页托管">0.2 网页托管</h3>
 <p>说起网页托管，大家第一想到的大概都是<a class="link" href="https://pages.github.com"  target="_blank" rel="noopener"
-    ><strong>Github Pages</strong></a>吧，最初我也是使用gh来对生成的动态页面进行托管，可长期使用下来我发现gh pages存在一些问题：</p>
+    ><strong>Github Pages</strong></a>吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：</p>
 <ol>
-<li>github pages会对绑定的域名进行cname验证，而Cloudflare默认将主域名的CNAME拉平成A解析，这导致我的域名一周多了还没有通过验证</li>
-<li>Github Pages默认给每个域名申请免费的SSL证书，而我的一个域名出现了SSL证书出错的情况😓，最后也没排查出是域名还是gh pages的问题</li>
-<li>可能会有DNS污染导致github.io无法访问</li>
-<li>不支持PHP，导致我原先的一些脚本无法使用</li>
+<li>github pages 会对绑定的域名进行 cname 验证，而 Cloudflare 默认将主域名的 CNAME 拉平成 A 解析，这导致我的域名一周多了还没有通过验证</li>
+<li>Github Pages 默认给每个域名申请免费的 SSL 证书，而我的一个域名出现了 SSL 证书出错的情况 😓，最后也没排查出是域名还是 gh pages 的问题</li>
+<li>可能会有 DNS 污染导致 github.io 无法访问</li>
+<li>不支持 PHP，导致我原先的一些脚本无法使用</li>
 </ol>
 <p>为了解决这些问题，我在知乎游了一圈，发现了一个宝藏部署服务：<a class="link" href="https://vercel.com"  target="_blank" rel="noopener"
     ><strong>Vercel</strong></a></p>
@@ -177,22 +177,22 @@
 		data-flex-basis="385px"
 	
 ></p>
-<p>Vercel有以下优点：</p>
+<p>Vercel 有以下优点：</p>
 <ol>
 <li>
-<p>访问速度比Github Pages快</p>
+<p>访问速度比 Github Pages 快</p>
 </li>
 <li>
-<p>比Github Pages稳定</p>
+<p>比 Github Pages 稳定</p>
 </li>
 <li>
-<p>自带SSL证书</p>
+<p>自带 SSL 证书</p>
 </li>
 <li>
-<p>支持将域名DNS服务器迁移至Vercel</p>
+<p>支持将域名 DNS 服务器迁移至 Vercel</p>
 </li>
 </ol>
-<p>放一张Github Pages与Vercel速度对比图（左：Gh Pages | 右：vercel）
+<p>放一张 Github Pages 与 Vercel 速度对比图（左：Gh Pages | 右：vercel）
 <img src="/p/hugo-blog/speed-compair.png"
 	width="1514"
 	height="577"
@@ -213,13 +213,13 @@
 </blockquote>
 <p>Vercel 比 GhPages 绿多了（逃</p>
 <h2 id="一准备工作">一、准备工作</h2>
-<h3 id="11-安装hugo">1.1 安装Hugo</h3>
+<h3 id="11-安装-hugo">1.1 安装 Hugo</h3>
 <blockquote>
-<p>本文仅展示使用Windows安装Hugo</p>
+<p>本文仅展示使用 Windows 安装 Hugo</p>
 <p>本教程中使用 <a class="link" href="https://scoop.sh/"  target="_blank" rel="noopener"
     ><strong>scoop</strong>软件包管理器</a> 安装</p>
 <p>其余方法大同小异，请自行使用搜索引擎搜索</p>
-<p>安装scoop，请看这篇文章：<a class="link" href="/p/install-scoop/" >Scoop - 一款强大的Windows包管理工具</a></p>
+<p>安装 scoop，请看这篇文章：<a class="link" href="/p/install-scoop/" >Scoop - 一款强大的 Windows 包管理工具</a></p>
 </blockquote>
 <p><code>win</code> + <code>r</code> 打开运行窗口</p>
 <p><img src="/p/hugo-blog/run-windows.png"
@@ -252,16 +252,16 @@
 <h4 id="121-初始化站点">1.2.1 初始化站点</h4>
 <p>在控制台中输入<code>hugo new site 路径</code>新建一个站点</p>
 <p>如<code>hugo new site E:\myblog</code></p>
-<p>这个命令将在E盘中创建一个名为myblog的目录并在此中创建一个新的hugo站点</p>
+<p>这个命令将在 E 盘中创建一个名为 myblog 的目录并在此中创建一个新的 hugo 站点</p>
 <h4 id="122-安装主题">1.2.2 安装主题</h4>
 <p>由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题</p>
-<p>在本文中选择从hexo移植的<a class="link" href="https://github.com/elkan1788/hugo-theme-next"  target="_blank" rel="noopener"
-    >Next主题</a></p>
-<p>进入站点根目录后，使用git获取主题</p>
+<p>在本文中选择从 hexo 移植的<a class="link" href="https://github.com/elkan1788/hugo-theme-next"  target="_blank" rel="noopener"
+    >Next 主题</a></p>
+<p>进入站点根目录后，使用 git 获取主题</p>
 <p><code>git clone https://github.com/elkan1788/hugo-theme-next.git themes/hugo-theme-next</code></p>
-<p>复制站点根目录/theme/hugo-theme-next/exampleSite中的文件并粘贴至站点根目录后覆盖</p>
+<p>复制站点根目录/theme/hugo-theme-next/exampleSite 中的文件并粘贴至站点根目录后覆盖</p>
 <p>运行<code>hugo server</code></p>
-<p>恭喜你，你的hugo博客已成功运行</p>
+<p>恭喜你，你的 hugo 博客已成功运行</p>
 <h4 id="123-自定义博客">1.2.3 自定义博客</h4>
 <p>待完成&hellip;..</p>
 
@@ -507,7 +507,9 @@
     <section class="copyright">
         &copy; 
         
-        2022 景蓝の小屋
+            2022 - 
+        
+        2023 景蓝の小屋
     </section>
     
     <section class="powerby">
@@ -619,13 +621,13 @@
   <ol>
     <li><a href="#前言">〇、前言</a>
       <ol>
-        <li><a href="#01-我为什么选择hugo">0.1 我为什么选择Hugo</a></li>
+        <li><a href="#01-我为什么选择-hugo">0.1 我为什么选择 Hugo</a></li>
         <li><a href="#02-网页托管">0.2 网页托管</a></li>
       </ol>
     </li>
     <li><a href="#一准备工作">一、准备工作</a>
       <ol>
-        <li><a href="#11-安装hugo">1.1 安装Hugo</a></li>
+        <li><a href="#11-安装-hugo">1.1 安装 Hugo</a></li>
         <li><a href="#12-创建站点">1.2 创建站点</a>
           <ol>
             <li><a href="#121-初始化站点">1.2.1 初始化站点</a></li>

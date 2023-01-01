@@ -1,12 +1,12 @@
 ---
-title: '在Linux上搭建MC服务器（一）'
+title: "在Linux上搭建MC服务器（一）"
 description: build-and-run-a-minecraft-Server
 date: 2022-12-14
 slug: minecraft-Server-on-Linux-1
 image: done.png
 categories:
-    - 游戏
-    - 技术
+  - 游戏
+  - 技术
 
 license: CC BY-NC-SA 4.0
 ---
@@ -15,35 +15,35 @@ license: CC BY-NC-SA 4.0
 
 自从有了一台独立服务器后，可以玩的东西就多了
 
-于是决定开一个我的世界Java服务器
+于是决定开一个我的世界 Java 服务器
 
 写一篇文章记录一下
 
 ## 一、安装运行环境
 
-Minecraft Java版的服务器运行环境非常单纯，只需要一个Java就行
+Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行
 
-由于我想开一个1.16.5的服务器，所以Java版本选择了Java 17
+由于我想开一个 1.16.5 的服务器，所以 Java 版本选择了 Java 17
 
 安装过程参考的这篇文章《[Linux 安装 Java 17 - ChaosMoor](https://www.cnblogs.com/chaosmoor/p/15897693.html)》
 
 ## 二、下载服务端
 
-Minecraft服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit等
+Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等
 
 由于我希望保留原版的红石特性，所以选择了原版服务端
 
-对于最新版本的Minecraft服务器，可以前往[Minecraft.net](https://www.minecraft.net/download/server)下载jar文件
+对于最新版本的 Minecraft 服务器，可以前往[Minecraft.net](https://www.minecraft.net/download/server)下载 jar 文件
 
 如果你想获取特定版本的服务端文件，可以访问[Minecraft Wiki](https://minecraft.fandom.com/wiki/Minecraft_Wiki)搜索对应版本页面
 
 ![1.16.5 - WIKI](wiki.png)
 
-▲ Wiki界面
+▲ Wiki 界面
 
 Download(下载) -> Server(服务端)下载服务端
 
-><span style="color:red !important"><b>注意，不开玩笑！</b></span>：千万不要误点括号后的(.json)文件，或错选Obfuscation maps(混淆映射表)中的Server(服务器)选项
+> <span style="color:red !important"><b>注意，不开玩笑！</b></span>：千万不要误点括号后的(.json)文件，或错选 Obfuscation maps(混淆映射表)中的 Server(服务器)选项
 
 ## 三、运行服务器
 
@@ -61,9 +61,9 @@ Download(下载) -> Server(服务端)下载服务端
 
 ![WinSCP](winscp-upload.png)
 
-▲ 使用WinSCP上传
+▲ 使用 WinSCP 上传
 
->我在这里将服务端命名为server.jar
+> 我在这里将服务端命名为 server.jar
 
 修改文件权限
 
@@ -79,17 +79,17 @@ Download(下载) -> Server(服务端)下载服务端
 
 怎么回事，闪退啦?
 
-查了下翻译软件，发现是要你同意Eula文件
+查了下翻译软件，发现是要你同意 Eula 文件
 
 做法很简单
 
-用文本编辑器将eula.txt中最后一行`eula=false`修改为`eula=true`再次运行即可
+用文本编辑器将 eula.txt 中最后一行`eula=false`修改为`eula=true`再次运行即可
 
 ![Accept EULA](eula-true.png)
 
-▲ EULA.TXT修改后
+▲ EULA.TXT 修改后
 
-><span style="color:green !important"><b>记住这点更好</b></span>：当你将eula改为**true**后，即代表你同意了《[MINECRAFT 最终用户许可协议](https://account.mojang.com/documents/minecraft_eula)》, 因此你最好详细阅读一下
+> <span style="color:green !important"><b>记住这点更好</b></span>：当你将 eula 改为**true**后，即代表你同意了《[MINECRAFT 最终用户许可协议](https://account.mojang.com/documents/minecraft_eula)》, 因此你最好详细阅读一下
 
 ## 四、服务器配置
 
@@ -152,6 +152,7 @@ max-world-size=29999984
 可以对应自己实际情况修改，也可以下载[我的配置文件](server.properties)（基本默认）
 
 ## 五、成功
+
 ![Done](done.png)
 
 ▲ 游戏内的显示效果

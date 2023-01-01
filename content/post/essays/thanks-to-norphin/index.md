@@ -11,6 +11,4 @@ categories:
 image: banner.png
 ---
 
-
-
- RT
+RT

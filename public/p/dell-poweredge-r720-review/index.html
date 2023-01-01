@@ -154,7 +154,7 @@
     <p>假期咯，是时候折腾一些新玩意啦！</p>
 <p>假期开始的时候在一个同学家玩（下面叫他叫兽），突然有一天他说：“再过几周我想和你研究一下怎么写网页（HTML），顺便学学怎么搭建服务器。”</p>
 <p>“服务器嘛，你自己用一台电脑开就好了。”</p>
-<p>但我真的想要一台服务器啊QwQ</p>
+<p>但我真的想要一台服务器啊 QwQ</p>
 <p>回到家我越想越睡不着，越想越睡不着</p>
 <p>于是我</p>
 <p><img src="/p/dell-poweredge-r720-review/qzone.webp"
@@ -177,17 +177,17 @@
 <p>顺丰小哥：你买了什么啊，这么沉？</p>
 </blockquote>
 <p>商家发的真的结实，除了泡沫外顶上还有一层防摔垫</p>
-<p>（由于没有图，就不放了QWQ，大家看看上面的说说吧</p>
+<p>（由于没有图，就不放了 QWQ，大家看看上面的说说吧</p>
 <h2 id="idrac-yyds">iDRAC YYDS？</h2>
 <blockquote>
-<p>得益于戴尔强大的iDRAC助力，使安装系统变成了一件 <strong>极其容易</strong> 的事</p>
-<p>—— 景蓝Yurik</p>
+<p>得益于戴尔强大的 iDRAC 助力，使安装系统变成了一件 <strong>极其容易</strong> 的事</p>
+<p>—— 景蓝 Yurik</p>
 </blockquote>
 <p>这是我问云资后得出的初结论</p>
 <p><strong>真的吗？</strong></p>
-<p>这件事可能对于一台新的Dell服务器来说，易如反掌，但对于这样一台二手服务器，却花费了我和云资一个下午</p>
-<p>首先，服务器需要在原先网口的基础上再连接iDRAC的网口（也就是两根网线）</p>
-<p>我的解决方案是PDD 58元的 水星5口全千兆交换机</p>
+<p>这件事可能对于一台新的 Dell 服务器来说，易如反掌，但对于这样一台二手服务器，却花费了我和云资一个下午</p>
+<p>首先，服务器需要在原先网口的基础上再连接 iDRAC 的网口（也就是两根网线）</p>
+<p>我的解决方案是 PDD 58 元的 水星 5 口全千兆交换机</p>
 <p><img src="/p/dell-poweredge-r720-review/switch.webp"
 	width="1762"
 	height="810"
@@ -202,16 +202,16 @@
 		data-flex-basis="522px"
 	
 ></p>
-<p>一开始，iDrac的默认地址一直无法连接(https)</p>
-<p>重置之后Edge浏览器便提示</p>
+<p>一开始，iDrac 的默认地址一直无法连接(https)</p>
+<p>重置之后 Edge 浏览器便提示</p>
 <blockquote>
 <p><strong>使用不受支持的协议</strong></p>
 <p><strong>ERR_SSL_VERSION_OR_CIPHER_MISMATCH</strong></p>
 </blockquote>
-<p>无论是Chrome Firefox 还是 Edge 即使进入Windows设置支持SSL 3.0 后仍于事无补</p>
-<p>最后解决方案是使用Edge的IE模式访问（没想到IE还是蛮有用的）</p>
+<p>无论是 Chrome Firefox 还是 Edge 即使进入 Windows 设置支持 SSL 3.0 后仍于事无补</p>
+<p>最后解决方案是使用 Edge 的 IE 模式访问（没想到 IE 还是蛮有用的）</p>
 <h2 id="点亮">点亮</h2>
-<p>既然进入的iDRAC，我们就启动虚拟控制台吧</p>
+<p>既然进入的 iDRAC，我们就启动虚拟控制台吧</p>
 <p><img src="/p/dell-poweredge-r720-review/idrac-1.webp"
 	width="823"
 	height="284"
@@ -241,11 +241,11 @@
 	
 ></p>
 <p>点击 虚拟介质-&gt;连接虚拟介质</p>
-<p>等待连接后点 虚拟介质-&gt;映射CD/DVD，选择 ISO镜像，选择系统镜像</p>
-<p>选择 下次引导-&gt;虚拟CD/DVD/ISO</p>
+<p>等待连接后点 虚拟介质-&gt;映射 CD/DVD，选择 ISO 镜像，选择系统镜像</p>
+<p>选择 下次引导-&gt;虚拟 CD/DVD/ISO</p>
 <p>电源-&gt;系统关机后再开机（冷引导）</p>
 <p>重启后就和正常安装系统一样了</p>
-<p>我安装了Proxmox Virtual Environment ( PVE ),这样可以在一台设备上跑多个系统，ALL IN ONE YYDS!</p>
+<p>我安装了 Proxmox Virtual Environment ( PVE ),这样可以在一台设备上跑多个系统，ALL IN ONE YYDS!</p>
 <p><img src="/p/dell-poweredge-r720-review/PVE.webp"
 	width="1417"
 	height="834"
@@ -261,19 +261,19 @@
 	
 ></p>
 <blockquote>
-<p>截图时候还在装着Centos 用来跑 Rimetown 的 主要服务</p>
-<p>后来还装了一个OpenMediaVault来做Nas</p>
+<p>截图时候还在装着 Centos 用来跑 Rimetown 的 主要服务</p>
+<p>后来还装了一个 OpenMediaVault 来做 Nas</p>
 </blockquote>
 <h2 id="注意">注意</h2>
-<p>二手服务器到了之后一定要去BIOS里面重置一下iDRAC设置，并且最好不要让iDRAC使用DHCP获取IP，自己指定一个会方便很多</p>
+<p>二手服务器到了之后一定要去 BIOS 里面重置一下 iDRAC 设置，并且最好不要让 iDRAC 使用 DHCP 获取 IP，自己指定一个会方便很多</p>
 <h2 id="购买服务器后的部分问题--可能有用的解决方案">购买服务器后的部分问题 &amp; 可能有用的解决方案</h2>
 <h3 id="风扇开机后一直全功率运行">风扇开机后一直全功率运行</h3>
-<p>进入BIOS里面的System BIOS Settings -&gt; System Profile Settings 里面检查一下C1E有没有设置成Enabled</p>
-<p>设置成Enabled后重启，说不定就好了</p>
+<p>进入 BIOS 里面的 System BIOS Settings -&gt; System Profile Settings 里面检查一下 C1E 有没有设置成 Enabled</p>
+<p>设置成 Enabled 后重启，说不定就好了</p>
 <p>实在不行就只能用<a class="link" href="https://github.com/cw1997/dell_fans_controller"  target="_blank" rel="noopener"
     >dell_fans_controller (Windows 推荐)</a> 或者 <a class="link" href="https://github.com/ipmitool/ipmitool"  target="_blank" rel="noopener"
     >ipmitool (上手成本较高)</a>来手动调速了，具体方法自行百度</p>
-<p>别忘了开启主机的IPMI</p>
+<p>别忘了开启主机的 IPMI</p>
 <h2 id="配置">配置</h2>
 <div class="table-wrapper"><table>
 <thead>
@@ -312,17 +312,17 @@
 </tbody>
 </table></div>
 <h2 id="小插曲">小插曲</h2>
-<p>我的配置单中是双路750W的电源，但是卖家发错成了双495W的电源了</p>
-<p>我找完客服之后立马给我打电话联系我补发，原先的495W就送我了</p>
+<p>我的配置单中是双路 750W 的电源，但是卖家发错成了双 495W 的电源了</p>
+<p>我找完客服之后立马给我打电话联系我补发，原先的 495W 就送我了</p>
 <p>商家真的蛮好的</p>
 <p>但是我的博客里面就不打广告，不提店名啦</p>
 <h2 id="结语">结语</h2>
 <p>这一套配置说不上好，只是我第一次捡服务器（洋垃圾）的尝试</p>
 <p>谢谢你看了那么多 Orz</p>
-<p>总的来说，戴尔的服务器还是十分优秀的，iDRAC简直就是服务器管理的神器！</p>
+<p>总的来说，戴尔的服务器还是十分优秀的，iDRAC 简直就是服务器管理的神器！</p>
 <p>就靠他陪伴我和即将开服的<a class="link" href="https://rimetown.net"  target="_blank" rel="noopener"
     >Rime Town</a> 度过未来的日子啦!</p>
-<p>话说还是期待着换R730 或者 R740 的说&hellip;</p>
+<p>话说还是期待着换 R730 或者 R740 的说&hellip;</p>
 <h2 id="晒图">晒图</h2>
 <p><img src="/p/dell-poweredge-r720-review/photo-1.webp"
 	width="1905"
@@ -623,7 +623,9 @@
     <section class="copyright">
         &copy; 
         
-        2022 景蓝の小屋
+            2022 - 
+        
+        2023 景蓝の小屋
     </section>
     
     <section class="powerby">
