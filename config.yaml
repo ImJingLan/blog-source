@@ -199,6 +199,14 @@ menu:
         ### For demonstration purpose, the home link will be open in a new tab
         newTab: false
         icon: hash
+    - identifier: database
+      name: 个人知识库
+      url: https://wiki.yurik.cafe
+      weight: -96
+      params:
+        ### For demonstration purpose, the home link will be open in a new tab
+        newTab: false
+        icon: brand-twitter
 
   social:
     - identifier: github

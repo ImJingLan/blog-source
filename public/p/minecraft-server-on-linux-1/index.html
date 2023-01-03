@@ -139,7 +139,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -255,115 +255,7 @@
 </blockquote>
 <h2 id="四服务器配置">四、服务器配置</h2>
 <p>无论是什么客户端，<strong>server.properties</strong>是必须的配置文件，当然，在第一次运行服务端时会自动生成，文件内容 + 必要注释 如下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#Minecraft server properties
-</span></span><span class="line"><span class="cl">enable-jmx-monitoring=false
-</span></span><span class="line"><span class="cl">rcon.port=25575
-</span></span><span class="line"><span class="cl">level-seed= # 服务器种子（用于第一次生成地图）
-</span></span><span class="line"><span class="cl">gamemode=survival # 服务器模式 ：creative:创造 survival:生存 adventure:冒险模式
-</span></span><span class="line"><span class="cl">enable-command-block=false # 是否启用命令方块
-</span></span><span class="line"><span class="cl">enable-query=false
-</span></span><span class="line"><span class="cl">generator-settings=
-</span></span><span class="line"><span class="cl">level-name=world
-</span></span><span class="line"><span class="cl">motd=A Minecraft Server # 服务器标语，即客户端显示的文字
-</span></span><span class="line"><span class="cl">query.port=25565
-</span></span><span class="line"><span class="cl">pvp=true # 是否开启PVP
-</span></span><span class="line"><span class="cl">generate-structures=true # 生成自然结构
-</span></span><span class="line"><span class="cl">difficulty=easy # 服务器难度
-</span></span><span class="line"><span class="cl">network-compression-threshold=256
-</span></span><span class="line"><span class="cl">max-tick-time=60000
-</span></span><span class="line"><span class="cl">use-native-transport=true
-</span></span><span class="line"><span class="cl">max-players=20 # 服务器最高人数
-</span></span><span class="line"><span class="cl">online-mode=true # 是否开启正常验证
-</span></span><span class="line"><span class="cl">enable-status=true
-</span></span><span class="line"><span class="cl">allow-flight=false # 是否运行浮空（黑客端）
-</span></span><span class="line"><span class="cl">broadcast-rcon-to-ops=true
-</span></span><span class="line"><span class="cl">view-distance=10
-</span></span><span class="line"><span class="cl">max-build-height=256
-</span></span><span class="line"><span class="cl">server-ip=
-</span></span><span class="line"><span class="cl">allow-nether=true # 是否开启末地
-</span></span><span class="line"><span class="cl">server-port=25565 # 服务器端口，默认25565
-</span></span><span class="line"><span class="cl">enable-rcon=false
-</span></span><span class="line"><span class="cl">sync-chunk-writes=true
-</span></span><span class="line"><span class="cl">op-permission-level=4
-</span></span><span class="line"><span class="cl">prevent-proxy-connections=false
-</span></span><span class="line"><span class="cl">resource-pack=
-</span></span><span class="line"><span class="cl">entity-broadcast-range-percentage=100
-</span></span><span class="line"><span class="cl">rcon.password=
-</span></span><span class="line"><span class="cl">player-idle-timeout=0
-</span></span><span class="line"><span class="cl">force-gamemode=false
-</span></span><span class="line"><span class="cl">rate-limit=0
-</span></span><span class="line"><span class="cl">hardcore=false
-</span></span><span class="line"><span class="cl">white-list=false # 是否开启白名单
-</span></span><span class="line"><span class="cl">broadcast-console-to-ops=true
-</span></span><span class="line"><span class="cl">spawn-npcs=true # 是否生成NPC (村民等生物)
-</span></span><span class="line"><span class="cl">spawn-animals=true # 是否生成动物
-</span></span><span class="line"><span class="cl">snooper-enabled=true
-</span></span><span class="line"><span class="cl">function-permission-level=2
-</span></span><span class="line"><span class="cl">level-type=default
-</span></span><span class="line"><span class="cl">text-filtering-config=
-</span></span><span class="line"><span class="cl">spawn-monsters=true
-</span></span><span class="line"><span class="cl">enforce-whitelist=false
-</span></span><span class="line"><span class="cl">resource-pack-sha1=
-</span></span><span class="line"><span class="cl">spawn-protection=16
-</span></span><span class="line"><span class="cl">max-world-size=29999984
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以对应自己实际情况修改，也可以下载<a class="link" href="server.properties" >我的配置文件</a>（基本默认）</p>
+<p>可以对应自己实际情况修改，也可以下载<a class="link" href="server.properties" >我的配置文件</a>（基本默认）</p>
 <h2 id="五成功">五、成功</h2>
 <p><img src="/p/minecraft-server-on-linux-1/done.png"
 	width="1920"
