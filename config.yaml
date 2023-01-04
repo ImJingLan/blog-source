@@ -191,22 +191,6 @@ menu:
         ### For demonstration purpose, the home link will be open in a new tab
         newTab: false
         icon: train
-    - identifier: status
-      name: 服务器监视
-      url: https://stats.uptimerobot.com/pBNNEsz05n
-      weight: -96
-      params:
-        ### For demonstration purpose, the home link will be open in a new tab
-        newTab: false
-        icon: hash
-    - identifier: database
-      name: 个人知识库
-      url: https://wiki.yurik.cafe
-      weight: -96
-      params:
-        ### For demonstration purpose, the home link will be open in a new tab
-        newTab: false
-        icon: brand-twitter
 
   social:
     - identifier: github
