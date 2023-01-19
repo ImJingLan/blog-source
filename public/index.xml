@@ -6,7 +6,112 @@
         <description>Recent content on 景蓝の小屋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>树莓派4B烧录CentOS镜像并安装宝塔面板</title>
+        <link>https://yurik.cafe/p/raspberry-pi-os-install/</link>
+        <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://yurik.cafe/p/raspberry-pi-os-install/</guid>
+        <description>&lt;img src="https://yurik.cafe/p/raspberry-pi-os-install/banner.jpg" alt="Featured image of post 树莓派4B烧录CentOS镜像并安装宝塔面板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;很古早的时候我买了一台 树莓派 4B 4GB 版本（怀念当时 4GB 版本 500 块的日子）&lt;/p&gt;
+&lt;p&gt;由于 Cortex-A72 处理器，树莓派 4B 的性能其实很薄弱，当时我也只是勉强用它跑一跑 QQ 机器人和网站服务器。（宝塔跑 Mariadb 安装 CPU 占用率都能 100%）随后用旧电脑刷服务器后树莓派就闲置了。&lt;/p&gt;
+&lt;p&gt;最近有朋友想尝试在家里搭建个人网站，我就把树莓派借给了他，但是尝试了很多个 Linux 发行版（Debian、Ubuntu）后宝塔+LNMP 环境还是无法安装成功，不是宝塔无法运行就是 Mysql 无法安装。&lt;/p&gt;
+&lt;p&gt;在查阅了互联网资料后，发现我用的最多的 Centos 也存在 Arm 版本，在使用这个发行版后安装宝塔和 LNMP 环境也变得顺利了，于是打算写一篇博客记录一下安装过程&lt;/p&gt;
+&lt;h2 id=&#34;零准备工作&#34;&gt;零、准备工作&lt;/h2&gt;
+&lt;p&gt;需要准备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一台接入内网树莓派 4B&lt;/li&gt;
+&lt;li&gt;至少 16GB 的内存卡 + 读卡器 (USB3.0 最佳)&lt;/li&gt;
+&lt;li&gt;一台电脑&lt;/li&gt;
+&lt;li&gt;系统镜像&lt;/li&gt;
+&lt;li&gt;Raspberry Pi Imager (可前往 &lt;a class=&#34;link&#34; href=&#34;//www.raspberrypi.com/software/&#34; &gt;https://www.raspberrypi.com/software/&lt;/a&gt; 下载)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一烧录镜像&#34;&gt;一、烧录镜像&lt;/h2&gt;
+&lt;p&gt;其实 CentOS 7 为树莓派提供了专门的系统镜像，在&lt;a class=&#34;link&#34; href=&#34;https://www.centos.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CentOS - Download&lt;/a&gt;中给 Arm 架构的处理器提供了 &lt;a class=&#34;link&#34; href=&#34;//isoredirect.centos.org/altarch/7/isos/aarch64/&#34; &gt;ARM64(aarch64)&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;//isoredirect.centos.org/altarch/7/isos/armhfp/&#34; &gt;ARM32(armhfp)&lt;/a&gt; ，因为我的树莓派 4B 是 4GB 版本的，所以就选择了 ARM64 的版本&lt;/p&gt;
+&lt;p&gt;你可以在对应架构的下载界面中选择官方推荐的镜像下载地址，国内用户可以前往&lt;a class=&#34;link&#34; href=&#34;http://mirror.nju.edu.cn/centos-altarch/7.9.2009/isos/aarch64/images&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NJU Mirror&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/centos-altarch/7.9.2009/isos/aarch64/images/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;清华大学开源软件镜像站&lt;/a&gt; 或 &lt;a class=&#34;link&#34; href=&#34;https://mirrors.bfsu.edu.cn/centos-altarch/7.9.2009/isos/aarch64/images/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北京外国语大学开源软件镜像站&lt;/a&gt; 下载&lt;/p&gt;
+&lt;p&gt;下载文件名带 &lt;code&gt;RaspberryPI&lt;/code&gt; 的镜像&lt;/p&gt;
+&lt;p&gt;下载完毕后使用树莓派官方的烧录工具 Raspberry Pi Imager 烧录&lt;/p&gt;
+&lt;p&gt;插入读卡器，启动 Raspberry Pi Imager&lt;/p&gt;
+&lt;p&gt;选择操作系统-&amp;gt;使用自定义镜像，选择刚才下载好的 CentOS 镜像，再选择要烧录的内存卡，点击&lt;strong&gt;烧录&lt;/strong&gt;按钮即可开始烧录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若内存卡中已烧录其它系统，请擦除一遍后在进行烧录&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意 1&lt;/strong&gt;：烧录后内存卡中原存储文件将&lt;strong&gt;永久&lt;/strong&gt;丢失，请及时备份！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意 2&lt;/strong&gt;：烧录无需使用 Imager 的高级设置，若设置永久设置请清空后烧录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;二配置系统&#34;&gt;二、配置系统&lt;/h2&gt;
+&lt;p&gt;等待烧录完成后即可取出内存卡插入树莓派内，插上电源与网线即可启动&lt;/p&gt;
+&lt;p&gt;使用 ssh 登录树莓派，默认用户名为&lt;code&gt;root&lt;/code&gt;， 初始密码为&lt;code&gt;centos&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh 连接命令: &lt;code&gt;ssh 用户名@主机IP&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;登录后可使用&lt;code&gt;passwd&lt;/code&gt;修改密码，请牢记修改后密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入系统后输入&lt;code&gt;df -h&lt;/code&gt;查看各分区大小&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;rootfs-expand&lt;/code&gt;拓展系统空间&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;警告&lt;/strong&gt;：请务必拓展系统空间，否则可能导致空间过下使得宝塔安装失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新系统启动后推荐将软件源改为国内镜像，具体请参考镜像站帮助文档，如&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/centos-altarch/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;清华大学镜像站&lt;/a&gt;可运行以下命令一键换源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sed -e &amp;#39;s|^mirrorlist=|#mirrorlist=|g&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         -e &amp;#39;s|^#baseurl=http://mirror.centos.org/altarch/|baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos-altarch/|g&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         -e &amp;#39;s|^#baseurl=http://mirror.centos.org/$contentdir/|baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos-altarch/|g&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         -i.bak \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         /etc/yum.repos.d/CentOS-*.repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最后，更新软件包缓存 &lt;code&gt;sudo yum makecache&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;你也可以将系统语言设置为中文，设置方式如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查看当前系统语言包 &lt;code&gt;locale&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看所有系统语言包 &lt;code&gt;locale -a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;检查是否存在 &lt;code&gt;zh_CN&lt;/code&gt; 开头的语言包&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;nano /etc/locale.conf&lt;/code&gt; 编辑 &lt;code&gt;/etc/locale.conf&lt;/code&gt; 文件，将其中的&lt;strong&gt;LANG&lt;/strong&gt;值改为&lt;code&gt;zh_CN.UTF-8&lt;/code&gt;（若第三步中未找到&lt;code&gt;zh_CN.UTF-8&lt;/code&gt;，可用其他&lt;code&gt;zh_CN&lt;/code&gt;开头的语言包替换）&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;reboot&lt;/code&gt;命令重启系统让修改生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改语言为中文后部分软件&lt;strong&gt;可能存在未知错误&lt;/strong&gt;，若错误发生请按照第四步将&lt;strong&gt;LANG&lt;/strong&gt;值改为&lt;code&gt;en_US.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;三安装宝塔面板&#34;&gt;三、安装宝塔面板&lt;/h2&gt;
+&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://www.bt.cn/new/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宝塔官网-下载&lt;/a&gt;使用 CentOS 安装脚本安装&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yum install -y wget &amp;amp;&amp;amp; wget -O install.sh https://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请删除命令末尾 9 位字符串后运行命令&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;警告&lt;/strong&gt;: 请在纯净环境中安装宝塔面板，若你先前已安装其他 LNMP/LAMP 运行环境或先前宝塔面板安装失败请参考&lt;strong&gt;一、烧录镜像&lt;/strong&gt;擦除内存卡并重新烧录系统后安装&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;稍等一段时间后宝塔面板将安装完成&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://yurik.cafe/p/raspberry-pi-os-install/console.png&#34;
+	width=&#34;1115&#34;
+	height=&#34;609&#34;
+	srcset=&#34;https://yurik.cafe/p/raspberry-pi-os-install/console_hu55cc172340b863f58a2cd1f91ac24790_64154_480x0_resize_box_3.png 480w, https://yurik.cafe/p/raspberry-pi-os-install/console_hu55cc172340b863f58a2cd1f91ac24790_64154_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BT-Install-Done&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;四配置宝塔面板&#34;&gt;四、配置宝塔面板&lt;/h2&gt;
+&lt;p&gt;待写&amp;hellip;..&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Office 365 E5 账号申请</title>
         <link>https://yurik.cafe/p/create-an-office-e5-account/</link>
         <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>

@@ -1,7 +1,7 @@
 ---
 title: 树莓派4B烧录CentOS镜像并安装宝塔面板
 description: 树莓派4B烧录CentOS并安装宝塔面板
-date: 2023-01-20 01:13:00
+date: 2023-01-19
 slug: raspberry-pi-os-install
 image: banner.jpg
 categories:
