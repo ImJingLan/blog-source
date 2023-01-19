@@ -59,6 +59,8 @@ license: CC BY-NC-SA 4.0
 > ssh 连接命令: `ssh 用户名@主机IP`
 >
 > 登录后可使用`passwd`修改密码，请牢记修改后密码
+>
+> 若不清楚树莓派 IP 可进入路由器后台或使用[Advanced IP Scanner](https://www.advanced-ip-scanner.com/)扫描
 
 进入系统后输入`df -h`查看各分区大小
 

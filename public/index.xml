@@ -48,6 +48,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;ssh 连接命令: &lt;code&gt;ssh 用户名@主机IP&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;登录后可使用&lt;code&gt;passwd&lt;/code&gt;修改密码，请牢记修改后密码&lt;/p&gt;
+&lt;p&gt;若不清楚树莓派 IP 可进入路由器后台或使用&lt;a class=&#34;link&#34; href=&#34;https://www.advanced-ip-scanner.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Advanced IP Scanner&lt;/a&gt;扫描&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;进入系统后输入&lt;code&gt;df -h&lt;/code&gt;查看各分区大小&lt;/p&gt;
 &lt;p&gt;使用&lt;code&gt;rootfs-expand&lt;/code&gt;拓展系统空间&lt;/p&gt;
