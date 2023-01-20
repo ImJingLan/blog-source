@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>游戏 on 景蓝の小屋</title>
-    <link>https://yurik.cafe/categories/%E6%B8%B8%E6%88%8F/</link>
+    <link>https://blog.yurik.cafe/categories/%E6%B8%B8%E6%88%8F/</link>
     <description>Recent content in 游戏 on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/categories/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/categories/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在Linux上搭建MC服务器（一）</title>
-      <link>https://yurik.cafe/p/minecraft-server-on-linux-1/</link>
+      <link>https://blog.yurik.cafe/p/minecraft-server-on-linux-1/</link>
       <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/minecraft-server-on-linux-1/</guid>
+      <guid>https://blog.yurik.cafe/p/minecraft-server-on-linux-1/</guid>
       <description>接上文
 自从有了一台独立服务器后，可以玩的东西就多了
 于是决定开一个我的世界 Java 服务器
@@ -43,19 +43,19 @@ java -Xmx1024M -Xms1024M -jar &amp;lt;服务端文件名&amp;gt;.</description>
     
     <item>
       <title>谢谢你，我的宝😘</title>
-      <link>https://yurik.cafe/p/thanks-to-norphin/</link>
+      <link>https://blog.yurik.cafe/p/thanks-to-norphin/</link>
       <pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/thanks-to-norphin/</guid>
+      <guid>https://blog.yurik.cafe/p/thanks-to-norphin/</guid>
       <description>RT</description>
     </item>
     
     <item>
       <title>【转载】又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API</title>
-      <link>https://yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/</link>
+      <link>https://blog.yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/</link>
       <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/</guid>
+      <guid>https://blog.yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/</guid>
       <description>原文链接：PRIN BLOG - 又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API
 共享协议：本文与原文采用相同的 CC BY 4.0 协议而非本博客默认的共享协议
 最近给 Blessing Skin 写了个插件，利用皮肤站本身的账号系统实现了 Yggdrasil API（就是 Mojang 的登录 API），然后配合 authlib-injector 这个项目将启动器（基于 Java 编写的支持正版登录的启动器都行）、Minecraft 游戏、Minecraft 服务端中的 Mojang Yggdrasil API 地址给替换成了自己实现的第三方 Yggdrasil API 地址（字节码替换），从而实现了与正版登录功能几乎完全相同的账户鉴权系统。

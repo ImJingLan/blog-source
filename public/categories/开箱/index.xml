@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开箱 on 景蓝の小屋</title>
-    <link>https://yurik.cafe/categories/%E5%BC%80%E7%AE%B1/</link>
+    <link>https://blog.yurik.cafe/categories/%E5%BC%80%E7%AE%B1/</link>
     <description>Recent content in 开箱 on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 13 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/categories/%E5%BC%80%E7%AE%B1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/categories/%E5%BC%80%E7%AE%B1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iPod Classic 上手 :  优雅永不过时</title>
-      <link>https://yurik.cafe/p/ipod-classic-review/</link>
+      <link>https://blog.yurik.cafe/p/ipod-classic-review/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/ipod-classic-review/</guid>
+      <guid>https://blog.yurik.cafe/p/ipod-classic-review/</guid>
       <description>这篇文章是一篇补档，由于博客系统的更换，原文已丢失
 引言 iPod Classic</description>
     </item>
     
     <item>
       <title>戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</title>
-      <link>https://yurik.cafe/p/dell-poweredge-r720-review/</link>
+      <link>https://blog.yurik.cafe/p/dell-poweredge-r720-review/</link>
       <pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/dell-poweredge-r720-review/</guid>
+      <guid>https://blog.yurik.cafe/p/dell-poweredge-r720-review/</guid>
       <description>假期咯，是时候折腾一些新玩意啦！
 假期开始的时候在一个同学家玩（下面叫他叫兽），突然有一天他说：“再过几周我想和你研究一下怎么写网页（HTML），顺便学学怎么搭建服务器。”
 “服务器嘛，你自己用一台电脑开就好了。”

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>杂谈 on 景蓝の小屋</title>
-    <link>https://yurik.cafe/categories/%E6%9D%82%E8%B0%88/</link>
+    <link>https://blog.yurik.cafe/categories/%E6%9D%82%E8%B0%88/</link>
     <description>Recent content in 杂谈 on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 05 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yurik.cafe/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>谢谢你，我的宝😘</title>
-      <link>https://yurik.cafe/p/thanks-to-norphin/</link>
+      <link>https://blog.yurik.cafe/p/thanks-to-norphin/</link>
       <pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/thanks-to-norphin/</guid>
+      <guid>https://blog.yurik.cafe/p/thanks-to-norphin/</guid>
       <description>RT</description>
     </item>
     
     <item>
       <title>你好，好久不见</title>
-      <link>https://yurik.cafe/p/hello-world/</link>
+      <link>https://blog.yurik.cafe/p/hello-world/</link>
       <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://yurik.cafe/p/hello-world/</guid>
+      <guid>https://blog.yurik.cafe/p/hello-world/</guid>
       <description>重新认识一下吧 从初一开始捣鼓自己的服务器，从一开始在一台废旧的办公电脑上安装Windows Server搭配Sakura Frp国外服务器的穿透来使自己的网站能够访问（那时候建站节点还没有收费），后来将系统装成了 CentOS 7，从此就一直泡在Linux系统里面了
 那时候 Sakura Frp 的节点对于我家的网络还不是特别的稳定，有一次一个月内换了好几个节点。（也有可能是移动网络的问题）
 后来接触了虚拟主机，陆陆续续换了几家主机商，可最终因为没钱而取消续费

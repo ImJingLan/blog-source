@@ -1,4 +1,4 @@
-baseurl: https://yurik.cafe/
+baseurl: https://blog.yurik.cafe/
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
@@ -183,14 +183,14 @@ menu:
         ### For demonstration purpose, the home link will be open in a new tab
         newTab: false
         icon: home
-    - identifier: travelling
-      name: 开往
-      url: https://travellings.link
-      weight: -99
+    - identifier: Friend
+      name: 友人帐
+      url: https://yurik.cafe/friends
+      weight: -90
       params:
         ### For demonstration purpose, the home link will be open in a new tab
         newTab: false
-        icon: train
+        icon: link
 
   social:
     - identifier: github

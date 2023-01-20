@@ -12,17 +12,17 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="树莓派4B烧录CentOS并安装宝塔面板" /><title>树莓派4B烧录CentOS镜像并安装宝塔面板</title>
 
-<link rel="canonical" href="https://yurik.cafe/p/raspberry-pi-os-install/" />
+<link rel="canonical" href="https://blog.yurik.cafe/p/raspberry-pi-os-install/" />
 
 <link rel="stylesheet" href="/scss/style.min.d59041805007384093d8a29260ee89633f08e90f353c3067e472c66f3124b2a7.css"><meta property='og:title' content='树莓派4B烧录CentOS镜像并安装宝塔面板'>
 <meta property='og:description' content='树莓派4B烧录CentOS并安装宝塔面板'>
-<meta property='og:url' content='https://yurik.cafe/p/raspberry-pi-os-install/'>
+<meta property='og:url' content='https://blog.yurik.cafe/p/raspberry-pi-os-install/'>
 <meta property='og:site_name' content='景蓝の小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-01-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-01-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://yurik.cafe/p/raspberry-pi-os-install/banner.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-01-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-01-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.yurik.cafe/p/raspberry-pi-os-install/banner.jpg' />
 <meta name="twitter:site" content="@imjinglan">
     <meta name="twitter:creator" content="@imjinglan"><meta name="twitter:title" content="树莓派4B烧录CentOS镜像并安装宝塔面板">
 <meta name="twitter:description" content="树莓派4B烧录CentOS并安装宝塔面板"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://yurik.cafe/p/raspberry-pi-os-install/banner.jpg' />
+    <meta name="twitter:image" content='https://blog.yurik.cafe/p/raspberry-pi-os-install/banner.jpg' />
 <link rel="shortcut icon" href="https://cdn.rimeradio.top/2022/07/21/avatar.ico" />
 
     </head>
@@ -152,7 +152,7 @@
 <p>由于 Cortex-A72 处理器，树莓派 4B 的性能其实很薄弱，当时我也只是勉强用它跑一跑 QQ 机器人和网站服务器。（宝塔跑 Mariadb 安装 CPU 占用率都能 100%）随后用旧电脑刷服务器后树莓派就闲置了。</p>
 <p>最近有朋友想尝试在家里搭建个人网站，我就把树莓派借给了他，但是尝试了很多个 Linux 发行版（Debian、Ubuntu）后宝塔+LNMP 环境还是无法安装成功，不是宝塔无法运行就是 Mysql 无法安装。</p>
 <p>在查阅了互联网资料后，发现我用的最多的 Centos 也存在 Arm 版本，在使用这个发行版后安装宝塔和 LNMP 环境也变得顺利了，于是打算写一篇博客记录一下安装过程</p>
-<h2 id="零准备工作">零、准备工作</h2>
+<h2 id="准备工作">准备工作</h2>
 <p>需要准备：</p>
 <ul>
 <li>一台接入内网树莓派 4B</li>
@@ -161,7 +161,7 @@
 <li>系统镜像</li>
 <li>Raspberry Pi Imager (可前往 <a class="link" href="//www.raspberrypi.com/software/" >https://www.raspberrypi.com/software/</a> 下载)</li>
 </ul>
-<h2 id="一烧录镜像">一、烧录镜像</h2>
+<h2 id="烧录镜像">烧录镜像</h2>
 <p>其实 CentOS 7 为树莓派提供了专门的系统镜像，在<a class="link" href="https://www.centos.org/download/"  target="_blank" rel="noopener"
     >CentOS - Download</a>中给 Arm 架构的处理器提供了 <a class="link" href="//isoredirect.centos.org/altarch/7/isos/aarch64/" >ARM64(aarch64)</a> 和 <a class="link" href="//isoredirect.centos.org/altarch/7/isos/armhfp/" >ARM32(armhfp)</a> ，因为我的树莓派 4B 是 4GB 版本的，所以就选择了 ARM64 的版本</p>
 <p>你可以在对应架构的下载界面中选择官方推荐的镜像下载地址，国内用户可以前往<a class="link" href="http://mirror.nju.edu.cn/centos-altarch/7.9.2009/isos/aarch64/images"  target="_blank" rel="noopener"
@@ -177,7 +177,7 @@
 <p><strong>注意 1</strong>：烧录后内存卡中原存储文件将<strong>永久</strong>丢失，请及时备份！</p>
 <p><strong>注意 2</strong>：烧录无需使用 Imager 的高级设置，若设置永久设置请清空后烧录</p>
 </blockquote>
-<h2 id="二配置系统">二、配置系统</h2>
+<h2 id="配置系统">配置系统</h2>
 <p>等待烧录完成后即可取出内存卡插入树莓派内，插上电源与网线即可启动</p>
 <p>使用 ssh 登录树莓派，默认用户名为<code>root</code>， 初始密码为<code>centos</code></p>
 <blockquote>
@@ -221,7 +221,7 @@
 <blockquote>
 <p>修改语言为中文后部分软件<strong>可能存在未知错误</strong>，若错误发生请按照第四步将<strong>LANG</strong>值改为<code>en_US.UTF-8</code></p>
 </blockquote>
-<h2 id="三安装宝塔面板">三、安装宝塔面板</h2>
+<h2 id="安装宝塔面板">安装宝塔面板</h2>
 <p>参考<a class="link" href="https://www.bt.cn/new/download.html"  target="_blank" rel="noopener"
     >宝塔官网-下载</a>使用 CentOS 安装脚本安装</p>
 <p><code>yum install -y wget &amp;&amp; wget -O install.sh https://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</code></p>
@@ -244,7 +244,7 @@
 		data-flex-basis="439px"
 	
 ></p>
-<h2 id="四配置宝塔面板">四、配置宝塔面板</h2>
+<h2 id="配置宝塔面板">配置宝塔面板</h2>
 <p>待写&hellip;..</p>
 
 </section>
@@ -602,11 +602,11 @@
                     <nav id="TableOfContents">
   <ol>
     <li><a href="#前言">前言</a></li>
-    <li><a href="#零准备工作">零、准备工作</a></li>
-    <li><a href="#一烧录镜像">一、烧录镜像</a></li>
-    <li><a href="#二配置系统">二、配置系统</a></li>
-    <li><a href="#三安装宝塔面板">三、安装宝塔面板</a></li>
-    <li><a href="#四配置宝塔面板">四、配置宝塔面板</a></li>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#烧录镜像">烧录镜像</a></li>
+    <li><a href="#配置系统">配置系统</a></li>
+    <li><a href="#安装宝塔面板">安装宝塔面板</a></li>
+    <li><a href="#配置宝塔面板">配置宝塔面板</a></li>
   </ol>
 </nav>
                 </div>

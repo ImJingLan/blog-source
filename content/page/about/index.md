@@ -32,7 +32,9 @@ menu:
 
 - 是个接受过义务教育的苦逼高中生
 
-- 大概碰过:`PHP`,`HTML`,`JavaScript`,`C`,`C++`,`C#`,`python`, `易语言`都很菜就是了（~~退役~~ 现役 OIer）
+- INFP-T
+
+- 大概碰过:`PHP`,`HTML`,`JavaScript`,`C`,`C++`,`C#`,`python`, `易语言`都很菜就是了（~~退役~~ ~~现役~~ 退役 OIer）
 
 - 常用软件：Premiere Pro，Photoshop ， Fl Studio ，Studio One 5
 
@@ -51,7 +53,7 @@ menu:
   鼠标：罗技 G502 HERO
 
 - 目前就读于：`柳州高级中学 高新校区`
-- administrator
+
 - 个人主要配色
 
   ![COLOR](color.png)
