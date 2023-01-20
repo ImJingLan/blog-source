@@ -177,7 +177,7 @@ menu:
   main:
     - identifier: home
       name: 主页
-      url: /
+      url: https://yurik.cafe
       weight: -100
       params:
         ### For demonstration purpose, the home link will be open in a new tab
