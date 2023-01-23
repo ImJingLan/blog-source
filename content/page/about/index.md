@@ -70,10 +70,6 @@ menu:
 
 - [Twitter](https://twitter.com/ImJingLan)
 
-- [个人资料库](https://wiki.yurik.cafe/)
-
-- [服务器状态监视](https://stats.uptimerobot.com/pBNNEsz05n)
-
 ## 喜欢看的虚拟主播们的主页地址（没有 D!!.jpg）
 
 [巴琦 Baki](https://space.bilibili.com/1588646945)（爹！~~我真的好想你啊~~）
@@ -119,4 +115,5 @@ Bison 仓鼠: [主页](https://space.bilibili.com/136107) [直播间](http://liv
 ![CC BY-NC-SA 4.0](CC-BY-NC-SA.png)
 
 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 本站部分内容参考自互联网
