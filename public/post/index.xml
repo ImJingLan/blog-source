@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 景蓝の小屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Vercel托管静态网页</title>
+      <link>https://blog.yurik.cafe/p/use-vercel-introduction/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.yurik.cafe/p/use-vercel-introduction/</guid>
+      <description>前言 Vercel 是一个前端页面托管服务网站，用户可以在上面托管部署多个前端框架的项目
+当然，Vercel 也可以直接托管 Html 静态站点，并且 Vercel 的访问速度优于 Github Pages
+写这篇文章的想法来源于两个，一是之前发布的 Hugo 博客部署有一半烂尾了（懒.jpg）, 还有一点就是 Norphin 的博客在他自己自定义后使用了一张 3.04Mb 左右的背景图片，由于他使用 frp 服务+香港节点建站，使得整张图片我加载了大约 10s。于是决定教教他怎么使用 vercel 来规避一些流量损耗。
+BTW: 他的背景图是 4K 的，其实一般来说 1080p 到 2k 就差不多了，不必要上传那么大的图片的说&amp;hellip;
+注册 Vercel Vercel 的注册过程很简单，你可以直接使用自己的 GitHub、GitLab、BitBucket 账户直接登录，在本文中就不再过多赘述
+使用 Vercel 首先在 Github 或者 GitLab 账户（下文简称你的账户）中新建一个 Git 仓库，随后将自己的静态文件 Git 提交至仓库内
+接着在 Vercel 中点击 Add New..，或者访问这个网址。连接你的你的账户，选择先前新建的仓库，点击 Import
+设置你的Project Name, 如果你单纯的想要托管 Html 文档和静态资源的话 框架预设(Framework Preset)就选 Other 就好了
+点击 部署(Deploy) 后稍等片刻, 你的项目就部署完成
+绑定自定义域名 Vercel 会在部署项目时提供一个 .</description>
+    </item>
+    
     <item>
       <title>树莓派4B烧录CentOS镜像并安装宝塔面板</title>
       <link>https://blog.yurik.cafe/p/raspberry-pi-os-install/</link>
@@ -49,17 +67,17 @@
 自从有了一台独立服务器后，可以玩的东西就多了
 于是决定开一个我的世界 Java 服务器
 写一篇文章记录一下
-一、安装运行环境 Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行
+安装运行环境 Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行
 由于我想开一个 1.16.5 的服务器，所以 Java 版本选择了 Java 17
 安装过程参考的这篇文章《Linux 安装 Java 17 - ChaosMoor》
-二、下载服务端 Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等
+下载服务端 Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等
 由于我希望保留原版的红石特性，所以选择了原版服务端
 对于最新版本的 Minecraft 服务器，可以前往Minecraft.net下载 jar 文件
 如果你想获取特定版本的服务端文件，可以访问Minecraft Wiki搜索对应版本页面
 ▲ Wiki 界面
 Download(下载) -&amp;gt; Server(服务端)下载服务端
 注意，不开玩笑！：千万不要误点括号后的(.json)文件，或错选 Obfuscation maps(混淆映射表)中的 Server(服务器)选项
-三、运行服务器 进入终端
+运行服务器 进入终端
 在服务器上新建一个文件夹存放服务端文件
 mkdir &amp;lt;文件夹名称&amp;gt;
 进入文件夹
@@ -89,11 +107,11 @@ java -Xmx1024M -Xms1024M -jar &amp;lt;服务端文件名&amp;gt;.</description>
       <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://blog.yurik.cafe/p/get-bilibili-album/</guid>
-      <description>〇、前言 最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。草
+      <description>前言 最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。草
 在整理的时候发现有一些歌曲是直接从 B 站上下载下来的，专辑封面也是从 B 站封面扒的，全没了（呜呜呜
 虽然在 Bing 上一搜就有很多封面提取的网站
 但是秉承着用轮子不如造轮子的理论(其实就是闲着没事)，我决定自己用 Python 写一个提取封面的工具
-一、准备工作 既然是造轮子，那当然要先看 B 站的 API
+准备工作 既然是造轮子，那当然要先看 B 站的 API
 搜了一下，发现网上公认的哔哩哔哩官方 API 文档地址是：http://docs.bilibili.cn/wiki
 但是
 在 Github 上面找到的野生文档 SocialSisterYi/bilibili-API-collect
@@ -199,14 +217,15 @@ AC代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 #include&amp;lt;i
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://blog.yurik.cafe/p/hugo-blog/</guid>
-      <description>〇、前言 0.1 我为什么选择 Hugo Hugo 是一个使用Go语言编写的静态网站生成器。 长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的Typecho系统，转而寻找静态博客系统。在尝试了Hexo、Jekyll后，我选择了Hugo，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是Stack主题仅适用于 Hugo (搭建博客第一要领：好看)
-0.2 网页托管 说起网页托管，大家第一想到的大概都是Github Pages吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：
+      <description>前言 我为什么选择 Hugo Hugo 是一个使用Go语言编写的静态网站生成器。 长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的Typecho系统，转而寻找静态博客系统。在尝试了Hexo、Jekyll后，我选择了Hugo，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是Stack主题仅适用于 Hugo (搭建博客第一要领：好看)
+网页托管 说起网页托管，大家第一想到的大概都是Github Pages吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：
 github pages 会对绑定的域名进行 cname 验证，而 Cloudflare 默认将主域名的 CNAME 拉平成 A 解析，这导致我的域名一周多了还没有通过验证 Github Pages 默认给每个域名申请免费的 SSL 证书，而我的一个域名出现了 SSL 证书出错的情况 😓，最后也没排查出是域名还是 gh pages 的问题 可能会有 DNS 污染导致 github.io 无法访问 不支持 PHP，导致我原先的一些脚本无法使用 为了解决这些问题，我在知乎游了一圈，发现了一个宝藏部署服务：Vercel
 Vercel 有以下优点：
 访问速度比 Github Pages 快
 比 Github Pages 稳定
 自带 SSL 证书
-支持将域名 DNS 服务器迁移至 Vercel</description>
+支持将域名 DNS 服务器迁移至 Vercel
+放一张 Github Pages 与 Vercel 速度对比图（左：Gh Pages | 右：vercel） 数据、地图来自 站长工具 &amp;gt; 国内网站测速</description>
     </item>
     
     <item>
@@ -221,7 +240,7 @@ Vercel 有以下优点：
 通俗地讲，就是我把 Mojang 的正版登录 API 给【劫持】成自己的啦，所以可以像登录正版那样直接用皮肤站的邮箱和密码登录游戏（还支持 Mojang 都不支持的多用户选择哦）。这种外置登录系统的实现应该可以说是比市面上的软件都要完善（毕竟可以直接利用 Minecraft 本身自带的鉴权模块），因此写一篇博文介绍一下这些实现之间的不同之处，顺带记录一下实现 Yggdrasil API 时踩到的坑，算是抛砖引玉了。
 注意：本文不适合小白及问题解决能力弱的人群阅读。
 感觉我明明好久没玩 MC 了，要玩也都是玩正版服务器，但是却一直在搞这些盗版服用的东西，我真是舍己为人造福大众普惠众生啊（不
-一、服务器内置登录插件 相信维护过 Minecraft 服务器（当然，我这边说的是运行在离线模式下的服务器）的腐竹们或多或少都听说过 Authme、CrazyLogin 等登录插件的鼎鼎大名吧。由于这些服务器运作在离线模式（online-mode=false，即俗称的盗版模式）下，缺少 Mojang 官方账户认证系统的支持，所以必须使用这类插件来进行玩家认证（否则随便谁都可以冒名顶替别人了，换一个登录角色名就行）。
+服务器内置登录插件 相信维护过 Minecraft 服务器（当然，我这边说的是运行在离线模式下的服务器）的腐竹们或多或少都听说过 Authme、CrazyLogin 等登录插件的鼎鼎大名吧。由于这些服务器运作在离线模式（online-mode=false，即俗称的盗版模式）下，缺少 Mojang 官方账户认证系统的支持，所以必须使用这类插件来进行玩家认证（否则随便谁都可以冒名顶替别人了，换一个登录角色名就行）。
 这类插件的工作原理就是在服务端维护一个数据表，表中每一条记录中存储了角色的「角色名」、「登录密码」、「注册时间」、「登录 IP 地址」等等信息，当玩家初次进入服务器时需要通过这些插件进行注册操作（e.g. /register 命令）并在表中插入一条记录，注册完毕后进入服务器则需要输入密码（e.g. /login &amp;lt;password&amp;gt; 命令）来认证。
 其实这样的解决方案也没什么不好，而且现在 Authme 等登录插件在众多的服务器中都还是主流。但是，如果你的服务器已经发展到比较大型了，或许你就比较希望有这样一个东西：</description>
     </item>

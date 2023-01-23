@@ -10,18 +10,18 @@
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="使用Hugo配合Vercel搭建个人博客" /><title>使用Hugo搭建个人博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="使用Hugo搭建个人博客" /><title>使用Hugo搭建个人博客</title>
 
 <link rel="canonical" href="https://blog.yurik.cafe/p/hugo-blog/" />
 
 <link rel="stylesheet" href="/scss/style.min.d59041805007384093d8a29260ee89633f08e90f353c3067e472c66f3124b2a7.css"><meta property='og:title' content='使用Hugo搭建个人博客'>
-<meta property='og:description' content='使用Hugo配合Vercel搭建个人博客'>
+<meta property='og:description' content='使用Hugo搭建个人博客'>
 <meta property='og:url' content='https://blog.yurik.cafe/p/hugo-blog/'>
 <meta property='og:site_name' content='景蓝の小屋'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-02-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-02-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://blog.yurik.cafe/p/hugo-blog/banner.png' />
 <meta name="twitter:site" content="@imjinglan">
     <meta name="twitter:creator" content="@imjinglan"><meta name="twitter:title" content="使用Hugo搭建个人博客">
-<meta name="twitter:description" content="使用Hugo配合Vercel搭建个人博客"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="使用Hugo搭建个人博客"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://blog.yurik.cafe/p/hugo-blog/banner.png' />
 <link rel="shortcut icon" href="https://cdn.rimeradio.top/2022/07/21/avatar.ico" />
 
@@ -103,7 +103,7 @@
 
     
     <h3 class="article-subtitle">
-        使用Hugo配合Vercel搭建个人博客
+        使用Hugo搭建个人博客
     </h3>
     
 
@@ -147,12 +147,12 @@
     <section class="article-content">
     
     
-    <h2 id="前言">〇、前言</h2>
-<h3 id="01-我为什么选择-hugo">0.1 我为什么选择 Hugo</h3>
+    <h2 id="前言">前言</h2>
+<h3 id="我为什么选择-hugo">我为什么选择 Hugo</h3>
 <p>Hugo 是一个使用<strong>Go</strong>语言编写的静态网站生成器。
 长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的<strong>Typecho</strong>系统，转而寻找静态博客系统。在尝试了<strong>Hexo</strong>、<strong>Jekyll</strong>后，我选择了<strong>Hugo</strong>，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
     ><strong>Stack</strong></a>主题仅适用于 Hugo (搭建博客第一要领：好看)</p>
-<h3 id="02-网页托管">0.2 网页托管</h3>
+<h3 id="网页托管">网页托管</h3>
 <p>说起网页托管，大家第一想到的大概都是<a class="link" href="https://pages.github.com"  target="_blank" rel="noopener"
     ><strong>Github Pages</strong></a>吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：</p>
 <ol>
@@ -212,8 +212,8 @@
     >站长工具 &gt; 国内网站测速</a></p>
 </blockquote>
 <p>Vercel 比 GhPages 绿多了（逃</p>
-<h2 id="一准备工作">一、准备工作</h2>
-<h3 id="11-安装-hugo">1.1 安装 Hugo</h3>
+<h2 id="准备工作">准备工作</h2>
+<h3 id="安装-hugo">安装 Hugo</h3>
 <blockquote>
 <p>本文仅展示使用 Windows 安装 Hugo</p>
 <p>本教程中使用 <a class="link" href="https://scoop.sh/"  target="_blank" rel="noopener"
@@ -248,12 +248,12 @@
 <blockquote>
 <p>括号内版本号以最新版本为准</p>
 </blockquote>
-<h3 id="12-创建站点">1.2 创建站点</h3>
-<h4 id="121-初始化站点">1.2.1 初始化站点</h4>
+<h3 id="创建站点">创建站点</h3>
+<h4 id="初始化站点">初始化站点</h4>
 <p>在控制台中输入<code>hugo new site 路径</code>新建一个站点</p>
 <p>如<code>hugo new site E:\myblog</code></p>
 <p>这个命令将在 E 盘中创建一个名为 myblog 的目录并在此中创建一个新的 hugo 站点</p>
-<h4 id="122-安装主题">1.2.2 安装主题</h4>
+<h4 id="安装主题">安装主题</h4>
 <p>由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题</p>
 <p>在本文中选择从 hexo 移植的<a class="link" href="https://github.com/elkan1788/hugo-theme-next"  target="_blank" rel="noopener"
     >Next 主题</a></p>
@@ -262,8 +262,11 @@
 <p>复制站点根目录/theme/hugo-theme-next/exampleSite 中的文件并粘贴至站点根目录后覆盖</p>
 <p>运行<code>hugo server</code></p>
 <p>恭喜你，你的 hugo 博客已成功运行</p>
-<h4 id="123-自定义博客">1.2.3 自定义博客</h4>
+<h4 id="自定义博客">自定义博客</h4>
 <p>待完成&hellip;..</p>
+<h2 id="部署">部署</h2>
+<p>在博客文件夹根目录打开终端后运行 <code>hugo</code> 命令，稍等片刻后就会生成一个 <strong>public</strong> 文件夹, 文件夹中包含了站点渲染后所有的静态 html 文件以及样式与 js 文件, 你便可以将这些文件复制到你的站点目录或者任何静态网页托管服务来提供访问</p>
+<h3 id="使用-vercel-来部署个人博客">使用 Vercel 来部署个人博客</h3>
 
 </section>
 
@@ -297,6 +300,29 @@
         <h2 class="section-title">相关文章</h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/use-vercel-introduction/">
+        
+        
+            <div class="article-image">
+                <img src="/p/use-vercel-introduction/banner.43e79804456041f458f7184cf59f3ccc_hu7c9cee5a858557f74e9fc7f3b03eb440_55588_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 使用Vercel托管静态网页"
+                        data-key="use-vercel-introduction" 
+                        data-hash="md5-Q&#43;eYBEVgQfRY9xhM9Z88zA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用Vercel托管静态网页</h2>
+        </div>
+    </a>
+</article>
                 
                     
 <article class="has-image">
@@ -386,29 +412,6 @@
 
         <div class="article-details">
             <h2 class="article-title">戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/qqbot-dev-1/">
-        
-        
-            <div class="article-image">
-                <img src="/p/qqbot-dev-1/banner.f1a9de7e23c403edfb70aa9c46334a67_hu28c59544680010fae30152def9654cc9_242684_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post cqhttp-go - 便捷开发自己的QQ机器人（一）"
-                        data-key="qqbot-dev-1" 
-                        data-hash="md5-8anefiPEA&#43;37cKqcRjNKZw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">cqhttp-go - 便捷开发自己的QQ机器人（一）</h2>
         </div>
     </a>
 </article>
@@ -619,22 +622,27 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#前言">〇、前言</a>
+    <li><a href="#前言">前言</a>
       <ol>
-        <li><a href="#01-我为什么选择-hugo">0.1 我为什么选择 Hugo</a></li>
-        <li><a href="#02-网页托管">0.2 网页托管</a></li>
+        <li><a href="#我为什么选择-hugo">我为什么选择 Hugo</a></li>
+        <li><a href="#网页托管">网页托管</a></li>
       </ol>
     </li>
-    <li><a href="#一准备工作">一、准备工作</a>
+    <li><a href="#准备工作">准备工作</a>
       <ol>
-        <li><a href="#11-安装-hugo">1.1 安装 Hugo</a></li>
-        <li><a href="#12-创建站点">1.2 创建站点</a>
+        <li><a href="#安装-hugo">安装 Hugo</a></li>
+        <li><a href="#创建站点">创建站点</a>
           <ol>
-            <li><a href="#121-初始化站点">1.2.1 初始化站点</a></li>
-            <li><a href="#122-安装主题">1.2.2 安装主题</a></li>
-            <li><a href="#123-自定义博客">1.2.3 自定义博客</a></li>
+            <li><a href="#初始化站点">初始化站点</a></li>
+            <li><a href="#安装主题">安装主题</a></li>
+            <li><a href="#自定义博客">自定义博客</a></li>
           </ol>
         </li>
+      </ol>
+    </li>
+    <li><a href="#部署">部署</a>
+      <ol>
+        <li><a href="#使用-vercel-来部署个人博客">使用 Vercel 来部署个人博客</a></li>
       </ol>
     </li>
   </ol>

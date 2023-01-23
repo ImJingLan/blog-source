@@ -6,7 +6,58 @@
         <description>Recent content on 景蓝の小屋</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yurik.cafe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用Vercel托管静态网页</title>
+        <link>https://blog.yurik.cafe/p/use-vercel-introduction/</link>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.yurik.cafe/p/use-vercel-introduction/</guid>
+        <description>&lt;img src="https://blog.yurik.cafe/p/use-vercel-introduction/banner.png" alt="Featured image of post 使用Vercel托管静态网页" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;Vercel 是一个前端页面托管服务网站，用户可以在上面托管部署多个前端框架的项目&lt;/p&gt;
+&lt;p&gt;当然，Vercel 也可以直接托管 Html 静态站点，并且 Vercel 的访问速度优于 Github Pages&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.yurik.cafe/p/use-vercel-introduction/speed-compair.png&#34;
+	width=&#34;1514&#34;
+	height=&#34;577&#34;
+	srcset=&#34;https://blog.yurik.cafe/p/use-vercel-introduction/speed-compair_hu505af44e4305f8cbda9781a8e69602f7_110930_480x0_resize_box_3.png 480w, https://blog.yurik.cafe/p/use-vercel-introduction/speed-compair_hu505af44e4305f8cbda9781a8e69602f7_110930_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;速度对比&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;629px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;写这篇文章的想法来源于两个，一是之前发布的 Hugo 博客部署有一半烂尾了（懒.jpg）, 还有一点就是 Norphin 的博客在他自己自定义后使用了一张 3.04Mb 左右的背景图片，由于他使用 frp 服务+香港节点建站，使得整张图片我加载了大约 10s。于是决定教教他怎么使用 vercel 来规避一些流量损耗。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;BTW: 他的背景图是 4K 的，其实一般来说 1080p 到 2k 就差不多了，不必要上传那么大的图片的说&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;注册-vercel&#34;&gt;注册 Vercel&lt;/h2&gt;
+&lt;p&gt;Vercel 的注册过程很简单，你可以直接使用自己的 GitHub、GitLab、BitBucket 账户直接登录，在本文中就不再过多赘述&lt;/p&gt;
+&lt;h2 id=&#34;使用-vercel&#34;&gt;使用 Vercel&lt;/h2&gt;
+&lt;p&gt;首先在 Github 或者 GitLab 账户（下文简称&lt;strong&gt;你的账户&lt;/strong&gt;）中新建一个 Git 仓库，随后将自己的静态文件 Git 提交至仓库内&lt;/p&gt;
+&lt;p&gt;接着在 Vercel 中点击 &lt;strong&gt;Add New..&lt;/strong&gt;，或者访问&lt;a class=&#34;link&#34; href=&#34;https://vercel.com/new&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这个网址&lt;/a&gt;。连接你的你的账户，选择先前新建的仓库，点击 Import&lt;/p&gt;
+&lt;p&gt;设置你的&lt;strong&gt;Project Name&lt;/strong&gt;, 如果你单纯的想要托管 Html 文档和静态资源的话 框架预设(Framework Preset)就选 &lt;strong&gt;Other&lt;/strong&gt; 就好了&lt;/p&gt;
+&lt;p&gt;点击 部署(Deploy) 后稍等片刻, 你的项目就部署完成&lt;/p&gt;
+&lt;h2 id=&#34;绑定自定义域名&#34;&gt;绑定自定义域名&lt;/h2&gt;
+&lt;p&gt;Vercel 会在部署项目时提供一个 &lt;strong&gt;.vercel.app&lt;/strong&gt; 结尾的二级域名，但由于某些特殊原因，vercel.app 域名可能会无法访问，这时候你就需要一个自己的域名（域名注册方法自行使用搜索引擎搜索）&lt;/p&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://vercel.com/dashboard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dashboard&lt;/a&gt;中点击进入你刚刚部署的项目，点击上方的 Setting 进入设置页面，在左侧边栏进入&lt;strong&gt;Domains(域名)&lt;strong&gt;页面，在输入框中输入你想要的域名, 点击&lt;/strong&gt;Add&lt;/strong&gt;后按照提示在 DNS 中设置记录，返回域名管理页面点击**Refresh(刷新)**使其检测记录是否生效并注册 SSL 证书即可。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;值得注意的是，如果你添加的是一个 www 或者根域名，如 &lt;a class=&#34;link&#34; href=&#34;https://www.yurik.cafe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.yurik.cafe&lt;/a&gt; 或者 yurik.cafe，Vercel 会跳出提示询问你是选择将 www 域名重定向至根域名还是根域名重定向至 www 域名，抑或是单纯添加你输入的域名，你可以根据自身情况选择。&lt;/p&gt;
+&lt;p&gt;Vercel 推荐你将 www 域名重定向至根域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;访问&#34;&gt;访问&lt;/h2&gt;
+&lt;p&gt;按照&lt;strong&gt;域名/路径/文件名&lt;/strong&gt;访问即可&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vercel 会自动为域名注册一个免费的 SSL 证书，所以你可以使用 https 访问&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>树莓派4B烧录CentOS镜像并安装宝塔面板</title>
         <link>https://blog.yurik.cafe/p/raspberry-pi-os-install/</link>
         <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
@@ -254,12 +305,12 @@
 &lt;p&gt;自从有了一台独立服务器后，可以玩的东西就多了&lt;/p&gt;
 &lt;p&gt;于是决定开一个我的世界 Java 服务器&lt;/p&gt;
 &lt;p&gt;写一篇文章记录一下&lt;/p&gt;
-&lt;h2 id=&#34;一安装运行环境&#34;&gt;一、安装运行环境&lt;/h2&gt;
+&lt;h2 id=&#34;安装运行环境&#34;&gt;安装运行环境&lt;/h2&gt;
 &lt;p&gt;Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行&lt;/p&gt;
 &lt;p&gt;由于我想开一个 1.16.5 的服务器，所以 Java 版本选择了 Java 17&lt;/p&gt;
 &lt;p&gt;安装过程参考的这篇文章《&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/chaosmoor/p/15897693.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux 安装 Java 17 - ChaosMoor&lt;/a&gt;》&lt;/p&gt;
-&lt;h2 id=&#34;二下载服务端&#34;&gt;二、下载服务端&lt;/h2&gt;
+&lt;h2 id=&#34;下载服务端&#34;&gt;下载服务端&lt;/h2&gt;
 &lt;p&gt;Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等&lt;/p&gt;
 &lt;p&gt;由于我希望保留原版的红石特性，所以选择了原版服务端&lt;/p&gt;
 &lt;p&gt;对于最新版本的 Minecraft 服务器，可以前往&lt;a class=&#34;link&#34; href=&#34;https://www.minecraft.net/download/server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -285,7 +336,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span style=&#34;color:red !important&#34;&gt;&lt;b&gt;注意，不开玩笑！&lt;/b&gt;&lt;/span&gt;：千万不要误点括号后的(.json)文件，或错选 Obfuscation maps(混淆映射表)中的 Server(服务器)选项&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;三运行服务器&#34;&gt;三、运行服务器&lt;/h2&gt;
+&lt;h2 id=&#34;运行服务器&#34;&gt;运行服务器&lt;/h2&gt;
 &lt;p&gt;进入终端&lt;/p&gt;
 &lt;p&gt;在服务器上新建一个文件夹存放服务端文件&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;mkdir &amp;lt;文件夹名称&amp;gt;&lt;/code&gt;&lt;/p&gt;
@@ -352,10 +403,11 @@
 &lt;p&gt;&lt;span style=&#34;color:green !important&#34;&gt;&lt;b&gt;记住这点更好&lt;/b&gt;&lt;/span&gt;：当你将 eula 改为&lt;strong&gt;true&lt;/strong&gt;后，即代表你同意了《&lt;a class=&#34;link&#34; href=&#34;https://account.mojang.com/documents/minecraft_eula&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MINECRAFT 最终用户许可协议&lt;/a&gt;》, 因此你最好详细阅读一下&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;四服务器配置&#34;&gt;四、服务器配置&lt;/h2&gt;
-&lt;p&gt;无论是什么客户端，&lt;strong&gt;server.properties&lt;/strong&gt;是必须的配置文件，当然，在第一次运行服务端时会自动生成，文件内容 + 必要注释 如下&lt;/p&gt;
+&lt;h2 id=&#34;服务器配置&#34;&gt;服务器配置&lt;/h2&gt;
+&lt;p&gt;无论是什么客户端，&lt;strong&gt;server.properties&lt;/strong&gt;是必须的配置文件，当然，在第一次运行服务端时会自动生成，文件内容 + 必要注释 请查看&lt;a class=&#34;link&#34; href=&#34;https://wiki.yurik.cafe/Game/Minecraft/Server/server.properties/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这个网址&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以对应自己实际情况修改，也可以下载&lt;a class=&#34;link&#34; href=&#34;server.properties&#34; &gt;我的配置文件&lt;/a&gt;（基本默认）&lt;/p&gt;
-&lt;h2 id=&#34;五成功&#34;&gt;五、成功&lt;/h2&gt;
+&lt;h2 id=&#34;成功&#34;&gt;成功&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.yurik.cafe/p/minecraft-server-on-linux-1/done.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1032&#34;
@@ -371,6 +423,16 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;▲ 游戏内的显示效果&lt;/p&gt;
+&lt;h2 id=&#34;管理服务器&#34;&gt;管理服务器&lt;/h2&gt;
+&lt;p&gt;你可以使用命令行来管理服务器，常用的命令有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stop&lt;/code&gt;：停止服务器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list&lt;/code&gt;：列出当前在线的玩家&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kick [player]&lt;/code&gt;：将玩家踢出服务器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ban [player]&lt;/code&gt;：封禁玩家&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;op [player]&lt;/code&gt;：将玩家提升为服务器管理员&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;whitelist add [player]&lt;/code&gt;：将玩家添加到白名单&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
@@ -392,7 +454,7 @@
         <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
         
         <guid>https://blog.yurik.cafe/p/get-bilibili-album/</guid>
-        <description>&lt;img src="https://blog.yurik.cafe/p/get-bilibili-album/banner.png" alt="Featured image of post 获取B站视频封面" /&gt;&lt;h2 id=&#34;前言&#34;&gt;〇、前言&lt;/h2&gt;
+        <description>&lt;img src="https://blog.yurik.cafe/p/get-bilibili-album/banner.png" alt="Featured image of post 获取B站视频封面" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近重装了电脑，然后电脑上整理的 iTunes 资料库全没了。&lt;del&gt;草&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在整理的时候发现有一些歌曲是直接从 B 站上下载下来的，专辑封面也是从 B 站封面扒的，全没了（呜呜呜&lt;/p&gt;
 &lt;p&gt;虽然在 Bing 上一搜就有很多封面提取的网站&lt;/p&gt;
@@ -439,7 +501,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;但是秉承着&lt;strong&gt;用轮子不如造轮子&lt;/strong&gt;的理论(&lt;del&gt;其实就是闲着没事&lt;/del&gt;)，我决定自己用 Python 写一个提取封面的工具&lt;/p&gt;
-&lt;h2 id=&#34;一准备工作&#34;&gt;一、准备工作&lt;/h2&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
 &lt;p&gt;既然是造轮子，那当然要先看 B 站的 API&lt;/p&gt;
 &lt;p&gt;搜了一下，发现网上公认的哔哩哔哩官方 API 文档地址是：&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.bilibili.cn/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://docs.bilibili.cn/wiki&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -1034,7 +1096,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;那么，开搞&lt;/p&gt;
-&lt;h2 id=&#34;二python-实现&#34;&gt;二、Python 实现&lt;/h2&gt;
+&lt;h2 id=&#34;python-实现&#34;&gt;Python 实现&lt;/h2&gt;
 &lt;p&gt;随便写了个代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1338,7 +1400,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Done！&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;四后记&#34;&gt;四、后记&lt;/h2&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
 &lt;p&gt;这玩意没啥好说的。。。&lt;/p&gt;
 &lt;p&gt;唯一的缺点就是没有写 AV 号的获取和 BV 号格式检测吧。。&lt;/p&gt;
 </description>
@@ -1723,12 +1785,12 @@
         <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
         
         <guid>https://blog.yurik.cafe/p/hugo-blog/</guid>
-        <description>&lt;img src="https://blog.yurik.cafe/p/hugo-blog/banner.png" alt="Featured image of post 使用Hugo搭建个人博客" /&gt;&lt;h2 id=&#34;前言&#34;&gt;〇、前言&lt;/h2&gt;
-&lt;h3 id=&#34;01-我为什么选择-hugo&#34;&gt;0.1 我为什么选择 Hugo&lt;/h3&gt;
+        <description>&lt;img src="https://blog.yurik.cafe/p/hugo-blog/banner.png" alt="Featured image of post 使用Hugo搭建个人博客" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;h3 id=&#34;我为什么选择-hugo&#34;&gt;我为什么选择 Hugo&lt;/h3&gt;
 &lt;p&gt;Hugo 是一个使用&lt;strong&gt;Go&lt;/strong&gt;语言编写的静态网站生成器。
 长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的&lt;strong&gt;Typecho&lt;/strong&gt;系统，转而寻找静态博客系统。在尝试了&lt;strong&gt;Hexo&lt;/strong&gt;、&lt;strong&gt;Jekyll&lt;/strong&gt;后，我选择了&lt;strong&gt;Hugo&lt;/strong&gt;，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Stack&lt;/strong&gt;&lt;/a&gt;主题仅适用于 Hugo (搭建博客第一要领：好看)&lt;/p&gt;
-&lt;h3 id=&#34;02-网页托管&#34;&gt;0.2 网页托管&lt;/h3&gt;
+&lt;h3 id=&#34;网页托管&#34;&gt;网页托管&lt;/h3&gt;
 &lt;p&gt;说起网页托管，大家第一想到的大概都是&lt;a class=&#34;link&#34; href=&#34;https://pages.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;Github Pages&lt;/strong&gt;&lt;/a&gt;吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：&lt;/p&gt;
 &lt;ol&gt;
@@ -1788,8 +1850,8 @@
     &gt;站长工具 &amp;gt; 国内网站测速&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Vercel 比 GhPages 绿多了（逃&lt;/p&gt;
-&lt;h2 id=&#34;一准备工作&#34;&gt;一、准备工作&lt;/h2&gt;
-&lt;h3 id=&#34;11-安装-hugo&#34;&gt;1.1 安装 Hugo&lt;/h3&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;h3 id=&#34;安装-hugo&#34;&gt;安装 Hugo&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文仅展示使用 Windows 安装 Hugo&lt;/p&gt;
 &lt;p&gt;本教程中使用 &lt;a class=&#34;link&#34; href=&#34;https://scoop.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1824,12 +1886,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;括号内版本号以最新版本为准&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;12-创建站点&#34;&gt;1.2 创建站点&lt;/h3&gt;
-&lt;h4 id=&#34;121-初始化站点&#34;&gt;1.2.1 初始化站点&lt;/h4&gt;
+&lt;h3 id=&#34;创建站点&#34;&gt;创建站点&lt;/h3&gt;
+&lt;h4 id=&#34;初始化站点&#34;&gt;初始化站点&lt;/h4&gt;
 &lt;p&gt;在控制台中输入&lt;code&gt;hugo new site 路径&lt;/code&gt;新建一个站点&lt;/p&gt;
 &lt;p&gt;如&lt;code&gt;hugo new site E:\myblog&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这个命令将在 E 盘中创建一个名为 myblog 的目录并在此中创建一个新的 hugo 站点&lt;/p&gt;
-&lt;h4 id=&#34;122-安装主题&#34;&gt;1.2.2 安装主题&lt;/h4&gt;
+&lt;h4 id=&#34;安装主题&#34;&gt;安装主题&lt;/h4&gt;
 &lt;p&gt;由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题&lt;/p&gt;
 &lt;p&gt;在本文中选择从 hexo 移植的&lt;a class=&#34;link&#34; href=&#34;https://github.com/elkan1788/hugo-theme-next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Next 主题&lt;/a&gt;&lt;/p&gt;
@@ -1838,8 +1900,11 @@
 &lt;p&gt;复制站点根目录/theme/hugo-theme-next/exampleSite 中的文件并粘贴至站点根目录后覆盖&lt;/p&gt;
 &lt;p&gt;运行&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;恭喜你，你的 hugo 博客已成功运行&lt;/p&gt;
-&lt;h4 id=&#34;123-自定义博客&#34;&gt;1.2.3 自定义博客&lt;/h4&gt;
+&lt;h4 id=&#34;自定义博客&#34;&gt;自定义博客&lt;/h4&gt;
 &lt;p&gt;待完成&amp;hellip;..&lt;/p&gt;
+&lt;h2 id=&#34;部署&#34;&gt;部署&lt;/h2&gt;
+&lt;p&gt;在博客文件夹根目录打开终端后运行 &lt;code&gt;hugo&lt;/code&gt; 命令，稍等片刻后就会生成一个 &lt;strong&gt;public&lt;/strong&gt; 文件夹, 文件夹中包含了站点渲染后所有的静态 html 文件以及样式与 js 文件, 你便可以将这些文件复制到你的站点目录或者任何静态网页托管服务来提供访问&lt;/p&gt;
+&lt;h3 id=&#34;使用-vercel-来部署个人博客&#34;&gt;使用 Vercel 来部署个人博客&lt;/h3&gt;
 </description>
         </item>
         <item>
@@ -1861,7 +1926,7 @@
 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：本文不适合小白及问题解决能力弱的人群阅读。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;del&gt;感觉我明明好久没玩 MC 了，要玩也都是玩正版服务器，但是却一直在搞这些盗版服用的东西，我真是舍己为人造福大众普惠众生啊（不&lt;/del&gt;&lt;/p&gt;
-&lt;h2 id=&#34;一服务器内置登录插件&#34;&gt;一、服务器内置登录插件&lt;/h2&gt;
+&lt;h2 id=&#34;服务器内置登录插件&#34;&gt;服务器内置登录插件&lt;/h2&gt;
 &lt;p&gt;相信维护过 Minecraft 服务器（当然，我这边说的是运行在离线模式下的服务器）的腐竹们或多或少都听说过 Authme、CrazyLogin 等登录插件的鼎鼎大名吧。由于这些服务器运作在离线模式（&lt;code&gt;online-mode=false&lt;/code&gt;，即俗称的盗版模式）下，缺少 Mojang 官方账户认证系统的支持，所以必须使用这类插件来进行玩家认证（否则随便谁都可以冒名顶替别人了，换一个登录角色名就行）。&lt;/p&gt;
 &lt;p&gt;这类插件的工作原理就是在服务端维护一个数据表，表中每一条记录中存储了角色的「角色名」、「登录密码」、「注册时间」、「登录 IP 地址」等等信息，当玩家初次进入服务器时需要通过这些插件进行注册操作（e.g. &lt;code&gt;/register&lt;/code&gt; 命令）并在表中插入一条记录，注册完毕后进入服务器则需要输入密码（e.g. &lt;code&gt;/login &amp;lt;password&amp;gt;&lt;/code&gt; 命令）来认证。&lt;/p&gt;
 &lt;p&gt;其实这样的解决方案也没什么不好，而且现在 Authme 等登录插件在众多的服务器中都还是主流。但是，如果你的服务器已经发展到比较大型了，或许你就比较希望有这样一个东西：&lt;/p&gt;
@@ -1874,7 +1939,7 @@
 &lt;li&gt;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;并不是所有腐竹都满足于 Authme + Discuz 这样的组合的（而且这类游戏内登录系统也有不少安全漏洞），毕竟在这个 Minecraft 多人联机服务器发展接近饱和的时候，如果想要你的服务器能够吸引新玩家，那么除了服务器本身建设之外的地方也是要好好考虑的。&lt;/p&gt;
-&lt;h2 id=&#34;二外置登录系统&#34;&gt;二、外置登录系统&lt;/h2&gt;
+&lt;h2 id=&#34;外置登录系统&#34;&gt;外置登录系统&lt;/h2&gt;
 &lt;p&gt;正是这样的需求催生了不少 Minecraft 的「外置登录插件」、「网页登录」等等软件（而且人气都挺高的），我随手在 MCBBS 上一搜就有很多类似的产品，用啥语言写的都有：&lt;em&gt;MadAuth、WebLogin、BeeLogin、WebRegister、冰棂登陆系统……&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;这些软件的原理就是将原本的登录鉴权这一步骤从游戏里抽出来了，将其放到启动器 or 网页上去，而服务端插件的功能就只剩下「查询数据库中用户的登录状态，决定是否放行」：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/Minecraft.jpg&#34;
@@ -1897,11 +1962,11 @@
 &lt;p&gt;Printempw 的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;似乎也挺好的，不是吗？那我今天要说的「自行实现 Yggdrasil API」方法，和这些现成的方式有什么不一样呢？&lt;/p&gt;
-&lt;h2 id=&#34;三自行实现-yggdrasil-api&#34;&gt;三、自行实现 Yggdrasil API&lt;/h2&gt;
+&lt;h2 id=&#34;自行实现-yggdrasil-api&#34;&gt;自行实现 Yggdrasil API&lt;/h2&gt;
 &lt;p&gt;继续看下去之前，首先你要知道 Mojang 正版的 Minecraft 是怎样登录的。Mojang 专门定义了一个用于鉴权的 API，Mojang 旗下的游戏（Minecraft、Scrolls 等）都是用的这一套 API 来正版验证的 —— 这一套 API 的名字就叫做 Yggdrasil（即北欧神话里的世界树，&lt;del&gt;这名字可真几把炫酷&lt;/del&gt;）。&lt;/p&gt;
 &lt;p&gt;正版登录的好处就不用我说了吧？再也不用担心假人压测、自带外置登录（启动器里账号密码登录）、自带皮肤加载（不需要安装 CSL、USM 等皮肤补丁了）、Tab 栏显示头像……可以说，Minecraft 自带的 Yggdrasil API 鉴权系统比上面的那些什么登录插件啊什么外置登录的功能强多了，所以正版服务器（&lt;code&gt;online_mode=true&lt;/code&gt;）也不用担心那些破事，因为官方的这一套鉴权系统以及很完善了。&lt;/p&gt;
 &lt;p&gt;那么问题来了，盗版用户要怎样才能把 Mojang 为正版开发的 Yggdrasil API 系统拿来用呢？&lt;/p&gt;
-&lt;h3 id=&#34;31-基本原理&#34;&gt;3.1 基本原理&lt;/h3&gt;
+&lt;h3 id=&#34;基本原理&#34;&gt;基本原理&lt;/h3&gt;
 &lt;p&gt;这里必须感谢 &lt;a class=&#34;link&#34; href=&#34;https://github.com/to2mbn/authlib-injector/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;to2mbn/authlib-injector&lt;/a&gt; 这个项目，正是因为这个项目，我接下来描述的方法才成为可能。是的，方法很简单，Minecraft 虽然把 Mojang 官方的 Yggdrasil API 地址（&lt;code&gt;https://authserver.mojang.com&lt;/code&gt;）给写死在源码里了，但是既然 Minecraft 是基于 JVM 的应用程序，我们就可以通过字节码替换的方法将官方的 API 地址替换成我们自己实现的 API 地址。&lt;/p&gt;
 &lt;p&gt;以下内容援引自 authlib-agent（即 authlib-injector 前身）的 wiki：&lt;/p&gt;
@@ -1909,7 +1974,7 @@
 &lt;p&gt;authlib-agent 是一个高可靠性, 高适用性, 用于 Minecraft 的, 游戏外登录及皮肤解决方案. 支持 Minecraft1.7+, Craftbukkit, Spigot, Bungeecord 等. 通过对正版登录 API 的重定向, 实现了一个功能和正版几乎一样的游戏外登录系统.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;不过既然要把官方 API 地址替换成我们自己的，我们就得自己实现一个和官方 API 其他地方都一样的 API，也就是，&lt;strong&gt;仿造出一个第三方 Yggdrasil API 出来&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;32-解决方案&#34;&gt;3.2 解决方案&lt;/h3&gt;
+&lt;h3 id=&#34;解决方案&#34;&gt;解决方案&lt;/h3&gt;
 &lt;p&gt;可以说这个系统中，就是「开发完整实现了 Yggdrasil API 的后端」这一步最难了。为啥捏？这个服务端不止要实现用户的认证、皮肤获取，你还得实现用户的注册、登录、角色管理、皮肤上传、皮肤库等等七七八八的功能吧？你还得给这些功能套上一个好看的界面吧，不然你让你的玩家怎么使用？你还得来个后台管理页面吧，不然管理员怎么进行用户管理、封禁等操作？&lt;/p&gt;
 &lt;p&gt;authlib-injector 官方也提供了一个 Java 编写的后端 &lt;a class=&#34;link&#34; href=&#34;https://github.com/to2mbn/yggdrasil-mock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;yggdrasil-mock&lt;/a&gt;，虽然完整实现了 Yggdrasil API，但是它并没有提供直观的管理网页，只提供了一套 RESTful API，所以距离实装要求还是差得比较远的。&lt;/p&gt;
@@ -1930,7 +1995,7 @@
 		data-flex-basis=&#34;417px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;33-如何使用&#34;&gt;3.3 如何使用&lt;/h3&gt;
+&lt;h3 id=&#34;如何使用&#34;&gt;如何使用&lt;/h3&gt;
 &lt;p&gt;讲了那么多，那么到底该怎么使用呢？&lt;/p&gt;
 &lt;p&gt;请参阅：&lt;a class=&#34;link&#34; href=&#34;https://github.com/printempw/yggdrasil-api/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;printempw/yggdrasil-api wiki&lt;/a&gt;。&lt;/p&gt;
@@ -1942,7 +2007,7 @@
 &lt;/ul&gt;
 &lt;p&gt;这还不够多吗？&lt;/p&gt;
 &lt;p&gt;而且你还可以自己修改 HMCL 等开源启动器的源码，在启动时自动注入 &lt;code&gt;-javaagent&lt;/code&gt; 参数，更加方便，还能得到一个服务器专用启动器，逼格更高了（笑）&lt;/p&gt;
-&lt;h3 id=&#34;34-实现效果&#34;&gt;3.4 实现效果&lt;/h3&gt;
+&lt;h3 id=&#34;实现效果&#34;&gt;实现效果&lt;/h3&gt;
 &lt;p&gt;皮肤站的用户管理系统、皮肤系统、后台界面之类的我就不截图了，有兴趣可以去 MCBBS 的 &lt;a class=&#34;link&#34; href=&#34;http://www.mcbbs.net/forum.php?mod=viewthread&amp;amp;tid=552877&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;发布帖&lt;/a&gt; 上感受一下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.yurik.cafe/p/minecraft-yggdrasil-api-third-party-implementation/37e6d2778c77a.png&#34;
@@ -1990,7 +2055,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;▲ 游戏内的显示效果&lt;/p&gt;
-&lt;h2 id=&#34;四yggdrasil-api-踩坑记录&#34;&gt;四、Yggdrasil API 踩坑记录&lt;/h2&gt;
+&lt;h2 id=&#34;yggdrasil-api-踩坑记录&#34;&gt;Yggdrasil API 踩坑记录&lt;/h2&gt;
 &lt;p&gt;下面记录一些自己实现 Yggdrasil API 时踩到的坑，毕竟 wiki.vg 里并不会提到这些在自己实现 API 时需要注意的东西（提到的大部分都是使用 API 时应该要注意的），所以我也只能摸着石头过河，踩了不少坑，这里记录一下，希望能帮到后来人。&lt;/p&gt;
 &lt;p&gt;基础的 API 定义之类的我就不说了，下面主要讲一些 &lt;a class=&#34;link&#34; href=&#34;http://wiki.vg/Authentication&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;文档&lt;/a&gt; 里没怎么提到的东西。&lt;/p&gt;
@@ -1999,7 +2064,7 @@
 &lt;p&gt;最近 @yushijinhun 写了一篇 &lt;a class=&#34;link&#34; href=&#34;https://github.com/to2mbn/authlib-injector/wiki/Yggdrasil%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%8a%80%e6%9c%af%e8%a7%84%e8%8c%83&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Yggdrasil 服务端技术规范&lt;/a&gt;，大部分 API 相关的内容其中都有提及，大家去看那个就好了。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;41-登录与鉴权&#34;&gt;4.1 登录与鉴权&lt;/h3&gt;
+&lt;h3 id=&#34;登录与鉴权&#34;&gt;登录与鉴权&lt;/h3&gt;
 &lt;p&gt;用过正版 Minecraft 的登录系统的同学应该都知道，一般只有在初次登录游戏或者太久没有开过游戏的情况下，启动器才会要求你输入账号密码，其他情况下都是可以直接点击登录并启动游戏的。&lt;/p&gt;
 &lt;p&gt;但这并不是因为启动器记下了你的密码，相反，启动器保存的是 Mojang 认证服务器返回的 AccessToken。如果你曾经观察过启动器启动游戏时所用的启动参数，你就能发现其实 Minecraft 游戏本体其实只拿到了角色名、角色 Profile 对应的 UUID 以及上面提到的 AccessToken 而已。可以说，只要拿到这个 AccessToken 就可以进行几乎所有的操作了。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2014,17 +2079,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--accessToken cc1e7c7d-00ab-4f37-bbe1-983e18f1755d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;411-获取-accesstoken&#34;&gt;4.1.1 获取 AccessToken&lt;/h4&gt;
+&lt;/div&gt;&lt;h4 id=&#34;获取-accesstoken&#34;&gt;获取 AccessToken&lt;/h4&gt;
 &lt;p&gt;用正确的 &lt;code&gt;username&lt;/code&gt; 和 &lt;code&gt;password&lt;/code&gt; 请求 &lt;code&gt;/authenticate&lt;/code&gt; API 即可拿到 AccessToken，该令牌的有效期由服务端来决定（一般用 Redis 实现）。如果你请求 API 的时候没有带上 &lt;code&gt;clientToken&lt;/code&gt;，那服务端就会帮你生成一个，你要记得把这个返回值记下来，因为 clientToken 和 accessToken 是对应关系，有些 API 是要求同时提供 AccessToken 和签发该令牌的 clientToken 的。&lt;/p&gt;
 &lt;p&gt;另外需要注意的是，这个 &lt;code&gt;/authenticate&lt;/code&gt; API 中请求体中的 &lt;code&gt;username&lt;/code&gt; 字段，&lt;strong&gt;填的是邮箱&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;是的，你没听错，email，在 username 字段里填的是用户的 email。惊不惊喜，意不意外？这个狗屎一样的字段命名估计和历史遗留问题也有关系，因为早期 Minecraft 账号（也就是 Profile 里的那个 &lt;code&gt;legacy&lt;/code&gt; 字段）是直接用**「角色名」&lt;strong&gt;和「密码」登录的，但是新版 Mojang 账号（Yggdrasil API）认证是用的&lt;/strong&gt;「电子邮箱账号」**，Yggdrasil API 为了兼容旧账号的登录，所以搞了这么一个坑爹的东西，真是说不出话。&lt;/p&gt;
 &lt;p&gt;总之，如果想要自己实现 Yggdrasil API，是要注意一下这个神秘的 &lt;code&gt;username&lt;/code&gt; 字段的。&lt;/p&gt;
-&lt;h4 id=&#34;412-刷新-accesstoken&#34;&gt;4.1.2 刷新 AccessToken&lt;/h4&gt;
+&lt;h4 id=&#34;刷新-accesstoken&#34;&gt;刷新 AccessToken&lt;/h4&gt;
 &lt;p&gt;在登录成功拿到 &lt;code&gt;accessToken&lt;/code&gt; 后，启动器应该把这个令牌存起来，然后在每次玩家登录游戏之前请求一次 &lt;code&gt;/refresh&lt;/code&gt; API，提供 accessToken 和签发该令牌时用的 clientToken（这也是我为什么上面叫你要把这个存起来的原因），就可以拿到新签发的 accessToken 了（刷新令牌有效期）。只要令牌有效期没过，启动器就不会再次请求 &lt;code&gt;/authenticate&lt;/code&gt; API。&lt;/p&gt;
 &lt;p&gt;所以，虽然文档上没说，但是其实 &lt;code&gt;/refresh&lt;/code&gt; 返回的结果应该是要和 &lt;code&gt;/authenticate&lt;/code&gt; 的返回结果大致相同的，包括 accessToken、clientToken、availableProfiles、selectedProfile、user 等字段（具体下面再说）。&lt;/p&gt;
-&lt;h3 id=&#34;42-api-中的-token&#34;&gt;4.2 API 中的 Token&lt;/h3&gt;
+&lt;h3 id=&#34;api-中的-token&#34;&gt;API 中的 Token&lt;/h3&gt;
 &lt;p&gt;Yggdrasil API 的定义中主要有两个 Token，&lt;code&gt;clientToken&lt;/code&gt; 与 &lt;code&gt;accessToken&lt;/code&gt;，两者为对应关系。一般来说，启动器不会频繁变动 ClientToken（通常情况下，是永远不会变的），而 AccessToken 应该在每次登录游戏时通过 &lt;code&gt;/refresh&lt;/code&gt; 重新签发一个。&lt;/p&gt;
-&lt;h4 id=&#34;421-token-的生命周期&#34;&gt;4.2.1 Token 的生命周期&lt;/h4&gt;
+&lt;h4 id=&#34;token-的生命周期&#34;&gt;Token 的生命周期&lt;/h4&gt;
 &lt;p&gt;需要注意的是，AccessToken 是有生命周期的，大致如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2038,7 +2103,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;AccessToken 刚签发时处于「有效」状态，经过一段时间后（服务端自行设置）变成「暂时失效」状态。在这种状态下的 AccessToken 是无法进入任何开启了正版验证的服务器的（也就是 &lt;code&gt;/join&lt;/code&gt; API 不认），但是该令牌还是能拿来请求 &lt;code&gt;/refresh&lt;/code&gt; API，这会签发一个全新的处于「有效」状态的 AccessToken 并返回给客户端。&lt;/p&gt;
 &lt;p&gt;但是如果处于「暂时失效」状态的 AccessToken 再放置一段时间后就会完全失效（一般的实现就是从 Redis 令牌桶中删掉该令牌），处于「无效」状态的 AccessToken 是无法进行任何操作的，只能让用户重新输入密码并请求 &lt;code&gt;/authenticate&lt;/code&gt; API 以获取一个新的 AccessToken。&lt;/p&gt;
-&lt;h4 id=&#34;422-token-的格式&#34;&gt;4.2.2 Token 的格式&lt;/h4&gt;
+&lt;h4 id=&#34;token-的格式&#34;&gt;Token 的格式&lt;/h4&gt;
 &lt;p&gt;Yggdrasil API 中的 &lt;code&gt;clientToken&lt;/code&gt;、&lt;code&gt;accessToken&lt;/code&gt;、&lt;code&gt;id&lt;/code&gt; 等字段的格式都是一大串 16 进制数字和 &lt;code&gt;-&lt;/code&gt; 连字符组成的字符串，让人看起来很懵。其实这样的字符串格式就是 &lt;strong&gt;通用唯一识别码&lt;/strong&gt;（&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e9%80%9a%e7%94%a8%e5%94%af%e4%b8%80%e8%af%86%e5%88%ab%e7%a0%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Universally Unique Identifier&lt;/a&gt;）标准，也就是我们经常听到的 UUID 了。标准形式的 UUID 包含 32 位 16 进制数字，并且由连字符分割成形式为 8-4-4-4-12 的字符串，就像这样：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2101,7 +2166,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;至于后端存储时用怎样的格式就随意了，不过在 API 返回结果中是一定要按照上面的格式来的。&lt;/p&gt;
-&lt;h3 id=&#34;44-多角色选择功能&#34;&gt;4.4 多角色选择功能&lt;/h3&gt;
+&lt;h3 id=&#34;多角色选择功能&#34;&gt;多角色选择功能&lt;/h3&gt;
 &lt;p&gt;虽然 Mojang 官方迄今为止仍未支持同一个&lt;strong&gt;账号&lt;/strong&gt;（Mojang 账号，用邮箱登录的那个）下添加多个&lt;strong&gt;角色&lt;/strong&gt;（角色名，就是游戏里显示的那个），但是 Yggdrasil API 本身是可以实现这个**「单账号多角色」&lt;strong&gt;功能的，并且官方启动器、HMCL 等著名的第三方启动器都支持&lt;/strong&gt;登录后选择角色进入游戏**（具体效果参见上方截图）。&lt;/p&gt;
 &lt;p&gt;如果你仔细阅读过 wiki.vg 里的 API 文档的话就会发现，&lt;code&gt;/authenticate&lt;/code&gt; 里面有好几个包含了 Profile 的字段，分别是 &lt;code&gt;availableProfiles&lt;/code&gt;、&lt;code&gt;selectedProfile&lt;/code&gt; 和 &lt;code&gt;user&lt;/code&gt;。下面我稍微说一下这几个字段的功能。&lt;/p&gt;
 &lt;p&gt;首先，&lt;code&gt;availableProfiles&lt;/code&gt; 中存放的是这个&lt;strong&gt;账号&lt;/strong&gt;下所有可用&lt;strong&gt;角色&lt;/strong&gt;的 Profile，格式为 JSON 数组：&lt;/p&gt;
@@ -2134,10 +2199,10 @@
 &lt;/div&gt;&lt;p&gt;需要注意的是，每个&lt;strong&gt;角色 Profile&lt;/strong&gt; 都应该有一个唯一的 &lt;code&gt;id&lt;/code&gt;（格式为不带连字符的 UUID），而不是每个账号一个。而且，虽然官方文档上没有写，其实 &lt;code&gt;/refresh&lt;/code&gt; API 返回的结果应该和 &lt;code&gt;/authenticate&lt;/code&gt; 一样带上 &lt;code&gt;availableProfiles&lt;/code&gt; 这个属性（因为只有第一次密码登录才会请求 &lt;code&gt;/authenticate&lt;/code&gt;，之后进游戏就只会请求 &lt;code&gt;/refresh&lt;/code&gt; 了）。&lt;/p&gt;
 &lt;p&gt;而 &lt;code&gt;selectedProfile&lt;/code&gt; 字段内容为&lt;strong&gt;被选中&lt;/strong&gt;的角色 Profile。如果这个字段存在，启动器就会&lt;strong&gt;直接&lt;/strong&gt;用这个角色进入游戏。只有在 &lt;code&gt;selectedProfile&lt;/code&gt; 字段不存在时，启动器才会弹出「选择角色」对话框，并根据用户的输入选择不同的角色进入游戏。如果你想要搞支持&lt;strong&gt;单账户多角色&lt;/strong&gt;的 API 的话，可以不用管这个字段（不过当该账号名下只有一个角色的话记得指定 &lt;code&gt;selectedProfile&lt;/code&gt; ，这样启动器就可以直接用这个角色进游戏了）。&lt;/p&gt;
 &lt;p&gt;至于 &lt;code&gt;user&lt;/code&gt; 字段是只有在请求时带上了 &lt;code&gt;requestUser&lt;/code&gt; 属性时才会回复的，其中包括被选中角色的 UUID、语言偏好、Twitch 的 AccessToken 等等，一般来说，自己实现 Yggdrasil API 时可以忽略这玩意（而且这个属性对单账户多角色的支持并不好）。&lt;/p&gt;
-&lt;h3 id=&#34;45-加载皮肤与披风&#34;&gt;4.5 加载皮肤与披风&lt;/h3&gt;
+&lt;h3 id=&#34;加载皮肤与披风&#34;&gt;加载皮肤与披风&lt;/h3&gt;
 &lt;p&gt;这里稍微提一下 Minecraft 使用 Yggdrasil API 时加载皮肤的原理。&lt;/p&gt;
 &lt;p&gt;首先你要知道，Minecraft 游戏启动时从启动器那边（i.e. 从命令行）拿到的 API 相关属性只有「AccessToken」、「选中角色的 UUID」以及「选中角色的角色名」这三样东西。获取 Profile 以及加载皮肤是 Minecraft 游戏该做的工作，具体流程如下。&lt;/p&gt;
-&lt;h4 id=&#34;451-获取完整-profile&#34;&gt;4.5.1 获取完整 Profile&lt;/h4&gt;
+&lt;h4 id=&#34;获取完整-profile&#34;&gt;获取完整 Profile&lt;/h4&gt;
 &lt;p&gt;首先 Minecraft 会请求 API &lt;code&gt;/profiles/minecraft/{uuid}&lt;/code&gt; 获取角色的完整 Profile，差不多长这样：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2168,7 +2233,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;好吧好吧，看到这么多字符先别懵，&lt;code&gt;value&lt;/code&gt; 和 &lt;code&gt;signature&lt;/code&gt; 字段的内容都是 BASE64 编码过的，解码后 &lt;code&gt;value&lt;/code&gt; 字段就是个普通的 JSON 而已。至于 JSON 里是什么内容，就自己去看 wiki 吧。&lt;/p&gt;
-&lt;h4 id=&#34;452-数字签名&#34;&gt;4.5.2 数字签名&lt;/h4&gt;
+&lt;h4 id=&#34;数字签名&#34;&gt;数字签名&lt;/h4&gt;
 &lt;p&gt;需要注意的是上述 Profile 中的 &lt;code&gt;signature&lt;/code&gt; 字段。顾名思义，这个字段就是 &lt;code&gt;value&lt;/code&gt; 字段的数字签名。虽然官方 API 只有在指定 &lt;code&gt;unsigned=false&lt;/code&gt; 时才会返回带签名的 Profile，但是目前（截至本文发布）authlib-injector 在服务端未返回数字签名时会出现&lt;a class=&#34;link&#34; href=&#34;https://github.com/printempw/blessing-skin-server/issues/81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;神秘的错误&lt;/a&gt;，所以还是默认返回 &lt;code&gt;signature&lt;/code&gt; 字段来得好。&lt;/p&gt;
 &lt;p&gt;至于数字签名如何生成，其实就是用的 OpenSSL 内置的签名算法。各个平台都有 OpenSSL 库的实现，我这里贴一下 PHP 的示例代码：&lt;/p&gt;
@@ -2219,16 +2284,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其他语言大同小异，我就不多赘述了。&lt;/p&gt;
-&lt;h4 id=&#34;453-加载材质&#34;&gt;4.5.3 加载材质&lt;/h4&gt;
+&lt;h4 id=&#34;加载材质&#34;&gt;加载材质&lt;/h4&gt;
 &lt;p&gt;拿到角色 Profile，并且验证了数字签名后（签名不对的话不会加载的），Minecraft 游戏就会根据 Profile 中指定的皮肤、披风图片 URL 加载材质。需要注意的是，Minecraft 自带的 authlib 是只会加载 Mojang 官方域名下的材质的（白名单之外的材质地址是不会被加载的），这也是为什么需要 CustomSkinLoader 等皮肤 Mod 的原因。不过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/to2mbn/authlib-injector/blob/master/configure.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;authlib-injector&lt;/a&gt; 自带了对 authlib 的 hack，在配置文件（或者远程配置加载）中直接指定材质加载白名单即可。&lt;/p&gt;
 &lt;p&gt;如果一切正常，游戏内就会显示你的自定义皮肤了。&lt;/p&gt;
-&lt;h3 id=&#34;45-加入服务器&#34;&gt;4.5 加入服务器&lt;/h3&gt;
+&lt;h3 id=&#34;加入服务器&#34;&gt;加入服务器&lt;/h3&gt;
 &lt;p&gt;在 Minecraft 中加入一个服务器时，客户端会向 &lt;code&gt;/join&lt;/code&gt; API 发出一个请求，请求体中包含了 AccessToken、当前角色的 UUID 以及服务器的唯一标识符 &lt;code&gt;serverId&lt;/code&gt;（这玩意如何生成不用我们操心，Minecraft 游戏里会搞好的，你只管存这个就行了）。&lt;/p&gt;
 &lt;p&gt;在后端实现上，一般来说就是在 Redis 这类内存数据库中放一个键值对，具体数据结构你自己想。&lt;/p&gt;
 &lt;p&gt;向 Yggdrasil API 发送完 &lt;code&gt;join&lt;/code&gt; 请求后，Minecraft 客户端会向要加入的那个游戏服务器发送一个请求（这部分我们不用操心），服务器收到加入请求后，会向 Yggdrasil API 发送一个 &lt;code&gt;hasJoined&lt;/code&gt; 请求（Query String 中包含角色名、IP 以及服务器唯一标识符），如果该用户已经加入了服务器（也就是判断数据库中有没有之前 &lt;code&gt;join&lt;/code&gt; 时添加的记录），那就返回角色的完整 Profile，同时服务器允许用户进入。&lt;/p&gt;
 &lt;p&gt;这也就是为什么客户端和服务端同样需要使用 authlib-injector hack 的原因，因为我们要确保两者请求的都是同一个 API，这样才能起到一个维护登录状态的功能。&lt;/p&gt;
-&lt;h3 id=&#34;46-经常用到的-api&#34;&gt;4.6 经常用到的 API&lt;/h3&gt;
+&lt;h3 id=&#34;经常用到的-api&#34;&gt;经常用到的 API&lt;/h3&gt;
 &lt;p&gt;虽然 Yggdrasil 规范中定义了很多 API，但是其实日常游戏中用到的没几个，这里列举一些频繁使用的 API，也方便诸君知道哪里该认真开发哪里可以小小偷懒一下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2257,9 +2322,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其他 API 感觉都是几万年用不到一次的，很神秘。&lt;/p&gt;
-&lt;h2 id=&#34;五后记&#34;&gt;五、后记&lt;/h2&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
 &lt;p&gt;上周折腾了好几天这玩意，写篇博文记录一下，既能理清自己的思路，还有可能帮到后来人~~（花时间研究了东西，却没人知道，多亏啊）~~，何乐而不为呢 :P&lt;/p&gt;
-&lt;h3 id=&#34;51-参考链接&#34;&gt;5.1 参考链接&lt;/h3&gt;
+&lt;h3 id=&#34;参考链接&#34;&gt;参考链接&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://wiki.vg/Authentication&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://wiki.vg/Authentication&lt;/a&gt;&lt;/li&gt;
@@ -2276,7 +2341,7 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://printempw.github.io/minecraft-yggdrasil-api-third-party-implementation/blessing-skin-plugins/yggdrasil-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;blessing-skin-plugins/yggdrasil-api&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;52-文章更新日志&#34;&gt;5.2 文章更新日志&lt;/h3&gt;
+&lt;h3 id=&#34;文章更新日志&#34;&gt;文章更新日志&lt;/h3&gt;
 &lt;p&gt;具体的修改可以查看这篇博客在 GitHub 上源码的 &lt;a class=&#34;link&#34; href=&#34;https://github.com/prinsss/prinsss.github.io/commits/source/source/_posts/minecraft-yggdrasil-api-third-party-implementation.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;历史提交记录&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2018-02-22：&lt;/strong&gt;&lt;/p&gt;

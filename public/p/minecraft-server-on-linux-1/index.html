@@ -155,12 +155,12 @@
 <p>自从有了一台独立服务器后，可以玩的东西就多了</p>
 <p>于是决定开一个我的世界 Java 服务器</p>
 <p>写一篇文章记录一下</p>
-<h2 id="一安装运行环境">一、安装运行环境</h2>
+<h2 id="安装运行环境">安装运行环境</h2>
 <p>Minecraft Java 版的服务器运行环境非常单纯，只需要一个 Java 就行</p>
 <p>由于我想开一个 1.16.5 的服务器，所以 Java 版本选择了 Java 17</p>
 <p>安装过程参考的这篇文章《<a class="link" href="https://www.cnblogs.com/chaosmoor/p/15897693.html"  target="_blank" rel="noopener"
     >Linux 安装 Java 17 - ChaosMoor</a>》</p>
-<h2 id="二下载服务端">二、下载服务端</h2>
+<h2 id="下载服务端">下载服务端</h2>
 <p>Minecraft 服务端有很多种，例如原版香草端(Vanilla)、Paper、Bukkit 等</p>
 <p>由于我希望保留原版的红石特性，所以选择了原版服务端</p>
 <p>对于最新版本的 Minecraft 服务器，可以前往<a class="link" href="https://www.minecraft.net/download/server"  target="_blank" rel="noopener"
@@ -186,7 +186,7 @@
 <blockquote>
 <p><span style="color:red !important"><b>注意，不开玩笑！</b></span>：千万不要误点括号后的(.json)文件，或错选 Obfuscation maps(混淆映射表)中的 Server(服务器)选项</p>
 </blockquote>
-<h2 id="三运行服务器">三、运行服务器</h2>
+<h2 id="运行服务器">运行服务器</h2>
 <p>进入终端</p>
 <p>在服务器上新建一个文件夹存放服务端文件</p>
 <p><code>mkdir &lt;文件夹名称&gt;</code></p>
@@ -253,10 +253,11 @@
 <p><span style="color:green !important"><b>记住这点更好</b></span>：当你将 eula 改为<strong>true</strong>后，即代表你同意了《<a class="link" href="https://account.mojang.com/documents/minecraft_eula"  target="_blank" rel="noopener"
     >MINECRAFT 最终用户许可协议</a>》, 因此你最好详细阅读一下</p>
 </blockquote>
-<h2 id="四服务器配置">四、服务器配置</h2>
-<p>无论是什么客户端，<strong>server.properties</strong>是必须的配置文件，当然，在第一次运行服务端时会自动生成，文件内容 + 必要注释 如下</p>
+<h2 id="服务器配置">服务器配置</h2>
+<p>无论是什么客户端，<strong>server.properties</strong>是必须的配置文件，当然，在第一次运行服务端时会自动生成，文件内容 + 必要注释 请查看<a class="link" href="https://wiki.yurik.cafe/Game/Minecraft/Server/server.properties/"  target="_blank" rel="noopener"
+    >这个网址</a></p>
 <p>可以对应自己实际情况修改，也可以下载<a class="link" href="server.properties" >我的配置文件</a>（基本默认）</p>
-<h2 id="五成功">五、成功</h2>
+<h2 id="成功">成功</h2>
 <p><img src="/p/minecraft-server-on-linux-1/done.png"
 	width="1920"
 	height="1032"
@@ -272,6 +273,16 @@
 	
 ></p>
 <p>▲ 游戏内的显示效果</p>
+<h2 id="管理服务器">管理服务器</h2>
+<p>你可以使用命令行来管理服务器，常用的命令有：</p>
+<ul>
+<li><code>stop</code>：停止服务器</li>
+<li><code>list</code>：列出当前在线的玩家</li>
+<li><code>kick [player]</code>：将玩家踢出服务器</li>
+<li><code>ban [player]</code>：封禁玩家</li>
+<li><code>op [player]</code>：将玩家提升为服务器管理员</li>
+<li><code>whitelist add [player]</code>：将玩家添加到白名单</li>
+</ul>
 
 </section>
 
@@ -325,6 +336,29 @@
 
         <div class="article-details">
             <h2 class="article-title">【转载】又是一种 Minecraft 外置登录解决方案：自行实现 Yggdrasil API</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/use-vercel-introduction/">
+        
+        
+            <div class="article-image">
+                <img src="/p/use-vercel-introduction/banner.43e79804456041f458f7184cf59f3ccc_hu7c9cee5a858557f74e9fc7f3b03eb440_55588_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 使用Vercel托管静态网页"
+                        data-key="use-vercel-introduction" 
+                        data-hash="md5-Q&#43;eYBEVgQfRY9xhM9Z88zA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用Vercel托管静态网页</h2>
         </div>
     </a>
 </article>
@@ -394,29 +428,6 @@
 
         <div class="article-details">
             <h2 class="article-title">戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/qqbot-dev-1/">
-        
-        
-            <div class="article-image">
-                <img src="/p/qqbot-dev-1/banner.f1a9de7e23c403edfb70aa9c46334a67_hu28c59544680010fae30152def9654cc9_242684_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post cqhttp-go - 便捷开发自己的QQ机器人（一）"
-                        data-key="qqbot-dev-1" 
-                        data-hash="md5-8anefiPEA&#43;37cKqcRjNKZw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">cqhttp-go - 便捷开发自己的QQ机器人（一）</h2>
         </div>
     </a>
 </article>
@@ -627,11 +638,12 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#一安装运行环境">一、安装运行环境</a></li>
-    <li><a href="#二下载服务端">二、下载服务端</a></li>
-    <li><a href="#三运行服务器">三、运行服务器</a></li>
-    <li><a href="#四服务器配置">四、服务器配置</a></li>
-    <li><a href="#五成功">五、成功</a></li>
+    <li><a href="#安装运行环境">安装运行环境</a></li>
+    <li><a href="#下载服务端">下载服务端</a></li>
+    <li><a href="#运行服务器">运行服务器</a></li>
+    <li><a href="#服务器配置">服务器配置</a></li>
+    <li><a href="#成功">成功</a></li>
+    <li><a href="#管理服务器">管理服务器</a></li>
   </ol>
 </nav>
                 </div>

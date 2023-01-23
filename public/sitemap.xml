@@ -3,16 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.yurik.cafe/categories/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yurik.cafe/post/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yurik.cafe/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yurik.cafe/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yurik.cafe/p/use-vercel-introduction/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yurik.cafe/p/raspberry-pi-os-install/</loc>
     <lastmod>2023-01-19T00:00:00+00:00</lastmod>

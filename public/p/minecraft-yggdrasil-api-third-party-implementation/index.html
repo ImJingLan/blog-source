@@ -168,7 +168,7 @@
 <p><strong>注意</strong>：本文不适合小白及问题解决能力弱的人群阅读。</p>
 </blockquote>
 <p><del>感觉我明明好久没玩 MC 了，要玩也都是玩正版服务器，但是却一直在搞这些盗版服用的东西，我真是舍己为人造福大众普惠众生啊（不</del></p>
-<h2 id="一服务器内置登录插件">一、服务器内置登录插件</h2>
+<h2 id="服务器内置登录插件">服务器内置登录插件</h2>
 <p>相信维护过 Minecraft 服务器（当然，我这边说的是运行在离线模式下的服务器）的腐竹们或多或少都听说过 Authme、CrazyLogin 等登录插件的鼎鼎大名吧。由于这些服务器运作在离线模式（<code>online-mode=false</code>，即俗称的盗版模式）下，缺少 Mojang 官方账户认证系统的支持，所以必须使用这类插件来进行玩家认证（否则随便谁都可以冒名顶替别人了，换一个登录角色名就行）。</p>
 <p>这类插件的工作原理就是在服务端维护一个数据表，表中每一条记录中存储了角色的「角色名」、「登录密码」、「注册时间」、「登录 IP 地址」等等信息，当玩家初次进入服务器时需要通过这些插件进行注册操作（e.g. <code>/register</code> 命令）并在表中插入一条记录，注册完毕后进入服务器则需要输入密码（e.g. <code>/login &lt;password&gt;</code> 命令）来认证。</p>
 <p>其实这样的解决方案也没什么不好，而且现在 Authme 等登录插件在众多的服务器中都还是主流。但是，如果你的服务器已经发展到比较大型了，或许你就比较希望有这样一个东西：</p>
@@ -181,7 +181,7 @@
 <li>etc.</li>
 </ul>
 <p>并不是所有腐竹都满足于 Authme + Discuz 这样的组合的（而且这类游戏内登录系统也有不少安全漏洞），毕竟在这个 Minecraft 多人联机服务器发展接近饱和的时候，如果想要你的服务器能够吸引新玩家，那么除了服务器本身建设之外的地方也是要好好考虑的。</p>
-<h2 id="二外置登录系统">二、外置登录系统</h2>
+<h2 id="外置登录系统">外置登录系统</h2>
 <p>正是这样的需求催生了不少 Minecraft 的「外置登录插件」、「网页登录」等等软件（而且人气都挺高的），我随手在 MCBBS 上一搜就有很多类似的产品，用啥语言写的都有：<em>MadAuth、WebLogin、BeeLogin、WebRegister、冰棂登陆系统……</em></p>
 <p>这些软件的原理就是将原本的登录鉴权这一步骤从游戏里抽出来了，将其放到启动器 or 网页上去，而服务端插件的功能就只剩下「查询数据库中用户的登录状态，决定是否放行」：</p>
 <p><img src="/p/minecraft-yggdrasil-api-third-party-implementation/Minecraft.jpg"
@@ -204,11 +204,11 @@
 <p>Printempw 的图是透明的，对灯箱显示不是很友好，所以就自己上了一层白色底</p>
 </blockquote>
 <p>似乎也挺好的，不是吗？那我今天要说的「自行实现 Yggdrasil API」方法，和这些现成的方式有什么不一样呢？</p>
-<h2 id="三自行实现-yggdrasil-api">三、自行实现 Yggdrasil API</h2>
+<h2 id="自行实现-yggdrasil-api">自行实现 Yggdrasil API</h2>
 <p>继续看下去之前，首先你要知道 Mojang 正版的 Minecraft 是怎样登录的。Mojang 专门定义了一个用于鉴权的 API，Mojang 旗下的游戏（Minecraft、Scrolls 等）都是用的这一套 API 来正版验证的 —— 这一套 API 的名字就叫做 Yggdrasil（即北欧神话里的世界树，<del>这名字可真几把炫酷</del>）。</p>
 <p>正版登录的好处就不用我说了吧？再也不用担心假人压测、自带外置登录（启动器里账号密码登录）、自带皮肤加载（不需要安装 CSL、USM 等皮肤补丁了）、Tab 栏显示头像……可以说，Minecraft 自带的 Yggdrasil API 鉴权系统比上面的那些什么登录插件啊什么外置登录的功能强多了，所以正版服务器（<code>online_mode=true</code>）也不用担心那些破事，因为官方的这一套鉴权系统以及很完善了。</p>
 <p>那么问题来了，盗版用户要怎样才能把 Mojang 为正版开发的 Yggdrasil API 系统拿来用呢？</p>
-<h3 id="31-基本原理">3.1 基本原理</h3>
+<h3 id="基本原理">基本原理</h3>
 <p>这里必须感谢 <a class="link" href="https://github.com/to2mbn/authlib-injector/"  target="_blank" rel="noopener"
     >to2mbn/authlib-injector</a> 这个项目，正是因为这个项目，我接下来描述的方法才成为可能。是的，方法很简单，Minecraft 虽然把 Mojang 官方的 Yggdrasil API 地址（<code>https://authserver.mojang.com</code>）给写死在源码里了，但是既然 Minecraft 是基于 JVM 的应用程序，我们就可以通过字节码替换的方法将官方的 API 地址替换成我们自己实现的 API 地址。</p>
 <p>以下内容援引自 authlib-agent（即 authlib-injector 前身）的 wiki：</p>
@@ -216,7 +216,7 @@
 <p>authlib-agent 是一个高可靠性, 高适用性, 用于 Minecraft 的, 游戏外登录及皮肤解决方案. 支持 Minecraft1.7+, Craftbukkit, Spigot, Bungeecord 等. 通过对正版登录 API 的重定向, 实现了一个功能和正版几乎一样的游戏外登录系统.</p>
 </blockquote>
 <p>不过既然要把官方 API 地址替换成我们自己的，我们就得自己实现一个和官方 API 其他地方都一样的 API，也就是，<strong>仿造出一个第三方 Yggdrasil API 出来</strong>。</p>
-<h3 id="32-解决方案">3.2 解决方案</h3>
+<h3 id="解决方案">解决方案</h3>
 <p>可以说这个系统中，就是「开发完整实现了 Yggdrasil API 的后端」这一步最难了。为啥捏？这个服务端不止要实现用户的认证、皮肤获取，你还得实现用户的注册、登录、角色管理、皮肤上传、皮肤库等等七七八八的功能吧？你还得给这些功能套上一个好看的界面吧，不然你让你的玩家怎么使用？你还得来个后台管理页面吧，不然管理员怎么进行用户管理、封禁等操作？</p>
 <p>authlib-injector 官方也提供了一个 Java 编写的后端 <a class="link" href="https://github.com/to2mbn/yggdrasil-mock"  target="_blank" rel="noopener"
     >yggdrasil-mock</a>，虽然完整实现了 Yggdrasil API，但是它并没有提供直观的管理网页，只提供了一套 RESTful API，所以距离实装要求还是差得比较远的。</p>
@@ -237,7 +237,7 @@
 		data-flex-basis="417px"
 	
 ></p>
-<h3 id="33-如何使用">3.3 如何使用</h3>
+<h3 id="如何使用">如何使用</h3>
 <p>讲了那么多，那么到底该怎么使用呢？</p>
 <p>请参阅：<a class="link" href="https://github.com/printempw/yggdrasil-api/wiki"  target="_blank" rel="noopener"
     >printempw/yggdrasil-api wiki</a>。</p>
@@ -249,7 +249,7 @@
 </ul>
 <p>这还不够多吗？</p>
 <p>而且你还可以自己修改 HMCL 等开源启动器的源码，在启动时自动注入 <code>-javaagent</code> 参数，更加方便，还能得到一个服务器专用启动器，逼格更高了（笑）</p>
-<h3 id="34-实现效果">3.4 实现效果</h3>
+<h3 id="实现效果">实现效果</h3>
 <p>皮肤站的用户管理系统、皮肤系统、后台界面之类的我就不截图了，有兴趣可以去 MCBBS 的 <a class="link" href="http://www.mcbbs.net/forum.php?mod=viewthread&amp;tid=552877"  target="_blank" rel="noopener"
     >发布帖</a> 上感受一下。</p>
 <p><img src="/p/minecraft-yggdrasil-api-third-party-implementation/37e6d2778c77a.png"
@@ -297,7 +297,7 @@
 	
 ></p>
 <p>▲ 游戏内的显示效果</p>
-<h2 id="四yggdrasil-api-踩坑记录">四、Yggdrasil API 踩坑记录</h2>
+<h2 id="yggdrasil-api-踩坑记录">Yggdrasil API 踩坑记录</h2>
 <p>下面记录一些自己实现 Yggdrasil API 时踩到的坑，毕竟 wiki.vg 里并不会提到这些在自己实现 API 时需要注意的东西（提到的大部分都是使用 API 时应该要注意的），所以我也只能摸着石头过河，踩了不少坑，这里记录一下，希望能帮到后来人。</p>
 <p>基础的 API 定义之类的我就不说了，下面主要讲一些 <a class="link" href="http://wiki.vg/Authentication"  target="_blank" rel="noopener"
     >文档</a> 里没怎么提到的东西。</p>
@@ -306,7 +306,7 @@
 <p>最近 @yushijinhun 写了一篇 <a class="link" href="https://github.com/to2mbn/authlib-injector/wiki/Yggdrasil%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%8a%80%e6%9c%af%e8%a7%84%e8%8c%83"  target="_blank" rel="noopener"
     >Yggdrasil 服务端技术规范</a>，大部分 API 相关的内容其中都有提及，大家去看那个就好了。</p>
 </blockquote>
-<h3 id="41-登录与鉴权">4.1 登录与鉴权</h3>
+<h3 id="登录与鉴权">登录与鉴权</h3>
 <p>用过正版 Minecraft 的登录系统的同学应该都知道，一般只有在初次登录游戏或者太久没有开过游戏的情况下，启动器才会要求你输入账号密码，其他情况下都是可以直接点击登录并启动游戏的。</p>
 <p>但这并不是因为启动器记下了你的密码，相反，启动器保存的是 Mojang 认证服务器返回的 AccessToken。如果你曾经观察过启动器启动游戏时所用的启动参数，你就能发现其实 Minecraft 游戏本体其实只拿到了角色名、角色 Profile 对应的 UUID 以及上面提到的 AccessToken 而已。可以说，只要拿到这个 AccessToken 就可以进行几乎所有的操作了。</p>
 <div class="highlight"><div class="chroma">
@@ -321,17 +321,17 @@
 </span></span><span class="line"><span class="cl">--accessToken cc1e7c7d-00ab-4f37-bbe1-983e18f1755d
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="411-获取-accesstoken">4.1.1 获取 AccessToken</h4>
+</div><h4 id="获取-accesstoken">获取 AccessToken</h4>
 <p>用正确的 <code>username</code> 和 <code>password</code> 请求 <code>/authenticate</code> API 即可拿到 AccessToken，该令牌的有效期由服务端来决定（一般用 Redis 实现）。如果你请求 API 的时候没有带上 <code>clientToken</code>，那服务端就会帮你生成一个，你要记得把这个返回值记下来，因为 clientToken 和 accessToken 是对应关系，有些 API 是要求同时提供 AccessToken 和签发该令牌的 clientToken 的。</p>
 <p>另外需要注意的是，这个 <code>/authenticate</code> API 中请求体中的 <code>username</code> 字段，<strong>填的是邮箱</strong>。</p>
 <p>是的，你没听错，email，在 username 字段里填的是用户的 email。惊不惊喜，意不意外？这个狗屎一样的字段命名估计和历史遗留问题也有关系，因为早期 Minecraft 账号（也就是 Profile 里的那个 <code>legacy</code> 字段）是直接用**「角色名」<strong>和「密码」登录的，但是新版 Mojang 账号（Yggdrasil API）认证是用的</strong>「电子邮箱账号」**，Yggdrasil API 为了兼容旧账号的登录，所以搞了这么一个坑爹的东西，真是说不出话。</p>
 <p>总之，如果想要自己实现 Yggdrasil API，是要注意一下这个神秘的 <code>username</code> 字段的。</p>
-<h4 id="412-刷新-accesstoken">4.1.2 刷新 AccessToken</h4>
+<h4 id="刷新-accesstoken">刷新 AccessToken</h4>
 <p>在登录成功拿到 <code>accessToken</code> 后，启动器应该把这个令牌存起来，然后在每次玩家登录游戏之前请求一次 <code>/refresh</code> API，提供 accessToken 和签发该令牌时用的 clientToken（这也是我为什么上面叫你要把这个存起来的原因），就可以拿到新签发的 accessToken 了（刷新令牌有效期）。只要令牌有效期没过，启动器就不会再次请求 <code>/authenticate</code> API。</p>
 <p>所以，虽然文档上没说，但是其实 <code>/refresh</code> 返回的结果应该是要和 <code>/authenticate</code> 的返回结果大致相同的，包括 accessToken、clientToken、availableProfiles、selectedProfile、user 等字段（具体下面再说）。</p>
-<h3 id="42-api-中的-token">4.2 API 中的 Token</h3>
+<h3 id="api-中的-token">API 中的 Token</h3>
 <p>Yggdrasil API 的定义中主要有两个 Token，<code>clientToken</code> 与 <code>accessToken</code>，两者为对应关系。一般来说，启动器不会频繁变动 ClientToken（通常情况下，是永远不会变的），而 AccessToken 应该在每次登录游戏时通过 <code>/refresh</code> 重新签发一个。</p>
-<h4 id="421-token-的生命周期">4.2.1 Token 的生命周期</h4>
+<h4 id="token-的生命周期">Token 的生命周期</h4>
 <p>需要注意的是，AccessToken 是有生命周期的，大致如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -345,7 +345,7 @@
 </div>
 </div><p>AccessToken 刚签发时处于「有效」状态，经过一段时间后（服务端自行设置）变成「暂时失效」状态。在这种状态下的 AccessToken 是无法进入任何开启了正版验证的服务器的（也就是 <code>/join</code> API 不认），但是该令牌还是能拿来请求 <code>/refresh</code> API，这会签发一个全新的处于「有效」状态的 AccessToken 并返回给客户端。</p>
 <p>但是如果处于「暂时失效」状态的 AccessToken 再放置一段时间后就会完全失效（一般的实现就是从 Redis 令牌桶中删掉该令牌），处于「无效」状态的 AccessToken 是无法进行任何操作的，只能让用户重新输入密码并请求 <code>/authenticate</code> API 以获取一个新的 AccessToken。</p>
-<h4 id="422-token-的格式">4.2.2 Token 的格式</h4>
+<h4 id="token-的格式">Token 的格式</h4>
 <p>Yggdrasil API 中的 <code>clientToken</code>、<code>accessToken</code>、<code>id</code> 等字段的格式都是一大串 16 进制数字和 <code>-</code> 连字符组成的字符串，让人看起来很懵。其实这样的字符串格式就是 <strong>通用唯一识别码</strong>（<a class="link" href="https://zh.wikipedia.org/wiki/%e9%80%9a%e7%94%a8%e5%94%af%e4%b8%80%e8%af%86%e5%88%ab%e7%a0%81"  target="_blank" rel="noopener"
     >Universally Unique Identifier</a>）标准，也就是我们经常听到的 UUID 了。标准形式的 UUID 包含 32 位 16 进制数字，并且由连字符分割成形式为 8-4-4-4-12 的字符串，就像这样：</p>
 <div class="highlight"><div class="chroma">
@@ -408,7 +408,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>至于后端存储时用怎样的格式就随意了，不过在 API 返回结果中是一定要按照上面的格式来的。</p>
-<h3 id="44-多角色选择功能">4.4 多角色选择功能</h3>
+<h3 id="多角色选择功能">多角色选择功能</h3>
 <p>虽然 Mojang 官方迄今为止仍未支持同一个<strong>账号</strong>（Mojang 账号，用邮箱登录的那个）下添加多个<strong>角色</strong>（角色名，就是游戏里显示的那个），但是 Yggdrasil API 本身是可以实现这个**「单账号多角色」<strong>功能的，并且官方启动器、HMCL 等著名的第三方启动器都支持</strong>登录后选择角色进入游戏**（具体效果参见上方截图）。</p>
 <p>如果你仔细阅读过 wiki.vg 里的 API 文档的话就会发现，<code>/authenticate</code> 里面有好几个包含了 Profile 的字段，分别是 <code>availableProfiles</code>、<code>selectedProfile</code> 和 <code>user</code>。下面我稍微说一下这几个字段的功能。</p>
 <p>首先，<code>availableProfiles</code> 中存放的是这个<strong>账号</strong>下所有可用<strong>角色</strong>的 Profile，格式为 JSON 数组：</p>
@@ -441,10 +441,10 @@
 </div><p>需要注意的是，每个<strong>角色 Profile</strong> 都应该有一个唯一的 <code>id</code>（格式为不带连字符的 UUID），而不是每个账号一个。而且，虽然官方文档上没有写，其实 <code>/refresh</code> API 返回的结果应该和 <code>/authenticate</code> 一样带上 <code>availableProfiles</code> 这个属性（因为只有第一次密码登录才会请求 <code>/authenticate</code>，之后进游戏就只会请求 <code>/refresh</code> 了）。</p>
 <p>而 <code>selectedProfile</code> 字段内容为<strong>被选中</strong>的角色 Profile。如果这个字段存在，启动器就会<strong>直接</strong>用这个角色进入游戏。只有在 <code>selectedProfile</code> 字段不存在时，启动器才会弹出「选择角色」对话框，并根据用户的输入选择不同的角色进入游戏。如果你想要搞支持<strong>单账户多角色</strong>的 API 的话，可以不用管这个字段（不过当该账号名下只有一个角色的话记得指定 <code>selectedProfile</code> ，这样启动器就可以直接用这个角色进游戏了）。</p>
 <p>至于 <code>user</code> 字段是只有在请求时带上了 <code>requestUser</code> 属性时才会回复的，其中包括被选中角色的 UUID、语言偏好、Twitch 的 AccessToken 等等，一般来说，自己实现 Yggdrasil API 时可以忽略这玩意（而且这个属性对单账户多角色的支持并不好）。</p>
-<h3 id="45-加载皮肤与披风">4.5 加载皮肤与披风</h3>
+<h3 id="加载皮肤与披风">加载皮肤与披风</h3>
 <p>这里稍微提一下 Minecraft 使用 Yggdrasil API 时加载皮肤的原理。</p>
 <p>首先你要知道，Minecraft 游戏启动时从启动器那边（i.e. 从命令行）拿到的 API 相关属性只有「AccessToken」、「选中角色的 UUID」以及「选中角色的角色名」这三样东西。获取 Profile 以及加载皮肤是 Minecraft 游戏该做的工作，具体流程如下。</p>
-<h4 id="451-获取完整-profile">4.5.1 获取完整 Profile</h4>
+<h4 id="获取完整-profile">获取完整 Profile</h4>
 <p>首先 Minecraft 会请求 API <code>/profiles/minecraft/{uuid}</code> 获取角色的完整 Profile，差不多长这样：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -475,7 +475,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>好吧好吧，看到这么多字符先别懵，<code>value</code> 和 <code>signature</code> 字段的内容都是 BASE64 编码过的，解码后 <code>value</code> 字段就是个普通的 JSON 而已。至于 JSON 里是什么内容，就自己去看 wiki 吧。</p>
-<h4 id="452-数字签名">4.5.2 数字签名</h4>
+<h4 id="数字签名">数字签名</h4>
 <p>需要注意的是上述 Profile 中的 <code>signature</code> 字段。顾名思义，这个字段就是 <code>value</code> 字段的数字签名。虽然官方 API 只有在指定 <code>unsigned=false</code> 时才会返回带签名的 Profile，但是目前（截至本文发布）authlib-injector 在服务端未返回数字签名时会出现<a class="link" href="https://github.com/printempw/blessing-skin-server/issues/81"  target="_blank" rel="noopener"
     >神秘的错误</a>，所以还是默认返回 <code>signature</code> 字段来得好。</p>
 <p>至于数字签名如何生成，其实就是用的 OpenSSL 内置的签名算法。各个平台都有 OpenSSL 库的实现，我这里贴一下 PHP 的示例代码：</p>
@@ -526,16 +526,16 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>其他语言大同小异，我就不多赘述了。</p>
-<h4 id="453-加载材质">4.5.3 加载材质</h4>
+<h4 id="加载材质">加载材质</h4>
 <p>拿到角色 Profile，并且验证了数字签名后（签名不对的话不会加载的），Minecraft 游戏就会根据 Profile 中指定的皮肤、披风图片 URL 加载材质。需要注意的是，Minecraft 自带的 authlib 是只会加载 Mojang 官方域名下的材质的（白名单之外的材质地址是不会被加载的），这也是为什么需要 CustomSkinLoader 等皮肤 Mod 的原因。不过 <a class="link" href="https://github.com/to2mbn/authlib-injector/blob/master/configure.sh"  target="_blank" rel="noopener"
     >authlib-injector</a> 自带了对 authlib 的 hack，在配置文件（或者远程配置加载）中直接指定材质加载白名单即可。</p>
 <p>如果一切正常，游戏内就会显示你的自定义皮肤了。</p>
-<h3 id="45-加入服务器">4.5 加入服务器</h3>
+<h3 id="加入服务器">加入服务器</h3>
 <p>在 Minecraft 中加入一个服务器时，客户端会向 <code>/join</code> API 发出一个请求，请求体中包含了 AccessToken、当前角色的 UUID 以及服务器的唯一标识符 <code>serverId</code>（这玩意如何生成不用我们操心，Minecraft 游戏里会搞好的，你只管存这个就行了）。</p>
 <p>在后端实现上，一般来说就是在 Redis 这类内存数据库中放一个键值对，具体数据结构你自己想。</p>
 <p>向 Yggdrasil API 发送完 <code>join</code> 请求后，Minecraft 客户端会向要加入的那个游戏服务器发送一个请求（这部分我们不用操心），服务器收到加入请求后，会向 Yggdrasil API 发送一个 <code>hasJoined</code> 请求（Query String 中包含角色名、IP 以及服务器唯一标识符），如果该用户已经加入了服务器（也就是判断数据库中有没有之前 <code>join</code> 时添加的记录），那就返回角色的完整 Profile，同时服务器允许用户进入。</p>
 <p>这也就是为什么客户端和服务端同样需要使用 authlib-injector hack 的原因，因为我们要确保两者请求的都是同一个 API，这样才能起到一个维护登录状态的功能。</p>
-<h3 id="46-经常用到的-api">4.6 经常用到的 API</h3>
+<h3 id="经常用到的-api">经常用到的 API</h3>
 <p>虽然 Yggdrasil 规范中定义了很多 API，但是其实日常游戏中用到的没几个，这里列举一些频繁使用的 API，也方便诸君知道哪里该认真开发哪里可以小小偷懒一下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -564,9 +564,9 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>其他 API 感觉都是几万年用不到一次的，很神秘。</p>
-<h2 id="五后记">五、后记</h2>
+<h2 id="后记">后记</h2>
 <p>上周折腾了好几天这玩意，写篇博文记录一下，既能理清自己的思路，还有可能帮到后来人~~（花时间研究了东西，却没人知道，多亏啊）~~，何乐而不为呢 :P</p>
-<h3 id="51-参考链接">5.1 参考链接</h3>
+<h3 id="参考链接">参考链接</h3>
 <ul>
 <li><a class="link" href="http://wiki.vg/Authentication"  target="_blank" rel="noopener"
     >http://wiki.vg/Authentication</a></li>
@@ -583,7 +583,7 @@
 <li><a class="link" href="https://printempw.github.io/minecraft-yggdrasil-api-third-party-implementation/blessing-skin-plugins/yggdrasil-api"  target="_blank" rel="noopener"
     >blessing-skin-plugins/yggdrasil-api</a></li>
 </ul>
-<h3 id="52-文章更新日志">5.2 文章更新日志</h3>
+<h3 id="文章更新日志">文章更新日志</h3>
 <p>具体的修改可以查看这篇博客在 GitHub 上源码的 <a class="link" href="https://github.com/prinsss/prinsss.github.io/commits/source/source/_posts/minecraft-yggdrasil-api-third-party-implementation.md"  target="_blank" rel="noopener"
     >历史提交记录</a>。</p>
 <p><strong>2018-02-22：</strong></p>
@@ -653,6 +653,29 @@
                 
                     
 <article class="has-image">
+    <a href="/p/use-vercel-introduction/">
+        
+        
+            <div class="article-image">
+                <img src="/p/use-vercel-introduction/banner.43e79804456041f458f7184cf59f3ccc_hu7c9cee5a858557f74e9fc7f3b03eb440_55588_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 使用Vercel托管静态网页"
+                        data-key="use-vercel-introduction" 
+                        data-hash="md5-Q&#43;eYBEVgQfRY9xhM9Z88zA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用Vercel托管静态网页</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
     <a href="/p/raspberry-pi-os-install/">
         
         
@@ -716,29 +739,6 @@
 
         <div class="article-details">
             <h2 class="article-title">戴尔 PowerEdge R720 上手 : 年轻人的第一台家庭服务器</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/qqbot-dev-1/">
-        
-        
-            <div class="article-image">
-                <img src="/p/qqbot-dev-1/banner.f1a9de7e23c403edfb70aa9c46334a67_hu28c59544680010fae30152def9654cc9_242684_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post cqhttp-go - 便捷开发自己的QQ机器人（一）"
-                        data-key="qqbot-dev-1" 
-                        data-hash="md5-8anefiPEA&#43;37cKqcRjNKZw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">cqhttp-go - 便捷开发自己的QQ机器人（一）</h2>
         </div>
     </a>
 </article>
@@ -949,46 +949,46 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#一服务器内置登录插件">一、服务器内置登录插件</a></li>
-    <li><a href="#二外置登录系统">二、外置登录系统</a></li>
-    <li><a href="#三自行实现-yggdrasil-api">三、自行实现 Yggdrasil API</a>
+    <li><a href="#服务器内置登录插件">服务器内置登录插件</a></li>
+    <li><a href="#外置登录系统">外置登录系统</a></li>
+    <li><a href="#自行实现-yggdrasil-api">自行实现 Yggdrasil API</a>
       <ol>
-        <li><a href="#31-基本原理">3.1 基本原理</a></li>
-        <li><a href="#32-解决方案">3.2 解决方案</a></li>
-        <li><a href="#33-如何使用">3.3 如何使用</a></li>
-        <li><a href="#34-实现效果">3.4 实现效果</a></li>
+        <li><a href="#基本原理">基本原理</a></li>
+        <li><a href="#解决方案">解决方案</a></li>
+        <li><a href="#如何使用">如何使用</a></li>
+        <li><a href="#实现效果">实现效果</a></li>
       </ol>
     </li>
-    <li><a href="#四yggdrasil-api-踩坑记录">四、Yggdrasil API 踩坑记录</a>
+    <li><a href="#yggdrasil-api-踩坑记录">Yggdrasil API 踩坑记录</a>
       <ol>
-        <li><a href="#41-登录与鉴权">4.1 登录与鉴权</a>
+        <li><a href="#登录与鉴权">登录与鉴权</a>
           <ol>
-            <li><a href="#411-获取-accesstoken">4.1.1 获取 AccessToken</a></li>
-            <li><a href="#412-刷新-accesstoken">4.1.2 刷新 AccessToken</a></li>
+            <li><a href="#获取-accesstoken">获取 AccessToken</a></li>
+            <li><a href="#刷新-accesstoken">刷新 AccessToken</a></li>
           </ol>
         </li>
-        <li><a href="#42-api-中的-token">4.2 API 中的 Token</a>
+        <li><a href="#api-中的-token">API 中的 Token</a>
           <ol>
-            <li><a href="#421-token-的生命周期">4.2.1 Token 的生命周期</a></li>
-            <li><a href="#422-token-的格式">4.2.2 Token 的格式</a></li>
+            <li><a href="#token-的生命周期">Token 的生命周期</a></li>
+            <li><a href="#token-的格式">Token 的格式</a></li>
           </ol>
         </li>
-        <li><a href="#44-多角色选择功能">4.4 多角色选择功能</a></li>
-        <li><a href="#45-加载皮肤与披风">4.5 加载皮肤与披风</a>
+        <li><a href="#多角色选择功能">多角色选择功能</a></li>
+        <li><a href="#加载皮肤与披风">加载皮肤与披风</a>
           <ol>
-            <li><a href="#451-获取完整-profile">4.5.1 获取完整 Profile</a></li>
-            <li><a href="#452-数字签名">4.5.2 数字签名</a></li>
-            <li><a href="#453-加载材质">4.5.3 加载材质</a></li>
+            <li><a href="#获取完整-profile">获取完整 Profile</a></li>
+            <li><a href="#数字签名">数字签名</a></li>
+            <li><a href="#加载材质">加载材质</a></li>
           </ol>
         </li>
-        <li><a href="#45-加入服务器">4.5 加入服务器</a></li>
-        <li><a href="#46-经常用到的-api">4.6 经常用到的 API</a></li>
+        <li><a href="#加入服务器">加入服务器</a></li>
+        <li><a href="#经常用到的-api">经常用到的 API</a></li>
       </ol>
     </li>
-    <li><a href="#五后记">五、后记</a>
+    <li><a href="#后记">后记</a>
       <ol>
-        <li><a href="#51-参考链接">5.1 参考链接</a></li>
-        <li><a href="#52-文章更新日志">5.2 文章更新日志</a></li>
+        <li><a href="#参考链接">参考链接</a></li>
+        <li><a href="#文章更新日志">文章更新日志</a></li>
       </ol>
     </li>
   </ol>

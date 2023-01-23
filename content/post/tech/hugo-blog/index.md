@@ -1,6 +1,6 @@
 ---
 title: 使用Hugo搭建个人博客
-description: 使用Hugo配合Vercel搭建个人博客
+description: 使用Hugo搭建个人博客
 date: 2022-02-13
 slug: hugo-blog
 image: banner.png
@@ -10,14 +10,14 @@ categories:
 license: CC BY-NC-SA 4.0
 ---
 
-## 〇、前言
+## 前言
 
-### 0.1 我为什么选择 Hugo
+### 我为什么选择 Hugo
 
 Hugo 是一个使用**Go**语言编写的静态网站生成器。
 长期续费一个稳定的虚拟主机的费用是昂贵的，因此我放弃了原先的**Typecho**系统，转而寻找静态博客系统。在尝试了**Hexo**、**Jekyll**后，我选择了**Hugo**，原因首先是它支持 Markdown 语法，这使得我将文章从 Typecho 迁移至 Hugo 变得容易，其次是[**Stack**](https://github.com/CaiJimmy/hugo-theme-stack)主题仅适用于 Hugo (搭建博客第一要领：好看)
 
-### 0.2 网页托管
+### 网页托管
 
 说起网页托管，大家第一想到的大概都是[**Github Pages**](https://pages.github.com)吧，最初我也是使用 gh 来对生成的动态页面进行托管，可长期使用下来我发现 gh pages 存在一些问题：
 
@@ -47,9 +47,9 @@ Vercel 有以下优点：
 
 Vercel 比 GhPages 绿多了（逃
 
-## 一、准备工作
+## 准备工作
 
-### 1.1 安装 Hugo
+### 安装 Hugo
 
 > 本文仅展示使用 Windows 安装 Hugo
 >
@@ -79,9 +79,9 @@ Vercel 比 GhPages 绿多了（逃
 
 > 括号内版本号以最新版本为准
 
-### 1.2 创建站点
+### 创建站点
 
-#### 1.2.1 初始化站点
+#### 初始化站点
 
 在控制台中输入<code>hugo new site 路径</code>新建一个站点
 
@@ -89,7 +89,7 @@ Vercel 比 GhPages 绿多了（逃
 
 这个命令将在 E 盘中创建一个名为 myblog 的目录并在此中创建一个新的 hugo 站点
 
-#### 1.2.2 安装主题
+#### 安装主题
 
 由于新站点中无主题，因此无法渲染，所以我们需要安装一个新主题
 
@@ -97,7 +97,7 @@ Vercel 比 GhPages 绿多了（逃
 
 进入站点根目录后，使用 git 获取主题
 
-<code>git clone https://github.com/elkan1788/hugo-theme-next.git themes/hugo-theme-next</code>
+`git clone https://github.com/elkan1788/hugo-theme-next.git themes/hugo-theme-next`
 
 复制站点根目录/theme/hugo-theme-next/exampleSite 中的文件并粘贴至站点根目录后覆盖
 
@@ -105,6 +105,12 @@ Vercel 比 GhPages 绿多了（逃
 
 恭喜你，你的 hugo 博客已成功运行
 
-#### 1.2.3 自定义博客
+#### 自定义博客
 
 待完成.....
+
+## 部署
+
+在博客文件夹根目录打开终端后运行 `hugo` 命令，稍等片刻后就会生成一个 **public** 文件夹, 文件夹中包含了站点渲染后所有的静态 html 文件以及样式与 js 文件, 你便可以将这些文件复制到你的站点目录或者任何静态网页托管服务来提供访问
+
+### 使用 Vercel 来部署个人博客
